@@ -1,0 +1,25 @@
+# Auto-generated with h2o
+
+complete -c bash -s "c" -d "If the -c option is present, then commands are read from the first non-option argument command_string."
+complete -c bash -s "i" -d "If the -i option is present, the shell is interactive."
+complete -c bash -s "l" -d "Make bash act as if it had been invoked as a login shell (see INVOCATION below)."
+complete -c bash -s "r" -d "If the -r option is present, the shell becomes restricted (see RESTRICTED SHELL below)."
+complete -c bash -s "s" -d "If the -s option is present, or if no arguments remain after option processing, then commands are read from the standard input."
+complete -c bash -s "v" -d "Print shell input lines as they are read."
+complete -c bash -s "x" -d "Print commands and their arguments as they are executed."
+complete -c bash -s "D" -d "A list of all double-quoted strings preceded by \$ is printed on the standard output."
+complete -c bash -s "O" -d "shopt_option is one of the shell options accepted by the shopt builtin (see SHELL BUILTIN COMMANDS below)." -x
+complete -c bash  -d "A -- signals the end of options and disables further option processing."
+complete -c bash -l "debugger" -d "Arrange for the debugger profile to be executed before the shell starts."
+complete -c bash -l "dump-po-strings" -d "Equivalent to -D, but the output is in the GNU gettext po (portable object) file format."
+complete -c bash -l "dump-strings" -d "Equivalent to -D."
+complete -c bash -l "help" -d "Display a usage message on standard output and exit successfully."
+complete -c bash -l "init-file" -d "--rcfile file" -r
+complete -c bash -l "login" -d "Equivalent to -l."
+complete -c bash -l "noediting" -d "Do not use the GNU readline library to read command lines when the shell is interactive."
+complete -c bash -l "noprofile" -d "Do not read either the system-wide startup file /etc/profile or any of the personal initialization files ~/.bash_profile, ~/.bash_login, or ~/.profile."
+complete -c bash -l "norc" -d "Do not read and execute the system wide initialization file /etc/bash.bashrc and the personal initialization file ~/.bashrc if the shell is interactive."
+complete -c bash -l "posix" -d "Change the behavior of bash where the default operation differs from the POSIX standard to match the standard (posix mode)."
+complete -c bash -l "restricted" -d "The shell becomes restricted (see RESTRICTED SHELL below)."
+complete -c bash -l "verbose" -d "Equivalent to -v."
+complete -c bash -l "version" -d "Show version information for this instance of bash on the standard output and exit successfully."
