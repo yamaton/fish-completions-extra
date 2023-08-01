@@ -1,0 +1,15 @@
+# Auto-generated with h2o
+
+complete -c nyancat -s "i" -l "intro" -d "Show the introduction / about information at startup."
+complete -c nyancat -s "t" -l "telnet" -d "Telnet mode."
+complete -c nyancat -s "n" -l "no-counter" -d "Do not display the timer"
+complete -c nyancat -s "s" -l "no-title" -d "Do not set the titlebar text"
+complete -c nyancat -s "e" -l "no-clear" -d "Do not clear the display between frames"
+complete -c nyancat -s "f" -l "frames" -d "Display the requested number of frames, then quit"
+complete -c nyancat -s "r" -l "min-rows" -d "Crop the animation from the top"
+complete -c nyancat -s "R" -l "max-rows" -d "Crop the animation from the bottom"
+complete -c nyancat -s "c" -l "min-cols" -d "Crop the animation from the left"
+complete -c nyancat -s "C" -l "max-cols" -d "Crop the animation from the right"
+complete -c nyancat -s "W" -l "width" -d "Crop the animation to the given width"
+complete -c nyancat -s "H" -l "height" -d "Crop the animation to the given height"
+complete -c nyancat -s "h" -l "help" -d "Show this help message."
