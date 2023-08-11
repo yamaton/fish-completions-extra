@@ -4,6 +4,7 @@ complete -c yt-dlp -s "h" -l "help" -d "Print this help text and exit"
 complete -c yt-dlp -l "version" -d "Print program version and exit"
 complete -c yt-dlp -s "U" -l "update" -d "Check if updates are available."
 complete -c yt-dlp -l "no-update" -d "Do not check for updates (default)"
+complete -c yt-dlp -l "update-to" -d "Upgrade/downgrade to a specific version." -x
 complete -c yt-dlp -s "i" -l "ignore-errors" -d "Ignore download and postprocessing errors."
 complete -c yt-dlp -l "no-abort-on-error" -d "Continue with next video on download errors; e.g. to skip unavailable videos in a playlist (default)"
 complete -c yt-dlp -l "abort-on-error" -d "Abort downloading of further videos if an error occurs (Alias: --no-ignore-errors)"
@@ -16,14 +17,14 @@ complete -c yt-dlp -l "ignore-config" -d "Don't load any more configuration file
 complete -c yt-dlp -l "no-config-locations" -d "Do not load any custom configuration files (default)."
 complete -c yt-dlp -l "config-locations" -d "Location of the main configuration file; either the path to the config or its containing directory (\"-\" for stdin)." -r
 complete -c yt-dlp -l "flat-playlist" -d "Do not extract the videos of a playlist, only list them"
-complete -c yt-dlp -l "no-flat-playlist" -d "Extract the videos of a playlist"
+complete -c yt-dlp -l "no-flat-playlist" -d "Fully extract the videos of a playlist (default)"
 complete -c yt-dlp -l "live-from-start" -d "Download livestreams from the start."
 complete -c yt-dlp -l "no-live-from-start" -d "Download livestreams from the current time (default)"
 complete -c yt-dlp -l "wait-for-video" -d "Wait for scheduled streams to become available." -x
 complete -c yt-dlp -l "no-wait-for-video" -d "Do not wait for scheduled streams (default)"
 complete -c yt-dlp -l "mark-watched" -d "Mark videos watched (even with --simulate)"
 complete -c yt-dlp -l "no-mark-watched" -d "Do not mark videos watched (default)"
-complete -c yt-dlp -l "no-colors" -d "Do not emit color codes in output (Alias: --no-colours)"
+complete -c yt-dlp -l "color" -d "Whether to emit color codes in output, optionally prefixed by the STREAM (stdout or stderr) to apply the setting to." -x
 complete -c yt-dlp -l "compat-options" -d "Options that can help keep compatibility with youtube-dl or youtube-dlc configurations by reverting some of the changes made in yt-dlp." -x
 complete -c yt-dlp -l "alias" -d "Create aliases for an option string." -x
 complete -c yt-dlp -l "proxy" -d "Use the specified HTTP/HTTPS/SOCKS proxy." -r
@@ -31,19 +32,19 @@ complete -c yt-dlp -l "socket-timeout" -d "Time to wait before giving up, in sec
 complete -c yt-dlp -l "source-address" -d "Client-side IP address to bind to" -x
 complete -c yt-dlp -s "4" -l "force-ipv4" -d "Make all connections via IPv4"
 complete -c yt-dlp -s "6" -l "force-ipv6" -d "Make all connections via IPv6"
+complete -c yt-dlp -l "enable-file-urls" -d "Enable file:// URLs."
 complete -c yt-dlp -l "geo-verification-proxy" -d "Use this proxy to verify the IP address for some geo-restricted sites." -x
-complete -c yt-dlp -l "geo-bypass" -d "Bypass geographic restriction via faking X-Forwarded-For HTTP header (default)"
-complete -c yt-dlp -l "no-geo-bypass" -d "Do not bypass geographic restriction via faking X-Forwarded-For HTTP header"
-complete -c yt-dlp -l "geo-bypass-country" -d "Force bypass geographic restriction with explicitly provided two-letter ISO 3166-2 country code" -x
-complete -c yt-dlp -l "geo-bypass-ip-block" -d "Force bypass geographic restriction with explicitly provided IP block in CIDR notation" -x
-complete -c yt-dlp -s "I" -l "playlist-items" -d "Comma separated playlist_index of the videos to download." -x
+complete -c yt-dlp -l "xff" -d "How to fake X-Forwarded-For HTTP header to try bypassing geographic restriction." -x
+complete -c yt-dlp -s "I" -l "playlist-items" -d "Comma separated playlist_index of the items to download." -x
 complete -c yt-dlp -l "min-filesize" -d "Abort download if filesize is smaller than SIZE, e.g. 50k or 44.6M" -r
-complete -c yt-dlp -l "max-filesize" -d "Abort download if filesize if larger than SIZE, e.g. 50k or 44.6M" -r
+complete -c yt-dlp -l "max-filesize" -d "Abort download if filesize is larger than SIZE, e.g. 50k or 44.6M" -r
 complete -c yt-dlp -l "date" -d "Download only videos uploaded on this date." -x
 complete -c yt-dlp -l "datebefore" -d "Download only videos uploaded on or before this date." -x
 complete -c yt-dlp -l "dateafter" -d "Download only videos uploaded on or after this date." -x
 complete -c yt-dlp -l "match-filters" -d "Generic video filter." -x
-complete -c yt-dlp -l "no-match-filter" -d "Do not use generic video filter (default)"
+complete -c yt-dlp -l "no-match-filters" -d "Do not use any --match-filter (default)"
+complete -c yt-dlp -l "break-match-filters" -d "Same as \"--match-filters\" but stops the download process when a video is rejected" -x
+complete -c yt-dlp -l "no-break-match-filters" -d "Do not use any --break-match-filters (default)"
 complete -c yt-dlp -l "no-playlist" -d "Download only the video, if the URL refers to a video and a playlist"
 complete -c yt-dlp -l "yes-playlist" -d "Download the playlist, if the URL refers to a video and a playlist"
 complete -c yt-dlp -l "age-limit" -d "Download only videos suitable for the given age" -x
@@ -51,8 +52,7 @@ complete -c yt-dlp -l "download-archive" -d "Download only videos not listed in 
 complete -c yt-dlp -l "no-download-archive" -d "Do not use archive file (default)"
 complete -c yt-dlp -l "max-downloads" -d "Abort after downloading NUMBER files" -r
 complete -c yt-dlp -l "break-on-existing" -d "Stop the download process when encountering a file that is in the archive"
-complete -c yt-dlp -l "break-on-reject" -d "Stop the download process when encountering a file that has been filtered out"
-complete -c yt-dlp -l "break-per-input" -d "--break-on-existing, --break-on-reject, --max-downloads, and autonumber resets per input URL"
+complete -c yt-dlp -l "break-per-input" -d "Alters --max-downloads, --break-on-existing, --break-match-filter, and autonumber to reset per input URL"
 complete -c yt-dlp -l "no-break-per-input" -d "--break-on-existing and similar options terminates the entire download queue"
 complete -c yt-dlp -l "skip-playlist-after-errors" -d "Number of allowed failures until the rest of the playlist is skipped" -x
 complete -c yt-dlp -s "N" -l "concurrent-fragments" -d "Number of fragments of a dash/hlsnative video that should be downloaded concurrently (default is 1)" -x
@@ -62,8 +62,8 @@ complete -c yt-dlp -s "R" -l "retries" -d "Number of retries (default is 10), or
 complete -c yt-dlp -l "file-access-retries" -d "Number of times to retry on file access error (default is 3), or \"infinite\"" -r
 complete -c yt-dlp -l "fragment-retries" -d "Number of retries for a fragment (default is 10), or \"infinite\" (DASH, hlsnative and ISM)" -x
 complete -c yt-dlp -l "retry-sleep" -d "Time to sleep between retries in seconds (optionally) prefixed by the type of retry (http (default), fragment, file_access, extractor) to apply the sleep to." -r
-complete -c yt-dlp -l "skip-unavailable-fragments" -d "Skip unavailable fragments for DASH, hlsnative and ISM downloads (default) (Alias: --no-abort-on-unavailable-fragment)"
-complete -c yt-dlp -l "abort-on-unavailable-fragment" -d "Abort download if a fragment is unavailable (Alias: --no-skip-unavailable-fragments)"
+complete -c yt-dlp -l "skip-unavailable-fragments" -d "Skip unavailable fragments for DASH, hlsnative and ISM downloads (default) (Alias: --no-abort-on-unavailable-fragments)"
+complete -c yt-dlp -l "abort-on-unavailable-fragments" -d "Abort download if a fragment is unavailable (Alias: --no-skip-unavailable-fragments)"
 complete -c yt-dlp -l "keep-fragments" -d "Keep downloaded fragments on disk after downloading is finished"
 complete -c yt-dlp -l "no-keep-fragments" -d "Delete downloaded fragments after downloading is finished (default)"
 complete -c yt-dlp -l "buffer-size" -d "Size of download buffer, e.g. 1024 or 16K (default is 1024)" -x
@@ -76,7 +76,7 @@ complete -c yt-dlp -l "no-lazy-playlist" -d "Process videos in the playlist only
 complete -c yt-dlp -l "xattr-set-filesize" -d "Set file xattribute ytdl.filesize with expected file size"
 complete -c yt-dlp -l "hls-use-mpegts" -d "Use the mpegts container for HLS videos; allowing some players to play the video while downloading, and reducing the chance of file corruption if download is interrupted."
 complete -c yt-dlp -l "no-hls-use-mpegts" -d "Do not use the mpegts container for HLS videos."
-complete -c yt-dlp -l "download-sections" -d "Download only chapters whose title matches the given regular expression." -x
+complete -c yt-dlp -l "download-sections" -d "Download only chapters that match the regular expression." -x
 complete -c yt-dlp -l "downloader" -d "Name or path of the external downloader to use (optionally) prefixed by the protocols (http, ftp, m3u8, dash, rstp, rtmp, mms) to use it for." -r
 complete -c yt-dlp -l "downloader-args" -d "Give these arguments to the external downloader." -x
 complete -c yt-dlp -s "a" -l "batch-file" -d "File containing URLs to download (\"-\" for stdin), one URL per line." -r
@@ -104,7 +104,7 @@ complete -c yt-dlp -l "write-info-json" -d "Write video metadata to a .info.json
 complete -c yt-dlp -l "no-write-info-json" -d "Do not write video metadata (default)"
 complete -c yt-dlp -l "write-playlist-metafiles" -d "Write playlist metadata in addition to the video metadata when using --write-info-json, --write-description etc."
 complete -c yt-dlp -l "no-write-playlist-metafiles" -d "Do not write playlist metadata when using --write-info-json, --write-description etc."
-complete -c yt-dlp -l "clean-info-json" -d "Remove some private fields such as filenames from the infojson."
+complete -c yt-dlp -l "clean-info-json" -d "Remove some internal metadata such as filenames from the infojson (default)"
 complete -c yt-dlp -l "no-clean-info-json" -d "Write all fields to the infojson"
 complete -c yt-dlp -l "write-comments" -d "Retrieve video comments to be placed in the infojson."
 complete -c yt-dlp -l "no-write-comments" -d "Do not retrieve video comments unless the extraction is known to be quick (Alias: --no-get-comments)"
@@ -125,6 +125,7 @@ complete -c yt-dlp -l "write-url-link" -d "Write a .url Windows internet shortcu
 complete -c yt-dlp -l "write-webloc-link" -d "Write a .webloc macOS internet shortcut"
 complete -c yt-dlp -l "write-desktop-link" -d "Write a .desktop Linux internet shortcut"
 complete -c yt-dlp -s "q" -l "quiet" -d "Activate quiet mode."
+complete -c yt-dlp -l "no-quiet" -d "Deactivate quiet mode."
 complete -c yt-dlp -l "no-warnings" -d "Ignore warnings"
 complete -c yt-dlp -s "s" -l "simulate" -d "Do not download the video and do not write anything to disk"
 complete -c yt-dlp -l "no-simulate" -d "Download the video even if printing/listing options are used"
@@ -149,7 +150,7 @@ complete -c yt-dlp -l "encoding" -d "Force the specified encoding (experimental)
 complete -c yt-dlp -l "legacy-server-connect" -d "Explicitly allow HTTPS connection to servers that do not support RFC 5746 secure renegotiation"
 complete -c yt-dlp -l "no-check-certificates" -d "Suppress HTTPS certificate validation"
 complete -c yt-dlp -l "prefer-insecure" -d "Use an unencrypted connection to retrieve information about the video (Currently supported only for YouTube)"
-complete -c yt-dlp -l "add-header" -d "Specify a custom HTTP header and its value, separated by a colon \":\"." -x
+complete -c yt-dlp -l "add-headers" -d "Specify a custom HTTP header and its value, separated by a colon \":\"." -x
 complete -c yt-dlp -l "bidi-workaround" -d "Work around terminals that lack bidirectional text support."
 complete -c yt-dlp -l "sleep-requests" -d "Number of seconds to sleep between requests during data extraction" -x
 complete -c yt-dlp -l "sleep-interval" -d "Number of seconds to sleep before each download." -x
@@ -182,6 +183,7 @@ complete -c yt-dlp -s "p" -l "password" -d "Account password." -x
 complete -c yt-dlp -s "2" -l "twofactor" -d "Two-factor authentication code" -x
 complete -c yt-dlp -s "n" -l "netrc" -d "Use .netrc authentication data"
 complete -c yt-dlp -l "netrc-location" -d "Location of .netrc authentication data; either the path or its containing directory." -r
+complete -c yt-dlp -l "netrc-cmd" -d "Command to execute to get the credentials for an extractor." -x
 complete -c yt-dlp -l "video-password" -d "Video password (vimeo, youku)" -x
 complete -c yt-dlp -l "ap-mso" -d "Adobe Pass multiple-system operator (TV provider) identifier, use --ap-list-mso for a list of available MSOs" -x
 complete -c yt-dlp -l "ap-username" -d "Multiple-system operator account login" -x
@@ -193,7 +195,7 @@ complete -c yt-dlp -l "client-certificate-password" -d "Password for client cert
 complete -c yt-dlp -s "x" -l "extract-audio" -d "Convert video files to audio-only files (requires ffmpeg and ffprobe)"
 complete -c yt-dlp -l "audio-format" -d "Format to convert the audio to when -x is used." -x
 complete -c yt-dlp -l "audio-quality" -d "Specify ffmpeg audio quality to use when converting the audio with -x." -x
-complete -c yt-dlp -l "remux-video" -d "Remux the video into another container if necessary (currently supported: avi, flv, mkv, mov, mp4, webm, aac, aiff, alac, flac, m4a, mka, mp3, ogg, opus, vorbis, wav)." -x
+complete -c yt-dlp -l "remux-video" -d "Remux the video into another container if necessary (currently supported: avi, flv, gif, mkv, mov, mp4, webm, aac, aiff, alac, flac, m4a, mka, mp3, ogg, opus, vorbis, wav)." -x
 complete -c yt-dlp -l "recode-video" -d "Re-encode the video into another format if necessary." -x
 complete -c yt-dlp -l "postprocessor-args" -d "Give these arguments to the postprocessors." -r
 complete -c yt-dlp -s "k" -l "keep-video" -d "Keep the intermediate video file on disk after post-processing"
@@ -210,13 +212,13 @@ complete -c yt-dlp -l "embed-chapters" -d "Add chapter markers to the video file
 complete -c yt-dlp -l "no-embed-chapters" -d "Do not add chapter markers (default) (Alias: --no-add-chapters)"
 complete -c yt-dlp -l "embed-info-json" -d "Embed the infojson as an attachment to mkv/mka video files"
 complete -c yt-dlp -l "no-embed-info-json" -d "Do not embed the infojson as an attachment to the video file"
-complete -c yt-dlp -l "parse-metadata" -d "Parse additional metadata like title/artist from other fields; see \"MODIFYING METADATA\" for details" -x
+complete -c yt-dlp -l "parse-metadata" -d "Parse additional metadata like title/artist from other fields; see \"MODIFYING METADATA\" for details." -x
 complete -c yt-dlp -l "replace-in-metadata" -d "Replace text in a metadata field using the given regex." -x
 complete -c yt-dlp -l "xattrs" -d "Write metadata to the video file's xattrs (using dublin core and xdg standards)"
 complete -c yt-dlp -l "concat-playlist" -d "Concatenate videos in a playlist." -r
 complete -c yt-dlp -l "fixup" -d "Automatically correct known faults of the file." -r
 complete -c yt-dlp -l "ffmpeg-location" -d "Location of the ffmpeg binary; either the path to the binary or its containing directory" -r
-complete -c yt-dlp -l "exec" -d "Execute a command, optionally prefixed with when to execute it (after_move if unspecified), separated by a \":\"." -r
+complete -c yt-dlp -l "exec" -d "Execute a command, optionally prefixed with when to execute it, separated by a \":\"." -r
 complete -c yt-dlp -l "no-exec" -d "Remove any previously defined --exec"
 complete -c yt-dlp -l "convert-subs" -d "Convert the subtitles to another format (currently supported: ass, lrc, srt, vtt) (Alias: --convert-subtitles)" -x
 complete -c yt-dlp -l "convert-thumbnails" -d "Convert the thumbnails to another format (currently supported: jpg, png, webp)." -x
