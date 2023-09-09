@@ -1,0 +1,17 @@
+# Auto-generated with h2o
+
+complete -k -c bun -n __fish_use_subcommand -x -a upgrade -d "Get the latest version of Bun"
+complete -k -c bun -n __fish_use_subcommand -x -a build -d "Bundle TypeScript & JavaScript into a single file"
+complete -k -c bun -n __fish_use_subcommand -x -a pm -d "More commands for managing packages"
+complete -k -c bun -n __fish_use_subcommand -x -a unlink -d "Globally unlink an npm package"
+complete -k -c bun -n __fish_use_subcommand -x -a link -d "Link an npm package globally"
+complete -k -c bun -n __fish_use_subcommand -x -a update -d "Update outdated dependencies & save to package.json"
+complete -k -c bun -n __fish_use_subcommand -x -a remove -d "Remove a dependency from package.json (bun rm)"
+complete -k -c bun -n __fish_use_subcommand -x -a add -d "Add a dependency to package.json (bun a)"
+complete -k -c bun -n __fish_use_subcommand -x -a install -d "Install dependencies for a package.json (bun i)"
+complete -k -c bun -n __fish_use_subcommand -x -a create -d "Create a new project from a template (bun c)"
+complete -k -c bun -n __fish_use_subcommand -x -a init -d "Start an empty Bun project from a blank template"
+complete -k -c bun -n __fish_use_subcommand -x -a repl -d "Start a REPL session with Bun"
+complete -k -c bun -n __fish_use_subcommand -x -a x -d "Install and execute a package bin (bunx)"
+complete -k -c bun -n __fish_use_subcommand -x -a test -d "Run unit tests with Bun"
+complete -k -c bun -n __fish_use_subcommand -x -a run -d "Run JavaScript with Bun, a package.json script, or a bin"
