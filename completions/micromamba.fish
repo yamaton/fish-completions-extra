@@ -1,22 +1,22 @@
 # Auto-generated with h2o
 
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -s "h" -l "help" -d "Print this help message and exit"
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -l "rc-file" -d "Paths to the configuration files to use" -r
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -l "no-rc" -d "Disable the use of configuration files"
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -l "no-env" -d "Disable the use of environment variables"
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -s "v" -l "verbose" -d "Set verbosity (higher verbosity with multiple -v, e.g. -vvv)"
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -l "log-level" -d "Set the log level" -x
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -s "q" -l "quiet" -d "Set quiet mode (print less output)"
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -s "y" -l "yes" -d "Automatically answer yes on prompted questions"
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -l "json" -d "Report all output as json"
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -l "offline" -d "Force use cached repodata"
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -l "dry-run" -d "Only display what would have been done"
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -l "download-only" -d "Only download and extract packages, do not link them into environment."
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -l "experimental" -d "Enable experimental features"
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -s "r" -l "root-prefix" -d "Path to the root prefix" -r
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -s "p" -l "prefix" -d "Path to the target prefix" -r
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -l "relocate-prefix" -d "Path to the relocation prefix" -r
-complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery remove list package clean config info constructor env activate run ps auth search" -s "n" -l "name" -d "Name of the target prefix" -x
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -s "h" -l "help" -d "Print this help message and exit"
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -l "rc-file" -d "Paths to the configuration files to use" -r
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -l "no-rc" -d "Disable the use of configuration files"
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -l "no-env" -d "Disable the use of environment variables"
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -s "v" -l "verbose" -d "Set verbosity (higher verbosity with multiple -v, e.g. -vvv)"
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -l "log-level" -d "Set the log level" -x
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -s "q" -l "quiet" -d "Set quiet mode (print less output)"
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -s "y" -l "yes" -d "Automatically answer yes on prompted questions"
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -l "json" -d "Report all output as json"
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -l "offline" -d "Force use cached repodata"
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -l "dry-run" -d "Only display what would have been done"
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -l "download-only" -d "Only download and extract packages, do not link them into environment."
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -l "experimental" -d "Enable experimental features"
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -s "r" -l "root-prefix" -d "Path to the root prefix" -r
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -s "p" -l "prefix" -d "Path to the target prefix" -r
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -l "relocate-prefix" -d "Path to the relocation prefix" -r
+complete -c micromamba -n "not __fish_seen_subcommand_from shell create install update self-update repoquery list package clean config info constructor env activate run ps auth search" -s "n" -l "name" -d "Name of the target prefix" -x
 
 
 
@@ -25,14 +25,13 @@ complete -k -c micromamba -n __fish_use_subcommand -x -a auth -d "Login or logou
 complete -k -c micromamba -n __fish_use_subcommand -x -a ps -d "Show, inspect or kill running processes"
 complete -k -c micromamba -n __fish_use_subcommand -x -a run -d "Run an executable in an environment"
 complete -k -c micromamba -n __fish_use_subcommand -x -a activate -d "Activate an environment"
-complete -k -c micromamba -n __fish_use_subcommand -x -a env -d "List environments"
+complete -k -c micromamba -n __fish_use_subcommand -x -a env -d "See `mamba/micromamba env --help`"
 complete -k -c micromamba -n __fish_use_subcommand -x -a constructor -d "Commands to support using micromamba in constructor"
 complete -k -c micromamba -n __fish_use_subcommand -x -a info -d "Information about micromamba"
 complete -k -c micromamba -n __fish_use_subcommand -x -a config -d "Configuration of micromamba"
 complete -k -c micromamba -n __fish_use_subcommand -x -a clean -d "Clean package cache"
 complete -k -c micromamba -n __fish_use_subcommand -x -a package -d "Extract a package or bundle files into an archive"
 complete -k -c micromamba -n __fish_use_subcommand -x -a list -d "List packages in active environment"
-complete -k -c micromamba -n __fish_use_subcommand -x -a remove -d "Remove packages from active environment"
 complete -k -c micromamba -n __fish_use_subcommand -x -a repoquery -d "Find and analyze packages in active environment or channels"
 complete -k -c micromamba -n __fish_use_subcommand -x -a self-update -d "Update micromamba"
 complete -k -c micromamba -n __fish_use_subcommand -x -a update -d "Update packages in active environment"
@@ -75,12 +74,14 @@ complete -c micromamba -n "__fish_seen_subcommand_from create" -l "allow-uninsta
 complete -c micromamba -n "__fish_seen_subcommand_from create" -l "allow-downgrade" -l "no-allow-downgrade" -d "Allow downgrade when installing packages." -x
 complete -c micromamba -n "__fish_seen_subcommand_from create" -l "allow-softlinks" -l "no-allow-softlinks" -d "Allow to use soft-links when hard-links are not possible" -x
 complete -c micromamba -n "__fish_seen_subcommand_from create" -l "always-softlink" -l "no-always-softlink" -d "Use soft-link instead of hard-link" -x
-complete -c micromamba -n "__fish_seen_subcommand_from create" -l "always-copy" -l "no-always-copy" -d "Use copy instead of hard-link" -x
-complete -c micromamba -n "__fish_seen_subcommand_from create" -l "extra-safety-checks" -l "no-extra-safety-checks" -d "Run extra verifications on packages" -x
+complete -c micromamba -n "__fish_seen_subcommand_from create" -l "always-copy" -l "copy" -l "no-always-copy" -d "Use copy instead of hard-link" -x
 complete -c micromamba -n "__fish_seen_subcommand_from create" -l "lock-timeout" -d "Lockfile timeout" -r
 complete -c micromamba -n "__fish_seen_subcommand_from create" -l "shortcuts" -l "no-shortcuts" -d "Install start-menu shortcuts on Windows (not implemented on Linux / macOS)" -x
 complete -c micromamba -n "__fish_seen_subcommand_from create" -l "safety-checks" -d "Safety checks policy ('enabled', 'warn', or 'disabled')" -x
-complete -c micromamba -n "__fish_seen_subcommand_from create" -l "verify-artifacts" -d "Run verifications on packages signatures"
+complete -c micromamba -n "__fish_seen_subcommand_from create" -l "extra-safety-checks" -l "no-extra-safety-checks" -d "Run extra verifications on packages" -x
+complete -c micromamba -n "__fish_seen_subcommand_from create" -l "verify-artifacts" -d "Run verifications on packages signatures."
+complete -c micromamba -n "__fish_seen_subcommand_from create" -l "trusted-channels" -d "The list of trusted channels allowing artifacts verification." -x
+complete -c micromamba -n "__fish_seen_subcommand_from create" -l "exp-repodata-parsing" -l "no-exp-repodata-parsing" -d "Enable experimental parsing of `repodata.json` using simdjson." -x
 complete -c micromamba -n "__fish_seen_subcommand_from create" -l "platform" -d "The platform description" -x
 complete -c micromamba -n "__fish_seen_subcommand_from create" -l "no-deps" -d "Do not install dependencies."
 complete -c micromamba -n "__fish_seen_subcommand_from create" -l "only-deps" -d "Only install dependencies"
@@ -124,12 +125,14 @@ complete -c micromamba -n "__fish_seen_subcommand_from install" -l "allow-uninst
 complete -c micromamba -n "__fish_seen_subcommand_from install" -l "allow-downgrade" -l "no-allow-downgrade" -d "Allow downgrade when installing packages." -x
 complete -c micromamba -n "__fish_seen_subcommand_from install" -l "allow-softlinks" -l "no-allow-softlinks" -d "Allow to use soft-links when hard-links are not possible" -x
 complete -c micromamba -n "__fish_seen_subcommand_from install" -l "always-softlink" -l "no-always-softlink" -d "Use soft-link instead of hard-link" -x
-complete -c micromamba -n "__fish_seen_subcommand_from install" -l "always-copy" -l "no-always-copy" -d "Use copy instead of hard-link" -x
-complete -c micromamba -n "__fish_seen_subcommand_from install" -l "extra-safety-checks" -l "no-extra-safety-checks" -d "Run extra verifications on packages" -x
+complete -c micromamba -n "__fish_seen_subcommand_from install" -l "always-copy" -l "copy" -l "no-always-copy" -d "Use copy instead of hard-link" -x
 complete -c micromamba -n "__fish_seen_subcommand_from install" -l "lock-timeout" -d "Lockfile timeout" -r
 complete -c micromamba -n "__fish_seen_subcommand_from install" -l "shortcuts" -l "no-shortcuts" -d "Install start-menu shortcuts on Windows (not implemented on Linux / macOS)" -x
 complete -c micromamba -n "__fish_seen_subcommand_from install" -l "safety-checks" -d "Safety checks policy ('enabled', 'warn', or 'disabled')" -x
-complete -c micromamba -n "__fish_seen_subcommand_from install" -l "verify-artifacts" -d "Run verifications on packages signatures"
+complete -c micromamba -n "__fish_seen_subcommand_from install" -l "extra-safety-checks" -l "no-extra-safety-checks" -d "Run extra verifications on packages" -x
+complete -c micromamba -n "__fish_seen_subcommand_from install" -l "verify-artifacts" -d "Run verifications on packages signatures."
+complete -c micromamba -n "__fish_seen_subcommand_from install" -l "trusted-channels" -d "The list of trusted channels allowing artifacts verification." -x
+complete -c micromamba -n "__fish_seen_subcommand_from install" -l "exp-repodata-parsing" -l "no-exp-repodata-parsing" -d "Enable experimental parsing of `repodata.json` using simdjson." -x
 complete -c micromamba -n "__fish_seen_subcommand_from install" -l "platform" -d "The platform description" -x
 complete -c micromamba -n "__fish_seen_subcommand_from install" -l "no-deps" -d "Do not install dependencies."
 complete -c micromamba -n "__fish_seen_subcommand_from install" -l "only-deps" -d "Only install dependencies"
@@ -175,17 +178,19 @@ complete -c micromamba -n "__fish_seen_subcommand_from update" -l "allow-uninsta
 complete -c micromamba -n "__fish_seen_subcommand_from update" -l "allow-downgrade" -l "no-allow-downgrade" -d "Allow downgrade when installing packages." -x
 complete -c micromamba -n "__fish_seen_subcommand_from update" -l "allow-softlinks" -l "no-allow-softlinks" -d "Allow to use soft-links when hard-links are not possible" -x
 complete -c micromamba -n "__fish_seen_subcommand_from update" -l "always-softlink" -l "no-always-softlink" -d "Use soft-link instead of hard-link" -x
-complete -c micromamba -n "__fish_seen_subcommand_from update" -l "always-copy" -l "no-always-copy" -d "Use copy instead of hard-link" -x
-complete -c micromamba -n "__fish_seen_subcommand_from update" -l "extra-safety-checks" -l "no-extra-safety-checks" -d "Run extra verifications on packages" -x
+complete -c micromamba -n "__fish_seen_subcommand_from update" -l "always-copy" -l "copy" -l "no-always-copy" -d "Use copy instead of hard-link" -x
 complete -c micromamba -n "__fish_seen_subcommand_from update" -l "lock-timeout" -d "Lockfile timeout" -r
 complete -c micromamba -n "__fish_seen_subcommand_from update" -l "shortcuts" -l "no-shortcuts" -d "Install start-menu shortcuts on Windows (not implemented on Linux / macOS)" -x
 complete -c micromamba -n "__fish_seen_subcommand_from update" -l "safety-checks" -d "Safety checks policy ('enabled', 'warn', or 'disabled')" -x
-complete -c micromamba -n "__fish_seen_subcommand_from update" -l "verify-artifacts" -d "Run verifications on packages signatures"
+complete -c micromamba -n "__fish_seen_subcommand_from update" -l "extra-safety-checks" -l "no-extra-safety-checks" -d "Run extra verifications on packages" -x
+complete -c micromamba -n "__fish_seen_subcommand_from update" -l "verify-artifacts" -d "Run verifications on packages signatures."
+complete -c micromamba -n "__fish_seen_subcommand_from update" -l "trusted-channels" -d "The list of trusted channels allowing artifacts verification." -x
+complete -c micromamba -n "__fish_seen_subcommand_from update" -l "exp-repodata-parsing" -l "no-exp-repodata-parsing" -d "Enable experimental parsing of `repodata.json` using simdjson." -x
 complete -c micromamba -n "__fish_seen_subcommand_from update" -l "platform" -d "The platform description" -x
 complete -c micromamba -n "__fish_seen_subcommand_from update" -l "no-deps" -d "Do not install dependencies."
 complete -c micromamba -n "__fish_seen_subcommand_from update" -l "only-deps" -d "Only install dependencies"
 complete -c micromamba -n "__fish_seen_subcommand_from update" -l "category" -d "Categories of package to install from environment lockfile" -r
-complete -c micromamba -n "__fish_seen_subcommand_from update" -l "prune" -l "no-prune" -d "Prune dependencies (default)" -x
+complete -c micromamba -n "__fish_seen_subcommand_from update" -l "prune-deps" -l "no-prune-deps" -d "Prune dependencies (default)" -x
 complete -c micromamba -n "__fish_seen_subcommand_from update" -s "a" -l "all" -d "Update all packages in the environment"
 complete -c micromamba -n "__fish_seen_subcommand_from update" -l "rc-file" -d "Paths to the configuration files to use" -r
 complete -c micromamba -n "__fish_seen_subcommand_from update" -l "no-rc" -d "Disable the use of configuration files"
@@ -226,12 +231,14 @@ complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "allow-un
 complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "allow-downgrade" -l "no-allow-downgrade" -d "Allow downgrade when installing packages." -x
 complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "allow-softlinks" -l "no-allow-softlinks" -d "Allow to use soft-links when hard-links are not possible" -x
 complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "always-softlink" -l "no-always-softlink" -d "Use soft-link instead of hard-link" -x
-complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "always-copy" -l "no-always-copy" -d "Use copy instead of hard-link" -x
-complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "extra-safety-checks" -l "no-extra-safety-checks" -d "Run extra verifications on packages" -x
+complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "always-copy" -l "copy" -l "no-always-copy" -d "Use copy instead of hard-link" -x
 complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "lock-timeout" -d "Lockfile timeout" -r
 complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "shortcuts" -l "no-shortcuts" -d "Install start-menu shortcuts on Windows (not implemented on Linux / macOS)" -x
 complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "safety-checks" -d "Safety checks policy ('enabled', 'warn', or 'disabled')" -x
-complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "verify-artifacts" -d "Run verifications on packages signatures"
+complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "extra-safety-checks" -l "no-extra-safety-checks" -d "Run extra verifications on packages" -x
+complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "verify-artifacts" -d "Run verifications on packages signatures."
+complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "trusted-channels" -d "The list of trusted channels allowing artifacts verification." -x
+complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "exp-repodata-parsing" -l "no-exp-repodata-parsing" -d "Enable experimental parsing of `repodata.json` using simdjson." -x
 complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "platform" -d "The platform description" -x
 complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "no-deps" -d "Do not install dependencies."
 complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "only-deps" -d "Only install dependencies"
@@ -262,65 +269,11 @@ complete -c micromamba -n "__fish_seen_subcommand_from self-update" -l "retry-cl
 
 
 complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -s "h" -l "help" -d "Print this help message and exit"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -s "c" -l "channel" -d "Define the list of channels" -x
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "override-channels" -d "Override channels"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "channel-priority" -d "Define the channel priority ('strict' or 'disabled')" -x
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "channel-alias" -d "The prepended url location to associate with channel names" -x
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "strict-channel-priority" -d "Enable strict channel priority"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "no-channel-priority" -d "Disable channel priority"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -s "t" -l "tree" -d "Show result as a tree"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "recursive" -d "Show dependencies recursively, i.e. transitive dependencies (only for `depends`)"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "pretty" -d "Pretty print result (only for search)"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "use-local" -d "Use installed data (--use-local=1, default for `depends` and `whoneeds`) or remote repositories (--use-local=0, default for `search`)." -x
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "platform" -d "The platform description" -x
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "rc-file" -d "Paths to the configuration files to use" -r
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "no-rc" -d "Disable the use of configuration files"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "no-env" -d "Disable the use of environment variables"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -s "v" -l "verbose" -d "Set verbosity (higher verbosity with multiple -v, e.g. -vvv)"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "log-level" -d "Set the log level" -x
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -s "q" -l "quiet" -d "Set quiet mode (print less output)"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -s "y" -l "yes" -d "Automatically answer yes on prompted questions"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "json" -d "Report all output as json"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "offline" -d "Force use cached repodata"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "dry-run" -d "Only display what would have been done"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "download-only" -d "Only download and extract packages, do not link them into environment."
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "experimental" -d "Enable experimental features"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -s "r" -l "root-prefix" -d "Path to the root prefix" -r
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -s "p" -l "prefix" -d "Path to the target prefix" -r
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "relocate-prefix" -d "Path to the relocation prefix" -r
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -s "n" -l "name" -d "Name of the target prefix" -x
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "ssl-verify" -d "Verify SSL certificates for HTTPS requests" -x
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "ssl-no-revoke" -d "SSL certificate revocation checks"
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "cacert-path" -d "Path (file or directory) SSL certificate(s)" -r
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "repodata-ttl" -d "Repodata time-to-live" -x
-complete -c micromamba -n "__fish_seen_subcommand_from repoquery" -l "retry-clean-cache" -d "If solve fails, try to fetch updated repodata"
-
-
-
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -s "h" -l "help" -d "Print this help message and exit"
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -s "a" -l "all" -d "Remove all packages in the environment"
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -s "f" -l "force" -d "Force removal of package (note: consistency of environment is not guaranteed!"
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -l "prune" -l "no-prune" -d "Prune dependencies (default)" -x
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -l "rc-file" -d "Paths to the configuration files to use" -r
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -l "no-rc" -d "Disable the use of configuration files"
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -l "no-env" -d "Disable the use of environment variables"
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -s "v" -l "verbose" -d "Set verbosity (higher verbosity with multiple -v, e.g. -vvv)"
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -l "log-level" -d "Set the log level" -x
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -s "q" -l "quiet" -d "Set quiet mode (print less output)"
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -s "y" -l "yes" -d "Automatically answer yes on prompted questions"
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -l "json" -d "Report all output as json"
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -l "offline" -d "Force use cached repodata"
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -l "dry-run" -d "Only display what would have been done"
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -l "download-only" -d "Only download and extract packages, do not link them into environment."
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -l "experimental" -d "Enable experimental features"
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -s "r" -l "root-prefix" -d "Path to the root prefix" -r
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -s "p" -l "prefix" -d "Path to the target prefix" -r
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -l "relocate-prefix" -d "Path to the relocation prefix" -r
-complete -c micromamba -n "__fish_seen_subcommand_from remove" -s "n" -l "name" -d "Name of the target prefix" -x
 
 
 
 complete -c micromamba -n "__fish_seen_subcommand_from list" -s "h" -l "help" -d "Print this help message and exit"
+complete -c micromamba -n "__fish_seen_subcommand_from list" -s "f" -l "full-name" -d "Only search for full names, i.e., ^<regex>\$."
 complete -c micromamba -n "__fish_seen_subcommand_from list" -l "rc-file" -d "Paths to the configuration files to use" -r
 complete -c micromamba -n "__fish_seen_subcommand_from list" -l "no-rc" -d "Disable the use of configuration files"
 complete -c micromamba -n "__fish_seen_subcommand_from list" -l "no-env" -d "Disable the use of environment variables"
@@ -484,8 +437,8 @@ complete -c micromamba -n "__fish_seen_subcommand_from search" -l "no-channel-pr
 complete -c micromamba -n "__fish_seen_subcommand_from search" -s "t" -l "tree" -d "Show result as a tree"
 complete -c micromamba -n "__fish_seen_subcommand_from search" -l "recursive" -d "Show dependencies recursively, i.e. transitive dependencies (only for `depends`)"
 complete -c micromamba -n "__fish_seen_subcommand_from search" -l "pretty" -d "Pretty print result (only for search)"
-complete -c micromamba -n "__fish_seen_subcommand_from search" -l "use-local" -d "Use installed data (--use-local=1, default for `depends` and `whoneeds`) or remote repositories (--use-local=0, default for `search`)." -x
 complete -c micromamba -n "__fish_seen_subcommand_from search" -l "platform" -d "The platform description" -x
+complete -c micromamba -n "__fish_seen_subcommand_from search" -l "local" -d "Use installed prefix instead of remote repositories."
 complete -c micromamba -n "__fish_seen_subcommand_from search" -l "rc-file" -d "Paths to the configuration files to use" -r
 complete -c micromamba -n "__fish_seen_subcommand_from search" -l "no-rc" -d "Disable the use of configuration files"
 complete -c micromamba -n "__fish_seen_subcommand_from search" -l "no-env" -d "Disable the use of environment variables"
