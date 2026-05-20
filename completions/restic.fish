@@ -22,8 +22,6 @@ complete -c restic -n "not __fish_seen_subcommand_from backup cache cat copy dif
 complete -c restic -n "not __fish_seen_subcommand_from backup cache cat copy diff dump find forget generate help init key list ls migrate mount prune rebuild-index recover restore self-update snapshots stats tag unlock version" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "not __fish_seen_subcommand_from backup cache cat copy diff dump find forget generate help init key list ls migrate mount prune rebuild-index recover restore self-update snapshots stats tag unlock version" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
 
-
-
 complete -k -c restic -n __fish_use_subcommand -x -a version -d "Print version information"
 complete -k -c restic -n __fish_use_subcommand -x -a unlock -d "Remove locks other processes created"
 complete -k -c restic -n __fish_use_subcommand -x -a tag -d "Modify tags on snapshots"
@@ -50,8 +48,6 @@ complete -k -c restic -n __fish_use_subcommand -x -a copy -d "Copy snapshots fro
 complete -k -c restic -n __fish_use_subcommand -x -a cat -d "Print internal objects to stdout"
 complete -k -c restic -n __fish_use_subcommand -x -a cache -d "Operate on local cache directories"
 complete -k -c restic -n __fish_use_subcommand -x -a backup -d "Create a new backup of files and/or directories"
-
-
 
 complete -c restic -n "__fish_seen_subcommand_from backup" -s "n" -l "dry-run" -d "do not upload or write any data, just show what would be done"
 complete -c restic -n "__fish_seen_subcommand_from backup" -s "e" -l "exclude" -d "exclude a pattern (can be specified multiple times)" -x
@@ -97,8 +93,6 @@ complete -c restic -n "__fish_seen_subcommand_from backup" -l "repository-file" 
 complete -c restic -n "__fish_seen_subcommand_from backup" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from backup" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
 
-
-
 complete -c restic -n "__fish_seen_subcommand_from cache" -l "cleanup" -d "remove old cache directories"
 complete -c restic -n "__fish_seen_subcommand_from cache" -s "h" -l "help" -d "help for cache"
 complete -c restic -n "__fish_seen_subcommand_from cache" -l "max-age" -d "max age in days for cache directories to be considered old (default 30)" -r
@@ -124,8 +118,6 @@ complete -c restic -n "__fish_seen_subcommand_from cache" -l "repository-file" -
 complete -c restic -n "__fish_seen_subcommand_from cache" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from cache" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
 
-
-
 complete -c restic -n "__fish_seen_subcommand_from cat" -s "h" -l "help" -d "help for cat"
 complete -c restic -n "__fish_seen_subcommand_from cat" -l "cacert" -d "file to load root certificates from (default: use system certificates)" -r
 complete -c restic -n "__fish_seen_subcommand_from cat" -l "cache-dir" -d "set the cache directory." -r
@@ -147,8 +139,6 @@ complete -c restic -n "__fish_seen_subcommand_from cat" -s "r" -l "repo" -d "rep
 complete -c restic -n "__fish_seen_subcommand_from cat" -l "repository-file" -d "file to read the repository location from (default: \$RESTIC_REPOSITORY_FILE)" -r
 complete -c restic -n "__fish_seen_subcommand_from cat" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from cat" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
-
-
 
 complete -c restic -n "__fish_seen_subcommand_from copy" -l "from-key-hint" -d "key ID of key to try decrypting the source repository first (default: \$RESTIC_FROM_KEY_HINT)" -x
 complete -c restic -n "__fish_seen_subcommand_from copy" -l "from-password-command" -d "shell command to obtain the source repository password from (default: \$RESTIC_FROM_PASSWORD_COMMAND)" -x
@@ -180,8 +170,6 @@ complete -c restic -n "__fish_seen_subcommand_from copy" -l "repository-file" -d
 complete -c restic -n "__fish_seen_subcommand_from copy" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from copy" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
 
-
-
 complete -c restic -n "__fish_seen_subcommand_from diff" -s "h" -l "help" -d "help for diff"
 complete -c restic -n "__fish_seen_subcommand_from diff" -l "metadata" -d "print changes in metadata"
 complete -c restic -n "__fish_seen_subcommand_from diff" -l "cacert" -d "file to load root certificates from (default: use system certificates)" -r
@@ -204,8 +192,6 @@ complete -c restic -n "__fish_seen_subcommand_from diff" -s "r" -l "repo" -d "re
 complete -c restic -n "__fish_seen_subcommand_from diff" -l "repository-file" -d "file to read the repository location from (default: \$RESTIC_REPOSITORY_FILE)" -r
 complete -c restic -n "__fish_seen_subcommand_from diff" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from diff" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
-
-
 
 complete -c restic -n "__fish_seen_subcommand_from dump" -s "a" -l "archive" -d "set archive format as \"tar\" or \"zip\" (default \"tar\")" -x
 complete -c restic -n "__fish_seen_subcommand_from dump" -s "h" -l "help" -d "help for dump"
@@ -232,8 +218,6 @@ complete -c restic -n "__fish_seen_subcommand_from dump" -s "r" -l "repo" -d "re
 complete -c restic -n "__fish_seen_subcommand_from dump" -l "repository-file" -d "file to read the repository location from (default: \$RESTIC_REPOSITORY_FILE)" -r
 complete -c restic -n "__fish_seen_subcommand_from dump" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from dump" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
-
-
 
 complete -c restic -n "__fish_seen_subcommand_from find" -l "blob" -d "pattern is a blob-ID"
 complete -c restic -n "__fish_seen_subcommand_from find" -s "h" -l "help" -d "help for find"
@@ -268,8 +252,6 @@ complete -c restic -n "__fish_seen_subcommand_from find" -s "r" -l "repo" -d "re
 complete -c restic -n "__fish_seen_subcommand_from find" -l "repository-file" -d "file to read the repository location from (default: \$RESTIC_REPOSITORY_FILE)" -r
 complete -c restic -n "__fish_seen_subcommand_from find" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from find" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
-
-
 
 complete -c restic -n "__fish_seen_subcommand_from forget" -s "l" -l "keep-last" -d "keep the last n snapshots" -x
 complete -c restic -n "__fish_seen_subcommand_from forget" -s "H" -l "keep-hourly" -d "keep the last n hourly snapshots" -x
@@ -318,8 +300,6 @@ complete -c restic -n "__fish_seen_subcommand_from forget" -l "repository-file" 
 complete -c restic -n "__fish_seen_subcommand_from forget" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from forget" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
 
-
-
 complete -c restic -n "__fish_seen_subcommand_from generate" -l "bash-completion" -d "write bash completion file" -r
 complete -c restic -n "__fish_seen_subcommand_from generate" -l "fish-completion" -d "write fish completion file" -r
 complete -c restic -n "__fish_seen_subcommand_from generate" -s "h" -l "help" -d "help for generate"
@@ -346,8 +326,6 @@ complete -c restic -n "__fish_seen_subcommand_from generate" -l "repository-file
 complete -c restic -n "__fish_seen_subcommand_from generate" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from generate" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
 
-
-
 complete -c restic -n "__fish_seen_subcommand_from help" -s "h" -l "help" -d "help for help"
 complete -c restic -n "__fish_seen_subcommand_from help" -l "cacert" -d "file to load root certificates from (default: use system certificates)" -r
 complete -c restic -n "__fish_seen_subcommand_from help" -l "cache-dir" -d "set the cache directory." -r
@@ -369,8 +347,6 @@ complete -c restic -n "__fish_seen_subcommand_from help" -s "r" -l "repo" -d "re
 complete -c restic -n "__fish_seen_subcommand_from help" -l "repository-file" -d "file to read the repository location from (default: \$RESTIC_REPOSITORY_FILE)" -r
 complete -c restic -n "__fish_seen_subcommand_from help" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from help" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
-
-
 
 complete -c restic -n "__fish_seen_subcommand_from init" -l "copy-chunker-params" -d "copy chunker parameters from the secondary repository (useful with the copy command)"
 complete -c restic -n "__fish_seen_subcommand_from init" -l "from-key-hint" -d "key ID of key to try decrypting the source repository first (default: \$RESTIC_FROM_KEY_HINT)" -x
@@ -401,8 +377,6 @@ complete -c restic -n "__fish_seen_subcommand_from init" -l "repository-file" -d
 complete -c restic -n "__fish_seen_subcommand_from init" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from init" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
 
-
-
 complete -c restic -n "__fish_seen_subcommand_from key" -s "h" -l "help" -d "help for key"
 complete -c restic -n "__fish_seen_subcommand_from key" -l "host" -d "the hostname for new keys" -x
 complete -c restic -n "__fish_seen_subcommand_from key" -l "new-password-file" -d "file from which to read the new password" -r
@@ -428,8 +402,6 @@ complete -c restic -n "__fish_seen_subcommand_from key" -l "repository-file" -d 
 complete -c restic -n "__fish_seen_subcommand_from key" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from key" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
 
-
-
 complete -c restic -n "__fish_seen_subcommand_from list" -s "h" -l "help" -d "help for list"
 complete -c restic -n "__fish_seen_subcommand_from list" -l "cacert" -d "file to load root certificates from (default: use system certificates)" -r
 complete -c restic -n "__fish_seen_subcommand_from list" -l "cache-dir" -d "set the cache directory." -r
@@ -451,8 +423,6 @@ complete -c restic -n "__fish_seen_subcommand_from list" -s "r" -l "repo" -d "re
 complete -c restic -n "__fish_seen_subcommand_from list" -l "repository-file" -d "file to read the repository location from (default: \$RESTIC_REPOSITORY_FILE)" -r
 complete -c restic -n "__fish_seen_subcommand_from list" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from list" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
-
-
 
 complete -c restic -n "__fish_seen_subcommand_from ls" -s "h" -l "help" -s "H" -l "host" -d "snapshots for this host, when snapshot ID \"latest\" is given (can be specified multiple times)" -x
 complete -c restic -n "__fish_seen_subcommand_from ls" -s "l" -l "long" -d "use a long listing format showing size and mode"
@@ -480,8 +450,6 @@ complete -c restic -n "__fish_seen_subcommand_from ls" -l "repository-file" -d "
 complete -c restic -n "__fish_seen_subcommand_from ls" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from ls" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
 
-
-
 complete -c restic -n "__fish_seen_subcommand_from migrate" -s "f" -l "force" -d "apply a migration a second time"
 complete -c restic -n "__fish_seen_subcommand_from migrate" -s "h" -l "help" -d "help for migrate"
 complete -c restic -n "__fish_seen_subcommand_from migrate" -l "cacert" -d "file to load root certificates from (default: use system certificates)" -r
@@ -504,8 +472,6 @@ complete -c restic -n "__fish_seen_subcommand_from migrate" -s "r" -l "repo" -d 
 complete -c restic -n "__fish_seen_subcommand_from migrate" -l "repository-file" -d "file to read the repository location from (default: \$RESTIC_REPOSITORY_FILE)" -r
 complete -c restic -n "__fish_seen_subcommand_from migrate" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from migrate" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
-
-
 
 complete -c restic -n "__fish_seen_subcommand_from mount" -l "time-template" -d "You need to specify a sample format for exactly the following timestamp:" -x
 complete -c restic -n "__fish_seen_subcommand_from mount" -l "allow-other" -d "allow other users to access the data in the mounted directory"
@@ -538,8 +504,6 @@ complete -c restic -n "__fish_seen_subcommand_from mount" -l "repository-file" -
 complete -c restic -n "__fish_seen_subcommand_from mount" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from mount" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
 
-
-
 complete -c restic -n "__fish_seen_subcommand_from prune" -s "n" -l "dry-run" -d "do not modify the repository, just print what would be done"
 complete -c restic -n "__fish_seen_subcommand_from prune" -s "h" -l "help" -d "help for prune"
 complete -c restic -n "__fish_seen_subcommand_from prune" -l "max-repack-size" -d "maximum size to repack (allowed suffixes: k/K, m/M, g/G, t/T)" -x
@@ -569,8 +533,6 @@ complete -c restic -n "__fish_seen_subcommand_from prune" -l "repository-file" -
 complete -c restic -n "__fish_seen_subcommand_from prune" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from prune" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
 
-
-
 complete -c restic -n "__fish_seen_subcommand_from rebuild-index" -s "h" -l "help" -d "help for rebuild-index"
 complete -c restic -n "__fish_seen_subcommand_from rebuild-index" -l "read-all-packs" -d "read all pack files to generate new index from scratch"
 complete -c restic -n "__fish_seen_subcommand_from rebuild-index" -l "cacert" -d "file to load root certificates from (default: use system certificates)" -r
@@ -594,8 +556,6 @@ complete -c restic -n "__fish_seen_subcommand_from rebuild-index" -l "repository
 complete -c restic -n "__fish_seen_subcommand_from rebuild-index" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from rebuild-index" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
 
-
-
 complete -c restic -n "__fish_seen_subcommand_from recover" -s "h" -l "help" -d "help for recover"
 complete -c restic -n "__fish_seen_subcommand_from recover" -l "cacert" -d "file to load root certificates from (default: use system certificates)" -r
 complete -c restic -n "__fish_seen_subcommand_from recover" -l "cache-dir" -d "set the cache directory." -r
@@ -617,8 +577,6 @@ complete -c restic -n "__fish_seen_subcommand_from recover" -s "r" -l "repo" -d 
 complete -c restic -n "__fish_seen_subcommand_from recover" -l "repository-file" -d "file to read the repository location from (default: \$RESTIC_REPOSITORY_FILE)" -r
 complete -c restic -n "__fish_seen_subcommand_from recover" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from recover" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
-
-
 
 complete -c restic -n "__fish_seen_subcommand_from restore" -s "e" -l "exclude" -d "exclude a pattern (can be specified multiple times)" -x
 complete -c restic -n "__fish_seen_subcommand_from restore" -s "h" -l "help" -d "help for restore"
@@ -649,8 +607,6 @@ complete -c restic -n "__fish_seen_subcommand_from restore" -l "repository-file"
 complete -c restic -n "__fish_seen_subcommand_from restore" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from restore" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
 
-
-
 complete -c restic -n "__fish_seen_subcommand_from self-update" -s "h" -l "help" -d "help for self-update"
 complete -c restic -n "__fish_seen_subcommand_from self-update" -l "output" -d "Save the downloaded file as filename (default: running binary itself)" -r
 complete -c restic -n "__fish_seen_subcommand_from self-update" -l "cacert" -d "file to load root certificates from (default: use system certificates)" -r
@@ -673,8 +629,6 @@ complete -c restic -n "__fish_seen_subcommand_from self-update" -s "r" -l "repo"
 complete -c restic -n "__fish_seen_subcommand_from self-update" -l "repository-file" -d "file to read the repository location from (default: \$RESTIC_REPOSITORY_FILE)" -r
 complete -c restic -n "__fish_seen_subcommand_from self-update" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from self-update" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
-
-
 
 complete -c restic -n "__fish_seen_subcommand_from snapshots" -s "c" -l "compact" -d "use compact output format"
 complete -c restic -n "__fish_seen_subcommand_from snapshots" -s "g" -l "group-by" -d "group snapshots by host, paths and/or tags, separated by comma" -r
@@ -704,8 +658,6 @@ complete -c restic -n "__fish_seen_subcommand_from snapshots" -l "repository-fil
 complete -c restic -n "__fish_seen_subcommand_from snapshots" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from snapshots" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
 
-
-
 complete -c restic -n "__fish_seen_subcommand_from stats" -s "h" -l "help" -d "help for stats"
 complete -c restic -n "__fish_seen_subcommand_from stats" -s "H" -l "host" -d "only consider snapshots with the given host (can be specified multiple times)" -x
 complete -c restic -n "__fish_seen_subcommand_from stats" -l "mode" -d "counting mode: restore-size (default), files-by-contents, blobs-per-file or raw-data (default \"restore-size\")" -r
@@ -731,8 +683,6 @@ complete -c restic -n "__fish_seen_subcommand_from stats" -s "r" -l "repo" -d "r
 complete -c restic -n "__fish_seen_subcommand_from stats" -l "repository-file" -d "file to read the repository location from (default: \$RESTIC_REPOSITORY_FILE)" -r
 complete -c restic -n "__fish_seen_subcommand_from stats" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from stats" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
-
-
 
 complete -c restic -n "__fish_seen_subcommand_from tag" -l "add" -d "tags which will be added to the existing tags in the format `tag[,tag,...]` (can be given multiple times) (default [])" -x
 complete -c restic -n "__fish_seen_subcommand_from tag" -s "h" -l "help" -d "help for tag"
@@ -762,8 +712,6 @@ complete -c restic -n "__fish_seen_subcommand_from tag" -l "repository-file" -d 
 complete -c restic -n "__fish_seen_subcommand_from tag" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from tag" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
 
-
-
 complete -c restic -n "__fish_seen_subcommand_from unlock" -s "h" -l "help" -d "help for unlock"
 complete -c restic -n "__fish_seen_subcommand_from unlock" -l "remove-all" -d "remove all locks, even non-stale ones"
 complete -c restic -n "__fish_seen_subcommand_from unlock" -l "cacert" -d "file to load root certificates from (default: use system certificates)" -r
@@ -786,8 +734,6 @@ complete -c restic -n "__fish_seen_subcommand_from unlock" -s "r" -l "repo" -d "
 complete -c restic -n "__fish_seen_subcommand_from unlock" -l "repository-file" -d "file to read the repository location from (default: \$RESTIC_REPOSITORY_FILE)" -r
 complete -c restic -n "__fish_seen_subcommand_from unlock" -l "tls-client-cert" -d "path to a file containing PEM encoded TLS client certificate and private key" -r
 complete -c restic -n "__fish_seen_subcommand_from unlock" -s "v" -l "verbose" -d "be verbose (specify multiple times or a level using --verbose=n, max level/times is 3)" -x
-
-
 
 complete -c restic -n "__fish_seen_subcommand_from version" -s "h" -l "help" -d "help for version"
 complete -c restic -n "__fish_seen_subcommand_from version" -l "cacert" -d "file to load root certificates from (default: use system certificates)" -r

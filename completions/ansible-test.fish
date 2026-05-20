@@ -3,8 +3,6 @@
 complete -c ansible-test -n "not __fish_seen_subcommand_from coverage env shell integration network-integration windows-integration sanity units" -s "h" -l "help" -d "show this help message and exit"
 complete -c ansible-test -n "not __fish_seen_subcommand_from coverage env shell integration network-integration windows-integration sanity units" -l "version" -d "show program's version number and exit"
 
-
-
 complete -k -c ansible-test -n __fish_use_subcommand -x -a units -d "unit tests"
 complete -k -c ansible-test -n __fish_use_subcommand -x -a sanity -d "sanity tests"
 complete -k -c ansible-test -n __fish_use_subcommand -x -a windows-integration -d "windows integration tests"
@@ -14,11 +12,226 @@ complete -k -c ansible-test -n __fish_use_subcommand -x -a shell -d "open an int
 complete -k -c ansible-test -n __fish_use_subcommand -x -a env -d "show information about the test environment"
 complete -k -c ansible-test -n __fish_use_subcommand -x -a coverage -d "code coverage management and reporting"
 
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and not __fish_seen_subcommand_from analyze erase combine report html xml" -s "h" -l "help" -d "show this help message and exit"
 
+complete -k -c ansible-test -n "__fish_seen_subcommand_from coverage; and not __fish_seen_subcommand_from analyze erase combine report html xml" -x -a xml -d "generate xml coverage report"
+complete -k -c ansible-test -n "__fish_seen_subcommand_from coverage; and not __fish_seen_subcommand_from analyze erase combine report html xml" -x -a html -d "generate html coverage report"
+complete -k -c ansible-test -n "__fish_seen_subcommand_from coverage; and not __fish_seen_subcommand_from analyze erase combine report html xml" -x -a report -d "generate console coverage report"
+complete -k -c ansible-test -n "__fish_seen_subcommand_from coverage; and not __fish_seen_subcommand_from analyze erase combine report html xml" -x -a combine -d "combine coverage data and rewrite remote paths"
+complete -k -c ansible-test -n "__fish_seen_subcommand_from coverage; and not __fish_seen_subcommand_from analyze erase combine report html xml" -x -a erase -d "erase coverage data files"
+complete -k -c ansible-test -n "__fish_seen_subcommand_from coverage; and not __fish_seen_subcommand_from analyze erase combine report html xml" -x -a analyze -d "analyze collected coverage data"
 
-complete -c ansible-test -n "__fish_seen_subcommand_from coverage" -s "h" -l "help" -d "show this help message and exit"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and not __fish_seen_subcommand_from targets" -s "h" -l "help" -d "show this help message and exit"
 
+complete -k -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and not __fish_seen_subcommand_from targets" -x -a targets -d "analyze integration test target coverage"
 
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and not __fish_seen_subcommand_from generate expand filter combine missing" -s "h" -l "help" -d "show this help message and exit"
+
+complete -k -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and not __fish_seen_subcommand_from generate expand filter combine missing" -x -a missing -d "identify coverage in one file missing in another"
+complete -k -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and not __fish_seen_subcommand_from generate expand filter combine missing" -x -a combine -d "combine multiple aggregated coverage files"
+complete -k -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and not __fish_seen_subcommand_from generate expand filter combine missing" -x -a filter -d "filter aggregated coverage data"
+complete -k -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and not __fish_seen_subcommand_from generate expand filter combine missing" -x -a expand -d "expand target names from integers in aggregated coverage"
+complete -k -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and not __fish_seen_subcommand_from generate expand filter combine missing" -x -a generate -d "aggregate coverage by integration test target"
+
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from generate" -s "h" -l "help" -d "show this help message and exit"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from generate" -s "e" -l "explain" -d "explain commands that would be executed"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from generate" -s "v" -l "verbose" -d "display more output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from generate" -l "color" -d "generate color output: yes, no, auto" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from generate" -l "debug" -d "run ansible commands in debug mode"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from generate" -l "truncate" -d "truncate some long output (0=disabled) (default: auto)" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from generate" -l "no-redact" -d "show sensitive values in output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from generate" -l "requirements" -d "install command requirements"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from generate" -l "python" -d "python version: 3.9, 3.10, 3.11" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from generate" -l "python-interpreter" -d "path to the python interpreter" -r
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from generate" -l "local" -d "run from the local environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from generate" -l "venv" -d "run from a virtual environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from generate" -l "venv-system-site-packages" -d "enable system site packages"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from generate" -l "controller" -d "configuration for the controller" -x
+
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from expand" -s "h" -l "help" -d "show this help message and exit"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from expand" -s "e" -l "explain" -d "explain commands that would be executed"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from expand" -s "v" -l "verbose" -d "display more output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from expand" -l "color" -d "generate color output: yes, no, auto" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from expand" -l "debug" -d "run ansible commands in debug mode"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from expand" -l "truncate" -d "truncate some long output (0=disabled) (default: auto)" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from expand" -l "no-redact" -d "show sensitive values in output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from expand" -l "requirements" -d "install command requirements"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from expand" -l "python" -d "python version: 3.9, 3.10, 3.11" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from expand" -l "python-interpreter" -d "path to the python interpreter" -r
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from expand" -l "local" -d "run from the local environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from expand" -l "venv" -d "run from a virtual environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from expand" -l "venv-system-site-packages" -d "enable system site packages"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from expand" -l "controller" -d "configuration for the controller" -x
+
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -s "h" -l "help" -d "show this help message and exit"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -s "e" -l "explain" -d "explain commands that would be executed"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -s "v" -l "verbose" -d "display more output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -l "color" -d "generate color output: yes, no, auto" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -l "debug" -d "run ansible commands in debug mode"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -l "truncate" -d "truncate some long output (0=disabled) (default: auto)" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -l "no-redact" -d "show sensitive values in output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -l "include-target" -d "include the specified targets" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -l "exclude-target" -d "exclude the specified targets" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -l "include-path" -d "include paths matching the given regex" -r
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -l "exclude-path" -d "exclude paths matching the given regex" -r
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -l "requirements" -d "install command requirements"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -l "python" -d "python version: 3.9, 3.10, 3.11" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -l "python-interpreter" -d "path to the python interpreter" -r
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -l "local" -d "run from the local environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -l "venv" -d "run from a virtual environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -l "venv-system-site-packages" -d "enable system site packages"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from filter" -l "controller" -d "configuration for the controller" -x
+
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from combine" -s "h" -l "help" -d "show this help message and exit"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from combine" -s "e" -l "explain" -d "explain commands that would be executed"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from combine" -s "v" -l "verbose" -d "display more output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from combine" -l "color" -d "generate color output: yes, no, auto" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from combine" -l "debug" -d "run ansible commands in debug mode"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from combine" -l "truncate" -d "truncate some long output (0=disabled) (default: auto)" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from combine" -l "no-redact" -d "show sensitive values in output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from combine" -l "requirements" -d "install command requirements"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from combine" -l "python" -d "python version: 3.9, 3.10, 3.11" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from combine" -l "python-interpreter" -d "path to the python interpreter" -r
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from combine" -l "local" -d "run from the local environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from combine" -l "venv" -d "run from a virtual environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from combine" -l "venv-system-site-packages" -d "enable system site packages"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from combine" -l "controller" -d "configuration for the controller" -x
+
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -s "h" -l "help" -d "show this help message and exit"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -s "e" -l "explain" -d "explain commands that would be executed"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -s "v" -l "verbose" -d "display more output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -l "color" -d "generate color output: yes, no, auto" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -l "debug" -d "run ansible commands in debug mode"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -l "truncate" -d "truncate some long output (0=disabled) (default: auto)" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -l "no-redact" -d "show sensitive values in output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -l "only-gaps" -d "report only arcs/lines not hit by any target"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -l "only-exists" -d "limit results to files that exist"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -l "requirements" -d "install command requirements"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -l "python" -d "python version: 3.9, 3.10, 3.11" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -l "python-interpreter" -d "path to the python interpreter" -r
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -l "local" -d "run from the local environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -l "venv" -d "run from a virtual environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -l "venv-system-site-packages" -d "enable system site packages"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from analyze; and __fish_seen_subcommand_from targets; and __fish_seen_subcommand_from missing" -l "controller" -d "configuration for the controller" -x
+
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from erase" -s "h" -l "help" -d "show this help message and exit"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from erase" -s "e" -l "explain" -d "explain commands that would be executed"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from erase" -s "v" -l "verbose" -d "display more output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from erase" -l "color" -d "generate color output: yes, no, auto" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from erase" -l "debug" -d "run ansible commands in debug mode"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from erase" -l "truncate" -d "truncate some long output (0=disabled) (default: auto)" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from erase" -l "no-redact" -d "show sensitive values in output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from erase" -l "requirements" -d "install command requirements"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from erase" -l "python" -d "python version: 3.9, 3.10, 3.11" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from erase" -l "python-interpreter" -d "path to the python interpreter" -r
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from erase" -l "local" -d "run from the local environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from erase" -l "venv" -d "run from a virtual environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from erase" -l "venv-system-site-packages" -d "enable system site packages"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from erase" -l "controller" -d "configuration for the controller" -x
+
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -s "h" -l "help" -d "show this help message and exit"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -s "e" -l "explain" -d "explain commands that would be executed"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -s "v" -l "verbose" -d "display more output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "color" -d "generate color output: yes, no, auto" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "debug" -d "run ansible commands in debug mode"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "truncate" -d "truncate some long output (0=disabled) (default: auto)" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "no-redact" -d "show sensitive values in output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "group-by" -d "group output by: command, target, environment, version" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "all" -d "include all python/powershell source files"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "stub" -d "generate empty report of all python/powershell source files"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "export" -d "directory to export combined coverage files to" -r
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "requirements" -d "install command requirements"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "docker-network" -d "run using the specified network" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "docker-terminate" -d "terminate the container: always, never, success (default: always)" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "prime-containers" -d "download containers without running tests"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "python" -d "python version: 3.9, 3.10, 3.11" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "python-interpreter" -d "path to the python interpreter" -r
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "local" -d "run from the local environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "venv" -d "run from a virtual environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "venv-system-site-packages" -d "enable system site packages"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "docker" -d "run from a docker container" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "docker-privileged" -d "run docker container in privileged mode"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "docker-seccomp" -d "set seccomp confinement for the test container: default, unconfined" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "docker-memory" -d "memory limit for docker in bytes" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from combine" -l "controller" -d "configuration for the controller" -x
+
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -s "h" -l "help" -d "show this help message and exit"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -s "e" -l "explain" -d "explain commands that would be executed"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -s "v" -l "verbose" -d "display more output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "color" -d "generate color output: yes, no, auto" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "debug" -d "run ansible commands in debug mode"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "truncate" -d "truncate some long output (0=disabled) (default: auto)" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "no-redact" -d "show sensitive values in output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "group-by" -d "group output by: command, target, environment, version" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "all" -d "include all python/powershell source files"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "stub" -d "generate empty report of all python/powershell source files"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "show-missing" -d "show line numbers of statements not executed"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "include" -d "only include paths that match a pattern (accepts quoted shell wildcards)" -r
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "omit" -d "omit paths that match a pattern (accepts quoted shell wildcards)" -r
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "requirements" -d "install command requirements"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "docker-network" -d "run using the specified network" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "docker-terminate" -d "terminate the container: always, never, success (default: always)" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "prime-containers" -d "download containers without running tests"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "python" -d "python version: 3.9, 3.10, 3.11" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "python-interpreter" -d "path to the python interpreter" -r
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "local" -d "run from the local environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "venv" -d "run from a virtual environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "venv-system-site-packages" -d "enable system site packages"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "docker" -d "run from a docker container" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "docker-privileged" -d "run docker container in privileged mode"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "docker-seccomp" -d "set seccomp confinement for the test container: default, unconfined" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "docker-memory" -d "memory limit for docker in bytes" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from report" -l "controller" -d "configuration for the controller" -x
+
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -s "h" -l "help" -d "show this help message and exit"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -s "e" -l "explain" -d "explain commands that would be executed"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -s "v" -l "verbose" -d "display more output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "color" -d "generate color output: yes, no, auto" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "debug" -d "run ansible commands in debug mode"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "truncate" -d "truncate some long output (0=disabled) (default: auto)" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "no-redact" -d "show sensitive values in output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "group-by" -d "group output by: command, target, environment, version" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "all" -d "include all python/powershell source files"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "stub" -d "generate empty report of all python/powershell source files"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "requirements" -d "install command requirements"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "docker-network" -d "run using the specified network" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "docker-terminate" -d "terminate the container: always, never, success (default: always)" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "prime-containers" -d "download containers without running tests"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "python" -d "python version: 3.9, 3.10, 3.11" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "python-interpreter" -d "path to the python interpreter" -r
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "local" -d "run from the local environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "venv" -d "run from a virtual environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "venv-system-site-packages" -d "enable system site packages"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "docker" -d "run from a docker container" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "docker-privileged" -d "run docker container in privileged mode"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "docker-seccomp" -d "set seccomp confinement for the test container: default, unconfined" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "docker-memory" -d "memory limit for docker in bytes" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from html" -l "controller" -d "configuration for the controller" -x
+
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -s "h" -l "help" -d "show this help message and exit"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -s "e" -l "explain" -d "explain commands that would be executed"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -s "v" -l "verbose" -d "display more output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "color" -d "generate color output: yes, no, auto" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "debug" -d "run ansible commands in debug mode"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "truncate" -d "truncate some long output (0=disabled) (default: auto)" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "no-redact" -d "show sensitive values in output"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "group-by" -d "group output by: command, target, environment, version" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "all" -d "include all python/powershell source files"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "stub" -d "generate empty report of all python/powershell source files"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "requirements" -d "install command requirements"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "docker-network" -d "run using the specified network" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "docker-terminate" -d "terminate the container: always, never, success (default: always)" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "prime-containers" -d "download containers without running tests"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "python" -d "python version: 3.9, 3.10, 3.11" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "python-interpreter" -d "path to the python interpreter" -r
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "local" -d "run from the local environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "venv" -d "run from a virtual environment"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "venv-system-site-packages" -d "enable system site packages"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "docker" -d "run from a docker container" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "docker-privileged" -d "run docker container in privileged mode"
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "docker-seccomp" -d "set seccomp confinement for the test container: default, unconfined" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "docker-memory" -d "memory limit for docker in bytes" -x
+complete -c ansible-test -n "__fish_seen_subcommand_from coverage; and __fish_seen_subcommand_from xml" -l "controller" -d "configuration for the controller" -x
 
 complete -c ansible-test -n "__fish_seen_subcommand_from env" -s "h" -l "help" -d "show this help message and exit"
 complete -c ansible-test -n "__fish_seen_subcommand_from env" -s "e" -l "explain" -d "explain commands that would be executed"
@@ -31,8 +244,6 @@ complete -c ansible-test -n "__fish_seen_subcommand_from env" -l "show" -d "show
 complete -c ansible-test -n "__fish_seen_subcommand_from env" -l "dump" -d "dump environment to disk"
 complete -c ansible-test -n "__fish_seen_subcommand_from env" -l "list-files" -d "list files on stdout"
 complete -c ansible-test -n "__fish_seen_subcommand_from env" -l "timeout" -d "timeout for future ansible-test commands (0 clears)" -x
-
-
 
 complete -c ansible-test -n "__fish_seen_subcommand_from shell" -s "h" -l "help" -d "show this help message and exit"
 complete -c ansible-test -n "__fish_seen_subcommand_from shell" -s "e" -l "explain" -d "explain commands that would be executed"
@@ -58,8 +269,6 @@ complete -c ansible-test -n "__fish_seen_subcommand_from shell" -l "docker-secco
 complete -c ansible-test -n "__fish_seen_subcommand_from shell" -l "docker-memory" -d "memory limit for docker in bytes" -x
 complete -c ansible-test -n "__fish_seen_subcommand_from shell" -l "controller" -d "configuration for the controller" -x
 complete -c ansible-test -n "__fish_seen_subcommand_from shell" -l "target-posix" -d "configuration for the target" -x
-
-
 
 complete -c ansible-test -n "__fish_seen_subcommand_from integration" -s "h" -l "help" -d "show this help message and exit"
 complete -c ansible-test -n "__fish_seen_subcommand_from integration" -s "e" -l "explain" -d "explain commands that would be executed"
@@ -113,8 +322,6 @@ complete -c ansible-test -n "__fish_seen_subcommand_from integration" -l "docker
 complete -c ansible-test -n "__fish_seen_subcommand_from integration" -l "docker-memory" -d "memory limit for docker in bytes" -x
 complete -c ansible-test -n "__fish_seen_subcommand_from integration" -l "controller" -d "configuration for the controller" -x
 complete -c ansible-test -n "__fish_seen_subcommand_from integration" -l "target" -d "configuration for the target" -x
-
-
 
 complete -c ansible-test -n "__fish_seen_subcommand_from network-integration" -s "h" -l "help" -d "show this help message and exit"
 complete -c ansible-test -n "__fish_seen_subcommand_from network-integration" -s "e" -l "explain" -d "explain commands that would be executed"
@@ -174,8 +381,6 @@ complete -c ansible-test -n "__fish_seen_subcommand_from network-integration" -l
 complete -c ansible-test -n "__fish_seen_subcommand_from network-integration" -l "controller" -d "configuration for the controller" -x
 complete -c ansible-test -n "__fish_seen_subcommand_from network-integration" -l "target" -d "configuration for the target(s)" -x
 
-
-
 complete -c ansible-test -n "__fish_seen_subcommand_from windows-integration" -s "h" -l "help" -d "show this help message and exit"
 complete -c ansible-test -n "__fish_seen_subcommand_from windows-integration" -s "e" -l "explain" -d "explain commands that would be executed"
 complete -c ansible-test -n "__fish_seen_subcommand_from windows-integration" -s "v" -l "verbose" -d "display more output"
@@ -231,8 +436,6 @@ complete -c ansible-test -n "__fish_seen_subcommand_from windows-integration" -l
 complete -c ansible-test -n "__fish_seen_subcommand_from windows-integration" -l "controller" -d "configuration for the controller" -x
 complete -c ansible-test -n "__fish_seen_subcommand_from windows-integration" -l "target" -d "configuration for the target(s)" -x
 
-
-
 complete -c ansible-test -n "__fish_seen_subcommand_from sanity" -s "h" -l "help" -d "show this help message and exit"
 complete -c ansible-test -n "__fish_seen_subcommand_from sanity" -s "e" -l "explain" -d "explain commands that would be executed"
 complete -c ansible-test -n "__fish_seen_subcommand_from sanity" -s "v" -l "verbose" -d "display more output"
@@ -275,8 +478,6 @@ complete -c ansible-test -n "__fish_seen_subcommand_from sanity" -l "docker-secc
 complete -c ansible-test -n "__fish_seen_subcommand_from sanity" -l "docker-memory" -d "memory limit for docker in bytes" -x
 complete -c ansible-test -n "__fish_seen_subcommand_from sanity" -l "controller" -d "configuration for the controller" -x
 complete -c ansible-test -n "__fish_seen_subcommand_from sanity" -l "target-python" -d "configuration for the target python interpreter(s)" -x
-
-
 
 complete -c ansible-test -n "__fish_seen_subcommand_from units" -s "h" -l "help" -d "show this help message and exit"
 complete -c ansible-test -n "__fish_seen_subcommand_from units" -s "e" -l "explain" -d "explain commands that would be executed"

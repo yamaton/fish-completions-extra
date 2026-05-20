@@ -25,8 +25,6 @@ complete -c borg -n "not __fish_seen_subcommand_from benchmark break-lock check 
 complete -c borg -n "not __fish_seen_subcommand_from benchmark break-lock check compact config create debug delete diff export-tar extract info init key list mount prune recreate rename serve umount upgrade with-lock import-tar" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
 complete -c borg -n "not __fish_seen_subcommand_from benchmark break-lock check compact config create debug delete diff export-tar extract info init key list mount prune recreate rename serve umount upgrade with-lock import-tar" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
 
-
-
 complete -k -c borg -n __fish_use_subcommand -x -a import-tar -d "Create a backup archive from a tarball"
 complete -k -c borg -n __fish_use_subcommand -x -a with-lock -d "run user command with lock held"
 complete -k -c borg -n __fish_use_subcommand -x -a upgrade -d "upgrade repository format"
@@ -52,8 +50,6 @@ complete -k -c borg -n __fish_use_subcommand -x -a check -d "verify repository"
 complete -k -c borg -n __fish_use_subcommand -x -a break-lock -d "break repository and cache locks"
 complete -k -c borg -n __fish_use_subcommand -x -a benchmark -d "benchmark command"
 
-
-
 complete -c borg -n "__fish_seen_subcommand_from benchmark" -s "h" -l "help" -d "show this help message and exit"
 complete -c borg -n "__fish_seen_subcommand_from benchmark" -l "critical" -d "work on log level CRITICAL"
 complete -c borg -n "__fish_seen_subcommand_from benchmark" -l "error" -d "work on log level ERROR"
@@ -78,8 +74,6 @@ complete -c borg -n "__fish_seen_subcommand_from benchmark" -l "consider-part-fi
 complete -c borg -n "__fish_seen_subcommand_from benchmark" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
 complete -c borg -n "__fish_seen_subcommand_from benchmark" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
 
-
-
 complete -c borg -n "__fish_seen_subcommand_from break-lock" -s "h" -l "help" -d "show this help message and exit"
 complete -c borg -n "__fish_seen_subcommand_from break-lock" -l "critical" -d "work on log level CRITICAL"
 complete -c borg -n "__fish_seen_subcommand_from break-lock" -l "error" -d "work on log level ERROR"
@@ -103,8 +97,6 @@ complete -c borg -n "__fish_seen_subcommand_from break-lock" -l "upload-buffer" 
 complete -c borg -n "__fish_seen_subcommand_from break-lock" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
 complete -c borg -n "__fish_seen_subcommand_from break-lock" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
 complete -c borg -n "__fish_seen_subcommand_from break-lock" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
-
-
 
 complete -c borg -n "__fish_seen_subcommand_from check" -l "repository-only" -d "only perform repository checks"
 complete -c borg -n "__fish_seen_subcommand_from check" -l "archives-only" -d "only perform archives checks"
@@ -141,8 +133,6 @@ complete -c borg -n "__fish_seen_subcommand_from check" -l "sort-by" -d "Comma-s
 complete -c borg -n "__fish_seen_subcommand_from check" -l "first" -d "consider first N archives after other filters were applied" -x
 complete -c borg -n "__fish_seen_subcommand_from check" -l "last" -d "consider last N archives after other filters were applied" -x
 
-
-
 complete -c borg -n "__fish_seen_subcommand_from compact" -l "cleanup-commits" -d "cleanup commit-only 17-byte segment files"
 complete -c borg -n "__fish_seen_subcommand_from compact" -l "threshold" -d "set minimum threshold for saved space in PERCENT (Default: 10)" -x
 complete -c borg -n "__fish_seen_subcommand_from compact" -s "h" -l "help" -d "show this help message and exit"
@@ -168,8 +158,6 @@ complete -c borg -n "__fish_seen_subcommand_from compact" -l "upload-buffer" -d 
 complete -c borg -n "__fish_seen_subcommand_from compact" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
 complete -c borg -n "__fish_seen_subcommand_from compact" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
 complete -c borg -n "__fish_seen_subcommand_from compact" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
-
-
 
 complete -c borg -n "__fish_seen_subcommand_from config" -s "c" -l "cache" -d "get and set values from the repo cache"
 complete -c borg -n "__fish_seen_subcommand_from config" -s "d" -l "delete" -d "delete the key from the config file"
@@ -197,8 +185,6 @@ complete -c borg -n "__fish_seen_subcommand_from config" -l "upload-buffer" -d "
 complete -c borg -n "__fish_seen_subcommand_from config" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
 complete -c borg -n "__fish_seen_subcommand_from config" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
 complete -c borg -n "__fish_seen_subcommand_from config" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
-
-
 
 complete -c borg -n "__fish_seen_subcommand_from create" -s "n" -l "dry-run" -d "do not create a backup archive"
 complete -c borg -n "__fish_seen_subcommand_from create" -s "s" -l "stats" -d "print statistics for the created archive"
@@ -265,33 +251,333 @@ complete -c borg -n "__fish_seen_subcommand_from create" -s "c" -l "checkpoint-i
 complete -c borg -n "__fish_seen_subcommand_from create" -l "chunker-params" -d "specify the chunker parameters (ALGO, CHUNK_MIN_EXP, CHUNK_MAX_EXP, HASH_MASK_BITS, HASH_WINDOW_SIZE)." -x
 complete -c borg -n "__fish_seen_subcommand_from create" -s "C" -l "compression" -d "select compression algorithm, see the output of the \"borg help compression\" command for details." -x
 
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
 
+complete -k -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -x -a convert-profile -d "convert Borg profile to Python profile (debug)"
+complete -k -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -x -a dump-hints -d "dump repo hints (debug)"
+complete -k -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -x -a refcount-obj -d "show refcount for object from repository (debug)"
+complete -k -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -x -a delete-obj -d "delete object from repository (debug)"
+complete -k -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -x -a put-obj -d "put object to repository (debug)"
+complete -k -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -x -a get-obj -d "get object from repository (debug)"
+complete -k -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -x -a search-repo-objs -d "search repo objects (debug)"
+complete -k -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -x -a dump-repo-objs -d "dump repo objects (debug)"
+complete -k -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -x -a dump-manifest -d "dump decoded repository metadata (debug)"
+complete -k -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -x -a dump-archive -d "dump decoded archive metadata (debug)"
+complete -k -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -x -a dump-archive-items -d "dump archive items (metadata) (debug)"
+complete -k -c borg -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info dump-archive-items dump-archive dump-manifest dump-repo-objs search-repo-objs get-obj put-obj delete-obj refcount-obj dump-hints convert-profile" -x -a info -d "show system infos for debugging / bug reports (debug)"
 
-complete -c borg -n "__fish_seen_subcommand_from debug" -s "h" -l "help" -d "show this help message and exit"
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "critical" -d "work on log level CRITICAL"
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "error" -d "work on log level ERROR"
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "warning" -d "work on log level WARNING (default)"
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "debug" -d "enable debug output, work on log level DEBUG"
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
-complete -c borg -n "__fish_seen_subcommand_from debug" -s "p" -l "progress" -d "show progress information"
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "iec" -d "format using IEC units (1KiB = 1024B)"
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "bypass-lock" -d "Bypass locking mechanism"
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "show-version" -d "show/log the borg version"
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "show-rc" -d "show/log the return code (rc)"
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "umask" -d "set umask to M (local only, default: 0077)" -x
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
-complete -c borg -n "__fish_seen_subcommand_from debug" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from info" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
 
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive-items" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
 
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-archive" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
+
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-manifest" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
+
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "ghost" -d "dump all segment file contents, including deleted/uncommitted objects and commits."
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "segment" -d "used together with --ghost: limit processing to given segment." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "offset" -d "used together with --ghost: limit processing to given offset." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-repo-objs" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
+
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from search-repo-objs" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
+
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from get-obj" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
+
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from put-obj" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
+
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from delete-obj" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
+
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from refcount-obj" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
+
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from dump-hints" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
+
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from debug; and __fish_seen_subcommand_from convert-profile" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
 
 complete -c borg -n "__fish_seen_subcommand_from delete" -s "n" -l "dry-run" -d "do not change repository"
 complete -c borg -n "__fish_seen_subcommand_from delete" -l "list" -d "output verbose list of archives"
@@ -329,8 +615,6 @@ complete -c borg -n "__fish_seen_subcommand_from delete" -l "sort-by" -d "Comma-
 complete -c borg -n "__fish_seen_subcommand_from delete" -l "first" -d "consider first N archives after other filters were applied" -x
 complete -c borg -n "__fish_seen_subcommand_from delete" -l "last" -d "consider last N archives after other filters were applied" -x
 
-
-
 complete -c borg -n "__fish_seen_subcommand_from diff" -l "numeric-owner" -d "deprecated, use ``--numeric-ids`` instead"
 complete -c borg -n "__fish_seen_subcommand_from diff" -l "numeric-ids" -d "only consider numeric user and group identifiers"
 complete -c borg -n "__fish_seen_subcommand_from diff" -l "same-chunker-params" -d "Override check of chunker parameters."
@@ -364,8 +648,6 @@ complete -c borg -n "__fish_seen_subcommand_from diff" -l "exclude-from" -d "rea
 complete -c borg -n "__fish_seen_subcommand_from diff" -l "pattern" -d "include/exclude paths matching PATTERN" -r
 complete -c borg -n "__fish_seen_subcommand_from diff" -l "patterns-from" -d "read include/exclude patterns from PATTERNFILE, one per line" -r
 
-
-
 complete -c borg -n "__fish_seen_subcommand_from export-tar" -l "tar-filter" -d "filter program to pipe data through" -x
 complete -c borg -n "__fish_seen_subcommand_from export-tar" -l "list" -d "output verbose list of items (files, dirs, ...)"
 complete -c borg -n "__fish_seen_subcommand_from export-tar" -s "h" -l "help" -d "show this help message and exit"
@@ -396,8 +678,6 @@ complete -c borg -n "__fish_seen_subcommand_from export-tar" -l "exclude-from" -
 complete -c borg -n "__fish_seen_subcommand_from export-tar" -l "pattern" -d "include/exclude paths matching PATTERN" -r
 complete -c borg -n "__fish_seen_subcommand_from export-tar" -l "patterns-from" -d "read include/exclude patterns from PATTERNFILE, one per line" -r
 complete -c borg -n "__fish_seen_subcommand_from export-tar" -l "strip-components" -d "Remove the specified number of leading path elements." -r
-
-
 
 complete -c borg -n "__fish_seen_subcommand_from extract" -l "list" -d "output verbose list of items (files, dirs, ...)"
 complete -c borg -n "__fish_seen_subcommand_from extract" -s "n" -l "dry-run" -d "do not actually change any files"
@@ -438,8 +718,6 @@ complete -c borg -n "__fish_seen_subcommand_from extract" -l "pattern" -d "inclu
 complete -c borg -n "__fish_seen_subcommand_from extract" -l "patterns-from" -d "read include/exclude patterns from PATTERNFILE, one per line" -r
 complete -c borg -n "__fish_seen_subcommand_from extract" -l "strip-components" -d "Remove the specified number of leading path elements." -r
 
-
-
 complete -c borg -n "__fish_seen_subcommand_from info" -l "json" -d "format output as JSON"
 complete -c borg -n "__fish_seen_subcommand_from info" -s "h" -l "help" -d "show this help message and exit"
 complete -c borg -n "__fish_seen_subcommand_from info" -l "critical" -d "work on log level CRITICAL"
@@ -470,8 +748,6 @@ complete -c borg -n "__fish_seen_subcommand_from info" -l "sort-by" -d "Comma-se
 complete -c borg -n "__fish_seen_subcommand_from info" -l "first" -d "consider first N archives after other filters were applied" -x
 complete -c borg -n "__fish_seen_subcommand_from info" -l "last" -d "consider last N archives after other filters were applied" -x
 
-
-
 complete -c borg -n "__fish_seen_subcommand_from init" -s "e" -l "encryption" -d "select encryption key mode **(required)**" -x
 complete -c borg -n "__fish_seen_subcommand_from init" -l "append-only" -d "create an append-only mode repository."
 complete -c borg -n "__fish_seen_subcommand_from init" -l "storage-quota" -d "Set storage quota of the new repository (e.g. 5G, 1.5T)." -x
@@ -500,33 +776,133 @@ complete -c borg -n "__fish_seen_subcommand_from init" -l "consider-part-files" 
 complete -c borg -n "__fish_seen_subcommand_from init" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
 complete -c borg -n "__fish_seen_subcommand_from init" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
 
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
 
+complete -k -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -x -a migrate-to-repokey -d "migrate passphrase-mode repository to repokey"
+complete -k -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -x -a change-passphrase -d "change repository passphrase"
+complete -k -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -x -a import -d "import repository key from backup"
+complete -k -c borg -n "__fish_seen_subcommand_from key; and not __fish_seen_subcommand_from export import change-passphrase migrate-to-repokey" -x -a export -d "export repository key for backup"
 
-complete -c borg -n "__fish_seen_subcommand_from key" -s "h" -l "help" -d "show this help message and exit"
-complete -c borg -n "__fish_seen_subcommand_from key" -l "critical" -d "work on log level CRITICAL"
-complete -c borg -n "__fish_seen_subcommand_from key" -l "error" -d "work on log level ERROR"
-complete -c borg -n "__fish_seen_subcommand_from key" -l "warning" -d "work on log level WARNING (default)"
-complete -c borg -n "__fish_seen_subcommand_from key" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
-complete -c borg -n "__fish_seen_subcommand_from key" -l "debug" -d "enable debug output, work on log level DEBUG"
-complete -c borg -n "__fish_seen_subcommand_from key" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
-complete -c borg -n "__fish_seen_subcommand_from key" -s "p" -l "progress" -d "show progress information"
-complete -c borg -n "__fish_seen_subcommand_from key" -l "iec" -d "format using IEC units (1KiB = 1024B)"
-complete -c borg -n "__fish_seen_subcommand_from key" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
-complete -c borg -n "__fish_seen_subcommand_from key" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
-complete -c borg -n "__fish_seen_subcommand_from key" -l "bypass-lock" -d "Bypass locking mechanism"
-complete -c borg -n "__fish_seen_subcommand_from key" -l "show-version" -d "show/log the borg version"
-complete -c borg -n "__fish_seen_subcommand_from key" -l "show-rc" -d "show/log the return code (rc)"
-complete -c borg -n "__fish_seen_subcommand_from key" -l "umask" -d "set umask to M (local only, default: 0077)" -x
-complete -c borg -n "__fish_seen_subcommand_from key" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
-complete -c borg -n "__fish_seen_subcommand_from key" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
-complete -c borg -n "__fish_seen_subcommand_from key" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
-complete -c borg -n "__fish_seen_subcommand_from key" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
-complete -c borg -n "__fish_seen_subcommand_from key" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
-complete -c borg -n "__fish_seen_subcommand_from key" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
-complete -c borg -n "__fish_seen_subcommand_from key" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
-complete -c borg -n "__fish_seen_subcommand_from key" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "paper" -d "Create an export suitable for printing and later type-in"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "qr-html" -d "Create an html file suitable for printing and later type-in or qr scan"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from export" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
 
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "paper" -d "interactively import from a backup done with ``--paper``"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from import" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
 
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from change-passphrase" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
+
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -s "h" -l "help" -d "show this help message and exit"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "critical" -d "work on log level CRITICAL"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "error" -d "work on log level ERROR"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "warning" -d "work on log level WARNING (default)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "info" -s "v" -l "verbose" -d "work on log level INFO"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "debug" -d "enable debug output, work on log level DEBUG"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "debug-topic" -d "enable TOPIC debugging (can be specified multiple times)." -r
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -s "p" -l "progress" -d "show progress information"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "iec" -d "format using IEC units (1KiB = 1024B)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "log-json" -d "Output one JSON object per log line instead of formatted text."
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "lock-wait" -d "wait at most SECONDS for acquiring a repository/cache lock (default: 1)." -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "bypass-lock" -d "Bypass locking mechanism"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "show-version" -d "show/log the borg version"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "show-rc" -d "show/log the return code (rc)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "umask" -d "set umask to M (local only, default: 0077)" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "remote-path" -d "use PATH as borg executable on the remote (default: \"borg\")" -r
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "remote-ratelimit" -d "deprecated, use ``--upload-ratelimit`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "upload-ratelimit" -d "set network upload rate limit in kiByte/s (default: 0=unlimited)" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "remote-buffer" -d "deprecated, use ``--upload-buffer`` instead" -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "upload-buffer" -d "set network upload buffer size in MiB." -x
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
+complete -c borg -n "__fish_seen_subcommand_from key; and __fish_seen_subcommand_from migrate-to-repokey" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
 
 complete -c borg -n "__fish_seen_subcommand_from list" -l "consider-checkpoints" -d "Show checkpoint archives in the repository contents list (default: hidden)."
 complete -c borg -n "__fish_seen_subcommand_from list" -l "short" -d "only print file/directory names, nothing else"
@@ -565,8 +941,6 @@ complete -c borg -n "__fish_seen_subcommand_from list" -s "e" -l "exclude" -d "e
 complete -c borg -n "__fish_seen_subcommand_from list" -l "exclude-from" -d "read exclude patterns from EXCLUDEFILE, one per line" -r
 complete -c borg -n "__fish_seen_subcommand_from list" -l "pattern" -d "include/exclude paths matching PATTERN" -r
 complete -c borg -n "__fish_seen_subcommand_from list" -l "patterns-from" -d "read include/exclude patterns from PATTERNFILE, one per line" -r
-
-
 
 complete -c borg -n "__fish_seen_subcommand_from mount" -l "consider-checkpoints" -d "Show checkpoint archives in the repository contents list (default: hidden)."
 complete -c borg -n "__fish_seen_subcommand_from mount" -s "f" -l "foreground" -d "stay in foreground, do not daemonize"
@@ -607,8 +981,6 @@ complete -c borg -n "__fish_seen_subcommand_from mount" -l "pattern" -d "include
 complete -c borg -n "__fish_seen_subcommand_from mount" -l "patterns-from" -d "read include/exclude patterns from PATTERNFILE, one per line" -r
 complete -c borg -n "__fish_seen_subcommand_from mount" -l "strip-components" -d "Remove the specified number of leading path elements." -r
 
-
-
 complete -c borg -n "__fish_seen_subcommand_from prune" -s "n" -l "dry-run" -d "do not change repository"
 complete -c borg -n "__fish_seen_subcommand_from prune" -l "force" -d "force pruning of corrupted archives, use ``--force --force`` in case ``--force`` does not work."
 complete -c borg -n "__fish_seen_subcommand_from prune" -s "s" -l "stats" -d "print statistics for the deleted archive"
@@ -647,8 +1019,6 @@ complete -c borg -n "__fish_seen_subcommand_from prune" -l "debug-profile" -d "W
 complete -c borg -n "__fish_seen_subcommand_from prune" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
 complete -c borg -n "__fish_seen_subcommand_from prune" -s "P" -l "prefix" -d "only consider archive names starting with this prefix." -x
 complete -c borg -n "__fish_seen_subcommand_from prune" -s "a" -l "glob-archives" -d "only consider archive names matching the glob." -x
-
-
 
 complete -c borg -n "__fish_seen_subcommand_from recreate" -l "list" -d "output verbose list of items (files, dirs, ...)"
 complete -c borg -n "__fish_seen_subcommand_from recreate" -l "filter" -d "only display items with the given status characters (listed in borg create --help)" -x
@@ -692,8 +1062,6 @@ complete -c borg -n "__fish_seen_subcommand_from recreate" -s "C" -l "compressio
 complete -c borg -n "__fish_seen_subcommand_from recreate" -l "recompress" -d "recompress data chunks according to `MODE` and ``--compression``." -x
 complete -c borg -n "__fish_seen_subcommand_from recreate" -l "chunker-params" -d "specify the chunker parameters (ALGO, CHUNK_MIN_EXP, CHUNK_MAX_EXP, HASH_MASK_BITS, HASH_WINDOW_SIZE) or `default` to use the current defaults." -x
 
-
-
 complete -c borg -n "__fish_seen_subcommand_from rename" -s "h" -l "help" -d "show this help message and exit"
 complete -c borg -n "__fish_seen_subcommand_from rename" -l "critical" -d "work on log level CRITICAL"
 complete -c borg -n "__fish_seen_subcommand_from rename" -l "error" -d "work on log level ERROR"
@@ -717,8 +1085,6 @@ complete -c borg -n "__fish_seen_subcommand_from rename" -l "upload-buffer" -d "
 complete -c borg -n "__fish_seen_subcommand_from rename" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
 complete -c borg -n "__fish_seen_subcommand_from rename" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
 complete -c borg -n "__fish_seen_subcommand_from rename" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
-
-
 
 complete -c borg -n "__fish_seen_subcommand_from serve" -l "restrict-to-path" -d "restrict repository access to PATH." -r
 complete -c borg -n "__fish_seen_subcommand_from serve" -l "restrict-to-repository" -d "restrict repository access." -r
@@ -748,8 +1114,6 @@ complete -c borg -n "__fish_seen_subcommand_from serve" -l "consider-part-files"
 complete -c borg -n "__fish_seen_subcommand_from serve" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
 complete -c borg -n "__fish_seen_subcommand_from serve" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
 
-
-
 complete -c borg -n "__fish_seen_subcommand_from umount" -s "h" -l "help" -d "show this help message and exit"
 complete -c borg -n "__fish_seen_subcommand_from umount" -l "critical" -d "work on log level CRITICAL"
 complete -c borg -n "__fish_seen_subcommand_from umount" -l "error" -d "work on log level ERROR"
@@ -773,8 +1137,6 @@ complete -c borg -n "__fish_seen_subcommand_from umount" -l "upload-buffer" -d "
 complete -c borg -n "__fish_seen_subcommand_from umount" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
 complete -c borg -n "__fish_seen_subcommand_from umount" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
 complete -c borg -n "__fish_seen_subcommand_from umount" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
-
-
 
 complete -c borg -n "__fish_seen_subcommand_from upgrade" -s "n" -l "dry-run" -d "do not change repository"
 complete -c borg -n "__fish_seen_subcommand_from upgrade" -l "inplace" -d "rewrite repository in place, with no chance of going back to older versions of the repository."
@@ -805,8 +1167,6 @@ complete -c borg -n "__fish_seen_subcommand_from upgrade" -l "consider-part-file
 complete -c borg -n "__fish_seen_subcommand_from upgrade" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
 complete -c borg -n "__fish_seen_subcommand_from upgrade" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
 
-
-
 complete -c borg -n "__fish_seen_subcommand_from with-lock" -s "h" -l "help" -d "show this help message and exit"
 complete -c borg -n "__fish_seen_subcommand_from with-lock" -l "critical" -d "work on log level CRITICAL"
 complete -c borg -n "__fish_seen_subcommand_from with-lock" -l "error" -d "work on log level ERROR"
@@ -830,8 +1190,6 @@ complete -c borg -n "__fish_seen_subcommand_from with-lock" -l "upload-buffer" -
 complete -c borg -n "__fish_seen_subcommand_from with-lock" -l "consider-part-files" -d "treat part files like normal files (e.g. to list/extract them)"
 complete -c borg -n "__fish_seen_subcommand_from with-lock" -l "debug-profile" -d "Write execution profile in Borg format into FILE." -r
 complete -c borg -n "__fish_seen_subcommand_from with-lock" -l "rsh" -d "Use this command to connect to the 'borg serve' process (default: 'ssh')" -x
-
-
 
 complete -c borg -n "__fish_seen_subcommand_from import-tar" -l "tar-filter" -d "filter program to pipe data through" -x
 complete -c borg -n "__fish_seen_subcommand_from import-tar" -s "s" -l "stats" -d "print statistics for the created archive"

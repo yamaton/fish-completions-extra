@@ -12,8 +12,6 @@ complete -c hatch -n "not __fish_seen_subcommand_from build clean config dep env
 complete -c hatch -n "not __fish_seen_subcommand_from build clean config dep env new project publish run shell status version" -l "version" -d "Show the version and exit."
 complete -c hatch -n "not __fish_seen_subcommand_from build clean config dep env new project publish run shell status version" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -k -c hatch -n __fish_use_subcommand -x -a version -d "View or set a project's version"
 complete -k -c hatch -n __fish_use_subcommand -x -a status -d "Show information about the current environment"
 complete -k -c hatch -n __fish_use_subcommand -x -a shell -d "Enter a shell within a project's environment"
@@ -27,8 +25,6 @@ complete -k -c hatch -n __fish_use_subcommand -x -a config -d "Manage the config
 complete -k -c hatch -n __fish_use_subcommand -x -a clean -d "Remove build artifacts"
 complete -k -c hatch -n __fish_use_subcommand -x -a build -d "Build a project"
 
-
-
 complete -c hatch -n "__fish_seen_subcommand_from build" -s "t" -l "target" -d "The target to build, overriding project defaults." -x
 complete -c hatch -n "__fish_seen_subcommand_from build" -l "hooks-only" -d "Whether or not to only execute build hooks [env var: `HATCH_BUILD_HOOKS_ONLY`]"
 complete -c hatch -n "__fish_seen_subcommand_from build" -l "no-hooks" -d "Whether or not to disable build hooks [env var: `HATCH_BUILD_NO_HOOKS`]"
@@ -37,38 +33,100 @@ complete -c hatch -n "__fish_seen_subcommand_from build" -s "c" -l "clean" -d "W
 complete -c hatch -n "__fish_seen_subcommand_from build" -l "clean-hooks-after" -d "Whether or not build hook artifacts should be removed after each build [env var: `HATCH_BUILD_CLEAN_HOOKS_AFTER`]"
 complete -c hatch -n "__fish_seen_subcommand_from build" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c hatch -n "__fish_seen_subcommand_from clean" -s "t" -l "target" -d "The target with which to remove artifacts, overriding project defaults." -x
 complete -c hatch -n "__fish_seen_subcommand_from clean" -l "hooks-only" -d "Whether or not to only remove artifacts from build hooks [env var: `HATCH_BUILD_HOOKS_ONLY`]"
 complete -c hatch -n "__fish_seen_subcommand_from clean" -l "no-hooks" -d "Whether or not to ignore artifacts from build hooks [env var: `HATCH_BUILD_NO_HOOKS`]"
 complete -c hatch -n "__fish_seen_subcommand_from clean" -l "ext" -d "Whether or not to only remove artifacts from build hooks for distributing binary Python packages, such as compiled extensions."
 complete -c hatch -n "__fish_seen_subcommand_from clean" -s "h" -l "help" -d "Show this message and exit."
 
+complete -c hatch -n "__fish_seen_subcommand_from config; and not __fish_seen_subcommand_from explore find restore set show update" -s "h" -l "help" -d "Show this message and exit."
 
+complete -k -c hatch -n "__fish_seen_subcommand_from config; and not __fish_seen_subcommand_from explore find restore set show update" -x -a update -d "Update the config file with any new fields"
+complete -k -c hatch -n "__fish_seen_subcommand_from config; and not __fish_seen_subcommand_from explore find restore set show update" -x -a show -d "Show the contents of the config file"
+complete -k -c hatch -n "__fish_seen_subcommand_from config; and not __fish_seen_subcommand_from explore find restore set show update" -x -a set -d "Assign values to config file entries"
+complete -k -c hatch -n "__fish_seen_subcommand_from config; and not __fish_seen_subcommand_from explore find restore set show update" -x -a restore -d "Restore the config file to default settings"
+complete -k -c hatch -n "__fish_seen_subcommand_from config; and not __fish_seen_subcommand_from explore find restore set show update" -x -a find -d "Show the location of the config file"
+complete -k -c hatch -n "__fish_seen_subcommand_from config; and not __fish_seen_subcommand_from explore find restore set show update" -x -a explore -d "Open the config location in your file manager"
 
-complete -c hatch -n "__fish_seen_subcommand_from config" -s "h" -l "help" -d "Show this message and exit."
+complete -c hatch -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from explore" -s "h" -l "help" -d "Show this message and exit."
 
+complete -c hatch -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from find" -s "c" -l "copy" -d "Copy the path to the config file to the clipboard"
+complete -c hatch -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from find" -s "h" -l "help" -d "Show this message and exit."
 
+complete -c hatch -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from restore" -s "h" -l "help" -d "Show this message and exit."
 
-complete -c hatch -n "__fish_seen_subcommand_from dep" -s "h" -l "help" -d "Show this message and exit."
+complete -c hatch -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from set" -s "h" -l "help" -d "Show this message and exit."
 
+complete -c hatch -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from show" -s "a" -l "all" -d "Do not scrub secret fields"
+complete -c hatch -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from show" -s "h" -l "help" -d "Show this message and exit."
 
+complete -c hatch -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from update" -s "h" -l "help" -d "Show this message and exit."
 
-complete -c hatch -n "__fish_seen_subcommand_from env" -s "h" -l "help" -d "Show this message and exit."
+complete -c hatch -n "__fish_seen_subcommand_from dep; and not __fish_seen_subcommand_from hash show" -s "h" -l "help" -d "Show this message and exit."
 
+complete -k -c hatch -n "__fish_seen_subcommand_from dep; and not __fish_seen_subcommand_from hash show" -x -a show -d "Display dependencies in various formats"
+complete -k -c hatch -n "__fish_seen_subcommand_from dep; and not __fish_seen_subcommand_from hash show" -x -a hash -d "Output a hash of the currently defined dependencies"
 
+complete -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from hash" -s "p" -l "project-only" -d "Whether or not to exclude environment dependencies"
+complete -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from hash" -s "e" -l "env-only" -d "Whether or not to exclude project dependencies"
+complete -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from hash" -s "h" -l "help" -d "Show this message and exit."
+
+complete -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from show; and not __fish_seen_subcommand_from requirements table" -s "h" -l "help" -d "Show this message and exit."
+
+complete -k -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from show; and not __fish_seen_subcommand_from requirements table" -x -a table -d "Enumerate dependencies in a tabular format"
+complete -k -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from show; and not __fish_seen_subcommand_from requirements table" -x -a requirements -d "Enumerate dependencies as a list of requirements"
+
+complete -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from show; and __fish_seen_subcommand_from requirements" -s "p" -l "project-only" -d "Whether or not to exclude environment dependencies"
+complete -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from show; and __fish_seen_subcommand_from requirements" -s "e" -l "env-only" -d "Whether or not to exclude project dependencies"
+complete -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from show; and __fish_seen_subcommand_from requirements" -s "f" -l "feature" -d "Whether or not to only show the dependencies of the specified features" -x
+complete -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from show; and __fish_seen_subcommand_from requirements" -l "all" -d "Whether or not to include the dependencies of all features"
+complete -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from show; and __fish_seen_subcommand_from requirements" -s "h" -l "help" -d "Show this message and exit."
+
+complete -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from show; and __fish_seen_subcommand_from table" -s "p" -l "project-only" -d "Whether or not to exclude environment dependencies"
+complete -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from show; and __fish_seen_subcommand_from table" -s "e" -l "env-only" -d "Whether or not to exclude project dependencies"
+complete -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from show; and __fish_seen_subcommand_from table" -s "l" -l "lines" -d "Whether or not to show lines between table rows"
+complete -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from show; and __fish_seen_subcommand_from table" -l "ascii" -d "Whether or not to only use ASCII characters"
+complete -c hatch -n "__fish_seen_subcommand_from dep; and __fish_seen_subcommand_from show; and __fish_seen_subcommand_from table" -s "h" -l "help" -d "Show this message and exit."
+
+complete -c hatch -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from create find prune remove run show" -s "h" -l "help" -d "Show this message and exit."
+
+complete -k -c hatch -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from create find prune remove run show" -x -a show -d "Show the available environments"
+complete -k -c hatch -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from create find prune remove run show" -x -a run -d "Run commands within project environments"
+complete -k -c hatch -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from create find prune remove run show" -x -a remove -d "Remove environments"
+complete -k -c hatch -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from create find prune remove run show" -x -a prune -d "Remove all environments"
+complete -k -c hatch -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from create find prune remove run show" -x -a find -d "Locate environments"
+complete -k -c hatch -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from create find prune remove run show" -x -a create -d "Create environments"
+
+complete -c hatch -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -s "h" -l "help" -d "Show this message and exit."
+
+complete -c hatch -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from find" -s "h" -l "help" -d "Show this message and exit."
+
+complete -c hatch -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from prune" -s "h" -l "help" -d "Show this message and exit."
+
+complete -c hatch -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from remove" -s "h" -l "help" -d "Show this message and exit."
+
+complete -c hatch -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from run" -s "e" -l "env" -d "The environments to target" -x
+complete -c hatch -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from run" -s "i" -l "include" -d "The matrix variables to include" -x
+complete -c hatch -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from run" -s "x" -l "exclude" -d "The matrix variables to exclude" -x
+complete -c hatch -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from run" -s "f" -l "filter" -d "The JSON data used to select environments" -x
+complete -c hatch -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from run" -l "force-continue" -d "Run every command and if there were any errors exit with the first code"
+complete -c hatch -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from run" -l "ignore-compat" -d "Ignore incompatibility when selecting specific environments"
+complete -c hatch -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from run" -s "h" -l "help" -d "Show this message and exit."
+
+complete -c hatch -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from show" -l "ascii" -d "Whether or not to only use ASCII characters"
+complete -c hatch -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from show" -l "json" -d "Whether or not to output in JSON format"
+complete -c hatch -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from show" -s "h" -l "help" -d "Show this message and exit."
 
 complete -c hatch -n "__fish_seen_subcommand_from new" -s "i" -l "interactive" -d "Interactively choose details about the project"
 complete -c hatch -n "__fish_seen_subcommand_from new" -l "cli" -d "Give the project a command line interface"
 complete -c hatch -n "__fish_seen_subcommand_from new" -l "init" -d "Initialize an existing project"
 complete -c hatch -n "__fish_seen_subcommand_from new" -s "h" -l "help" -d "Show this message and exit."
 
+complete -c hatch -n "__fish_seen_subcommand_from project; and not __fish_seen_subcommand_from metadata" -s "h" -l "help" -d "Show this message and exit."
 
+complete -k -c hatch -n "__fish_seen_subcommand_from project; and not __fish_seen_subcommand_from metadata" -x -a metadata -d "Display project metadata"
 
-complete -c hatch -n "__fish_seen_subcommand_from project" -s "h" -l "help" -d "Show this message and exit."
-
-
+complete -c hatch -n "__fish_seen_subcommand_from project; and __fish_seen_subcommand_from metadata" -s "h" -l "help" -d "Show this message and exit."
 
 complete -c hatch -n "__fish_seen_subcommand_from publish" -s "r" -l "repo" -d "The repository with which to publish artifacts [env var: `HATCH_INDEX_REPO`]" -x
 complete -c hatch -n "__fish_seen_subcommand_from publish" -s "u" -l "user" -d "The user with which to authenticate [env var: `HATCH_INDEX_USER`]" -x
@@ -84,13 +142,8 @@ complete -c hatch -n "__fish_seen_subcommand_from publish" -s "y" -l "yes" -d "C
 complete -c hatch -n "__fish_seen_subcommand_from publish" -s "h" -l "help" -d "Show this message and exit."
 
 
-
 complete -c hatch -n "__fish_seen_subcommand_from shell" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c hatch -n "__fish_seen_subcommand_from status" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c hatch -n "__fish_seen_subcommand_from version" -s "h" -l "help" -d "Show this message and exit."

@@ -7,13 +7,10 @@ complete -c wormhole -n "not __fish_seen_subcommand_from help receive send ssh" 
 complete -c wormhole -n "not __fish_seen_subcommand_from help receive send ssh" -l "version" -d "Show the version and exit."
 complete -c wormhole -n "not __fish_seen_subcommand_from help receive send ssh" -l "help" -d "Show this message and exit."
 
-
-
 complete -k -c wormhole -n __fish_use_subcommand -x -a ssh -d "Facilitate sending/receiving SSH public keys"
 complete -k -c wormhole -n __fish_use_subcommand -x -a send -d "Send a text message, file, or directory"
 complete -k -c wormhole -n __fish_use_subcommand -x -a receive -d "Receive a text message, file, or directory (from 'wormhole send')"
 complete -k -c wormhole -n __fish_use_subcommand -x -a help -d "Show help"
-
 
 
 complete -c wormhole -n "__fish_seen_subcommand_from receive" -s "0" -d "enable no-code anything-goes mode"
@@ -29,8 +26,6 @@ complete -c wormhole -n "__fish_seen_subcommand_from receive" -l "accept-file" -
 complete -c wormhole -n "__fish_seen_subcommand_from receive" -s "o" -l "output-file" -d "The file or directory to create, overriding the name suggested by the sender." -r
 complete -c wormhole -n "__fish_seen_subcommand_from receive" -l "help" -d "Show this message and exit."
 
-
-
 complete -c wormhole -n "__fish_seen_subcommand_from send" -s "0" -d "enable no-code anything-goes mode"
 complete -c wormhole -n "__fish_seen_subcommand_from send" -s "c" -l "code-length" -d "length of code (in bytes/words)" -x
 complete -c wormhole -n "__fish_seen_subcommand_from send" -s "v" -l "verify" -d "display verification string (and wait for approval)"
@@ -44,6 +39,21 @@ complete -c wormhole -n "__fish_seen_subcommand_from send" -l "text" -d "text me
 complete -c wormhole -n "__fish_seen_subcommand_from send" -l "ignore-unsendable-files" -d "Don't raise an error if a file can't be read."
 complete -c wormhole -n "__fish_seen_subcommand_from send" -l "help" -d "Show this message and exit."
 
+complete -c wormhole -n "__fish_seen_subcommand_from ssh; and not __fish_seen_subcommand_from accept invite" -l "help" -d "Show this message and exit."
 
+complete -k -c wormhole -n "__fish_seen_subcommand_from ssh; and not __fish_seen_subcommand_from accept invite" -x -a invite -d "Add a public-key to a ~/.ssh/authorized_keys file"
+complete -k -c wormhole -n "__fish_seen_subcommand_from ssh; and not __fish_seen_subcommand_from accept invite" -x -a accept -d "Send your SSH public-key"
 
-complete -c wormhole -n "__fish_seen_subcommand_from ssh" -l "help" -d "Show this message and exit."
+complete -c wormhole -n "__fish_seen_subcommand_from ssh; and __fish_seen_subcommand_from accept" -s "F" -l "key-file" -d "Key file" -r
+complete -c wormhole -n "__fish_seen_subcommand_from ssh; and __fish_seen_subcommand_from accept" -s "y" -l "yes" -d "Skip confirmation prompt to send key" -r
+complete -c wormhole -n "__fish_seen_subcommand_from ssh; and __fish_seen_subcommand_from accept" -l "tor" -d "use Tor when connecting"
+complete -c wormhole -n "__fish_seen_subcommand_from ssh; and __fish_seen_subcommand_from accept" -l "launch-tor" -d "launch Tor, rather than use existing control/socks port"
+complete -c wormhole -n "__fish_seen_subcommand_from ssh; and __fish_seen_subcommand_from accept" -l "tor-control-port" -d "endpoint descriptor for Tor control port" -x
+complete -c wormhole -n "__fish_seen_subcommand_from ssh; and __fish_seen_subcommand_from accept" -l "help" -d "Show this message and exit."
+
+complete -c wormhole -n "__fish_seen_subcommand_from ssh; and __fish_seen_subcommand_from invite" -s "c" -l "code-length" -d "length of code (in bytes/words)" -x
+complete -c wormhole -n "__fish_seen_subcommand_from ssh; and __fish_seen_subcommand_from invite" -s "u" -l "user" -d "Add to USER's ~/.ssh/authorized_keys" -x
+complete -c wormhole -n "__fish_seen_subcommand_from ssh; and __fish_seen_subcommand_from invite" -l "tor" -d "use Tor when connecting"
+complete -c wormhole -n "__fish_seen_subcommand_from ssh; and __fish_seen_subcommand_from invite" -l "launch-tor" -d "launch Tor, rather than use existing control/socks port"
+complete -c wormhole -n "__fish_seen_subcommand_from ssh; and __fish_seen_subcommand_from invite" -l "tor-control-port" -d "endpoint descriptor for Tor control port" -x
+complete -c wormhole -n "__fish_seen_subcommand_from ssh; and __fish_seen_subcommand_from invite" -l "help" -d "Show this message and exit."

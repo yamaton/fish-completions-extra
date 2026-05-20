@@ -163,8 +163,6 @@ complete -c nix -n "not __fish_seen_subcommand_from build develop flake help pro
 complete -c nix -n "not __fish_seen_subcommand_from build develop flake help profile repl run search shell bundle copy edit eval fmt log path-info registry why-depends daemon describe-stores hash key nar print-dev-env realisation show-config show-derivation store doctor upgrade-nix" -l "user-agent-suffix" -d "Set the user-agent-suffix setting." -x
 complete -c nix -n "not __fish_seen_subcommand_from build develop flake help profile repl run search shell bundle copy edit eval fmt log path-info registry why-depends daemon describe-stores hash key nar print-dev-env realisation show-config show-derivation store doctor upgrade-nix" -l "warn-dirty" -d "Enable the warn-dirty setting."
 
-
-
 complete -k -c nix -n __fish_use_subcommand -x -a upgrade-nix -d "upgrade Nix to the stable version declared in Nixpkgs"
 complete -k -c nix -n __fish_use_subcommand -x -a doctor -d "check your system for potential problems and print a PASS or FAIL for each check"
 complete -k -c nix -n __fish_use_subcommand -x -a store -d "manipulate a Nix store"
@@ -196,8 +194,6 @@ complete -k -c nix -n __fish_use_subcommand -x -a flake -d "manage Nix flakes"
 complete -k -c nix -n __fish_use_subcommand -x -a develop -d "run a bash shell that provides the build environment of a derivation"
 complete -k -c nix -n __fish_use_subcommand -x -a build -d "build a derivation or fetch a store path"
 
-
-
 complete -c nix -n "__fish_seen_subcommand_from build" -l "debugger" -d "start an interactive environment if evaluation fails"
 complete -c nix -n "__fish_seen_subcommand_from build" -l "dry-run" -d "Show what this command would do without doing it."
 complete -c nix -n "__fish_seen_subcommand_from build" -l "json" -d "Produce output in JSON format, suitable for consumption by another program."
@@ -223,8 +219,6 @@ complete -c nix -n "__fish_seen_subcommand_from build" -l "update-input" -d "Upd
 complete -c nix -n "__fish_seen_subcommand_from build" -l "derivation" -d "Operate on the store derivation rather than its outputs."
 complete -c nix -n "__fish_seen_subcommand_from build" -l "expr" -d "Interpret installables as attribute paths relative to the Nix expression expr." -r
 complete -c nix -n "__fish_seen_subcommand_from build" -l "file" -s "f" -d "Interpret installables as attribute paths relative to the Nix expression stored in file." -r
-
-
 
 complete -c nix -n "__fish_seen_subcommand_from develop" -l "build" -d "Run the build phase."
 complete -c nix -n "__fish_seen_subcommand_from develop" -l "check" -d "Run the check phase."
@@ -260,6 +254,7 @@ complete -c nix -n "__fish_seen_subcommand_from develop" -l "file" -s "f" -d "In
 
 
 
+
 complete -c nix -n "__fish_seen_subcommand_from repl" -l "debugger" -d "start an interactive environment if evaluation fails"
 complete -c nix -n "__fish_seen_subcommand_from repl" -l "arg" -d "Pass the value expr as the argument name to Nix functions." -x
 complete -c nix -n "__fish_seen_subcommand_from repl" -l "argstr" -d "Pass the string string as the argument name to Nix functions." -x
@@ -279,8 +274,6 @@ complete -c nix -n "__fish_seen_subcommand_from repl" -l "derivation" -d "Operat
 complete -c nix -n "__fish_seen_subcommand_from repl" -l "expr" -d "Interpret installables as attribute paths relative to the Nix expression expr." -r
 complete -c nix -n "__fish_seen_subcommand_from repl" -l "file" -s "f" -d "Interpret installables as attribute paths relative to the Nix expression stored in file." -r
 
-
-
 complete -c nix -n "__fish_seen_subcommand_from run" -l "debugger" -d "start an interactive environment if evaluation fails"
 complete -c nix -n "__fish_seen_subcommand_from run" -l "arg" -d "Pass the value expr as the argument name to Nix functions." -x
 complete -c nix -n "__fish_seen_subcommand_from run" -l "argstr" -d "Pass the string string as the argument name to Nix functions." -x
@@ -299,8 +292,6 @@ complete -c nix -n "__fish_seen_subcommand_from run" -l "update-input" -d "Updat
 complete -c nix -n "__fish_seen_subcommand_from run" -l "derivation" -d "Operate on the store derivation rather than its outputs."
 complete -c nix -n "__fish_seen_subcommand_from run" -l "expr" -d "Interpret installables as attribute paths relative to the Nix expression expr." -r
 complete -c nix -n "__fish_seen_subcommand_from run" -l "file" -s "f" -d "Interpret installables as attribute paths relative to the Nix expression stored in file." -r
-
-
 
 complete -c nix -n "__fish_seen_subcommand_from search" -l "debugger" -d "start an interactive environment if evaluation fails"
 complete -c nix -n "__fish_seen_subcommand_from search" -l "exclude" -s "e" -d "Hide packages whose attribute path, name or description contain regex." -r
@@ -322,8 +313,6 @@ complete -c nix -n "__fish_seen_subcommand_from search" -l "update-input" -d "Up
 complete -c nix -n "__fish_seen_subcommand_from search" -l "derivation" -d "Operate on the store derivation rather than its outputs."
 complete -c nix -n "__fish_seen_subcommand_from search" -l "expr" -d "Interpret installables as attribute paths relative to the Nix expression expr." -r
 complete -c nix -n "__fish_seen_subcommand_from search" -l "file" -s "f" -d "Interpret installables as attribute paths relative to the Nix expression stored in file." -r
-
-
 
 complete -c nix -n "__fish_seen_subcommand_from shell" -l "command" -s "c" -d "Command and arguments to be executed, defaulting to \$SHELL" -x
 complete -c nix -n "__fish_seen_subcommand_from shell" -l "debugger" -d "start an interactive environment if evaluation fails"
@@ -348,8 +337,6 @@ complete -c nix -n "__fish_seen_subcommand_from shell" -l "derivation" -d "Opera
 complete -c nix -n "__fish_seen_subcommand_from shell" -l "expr" -d "Interpret installables as attribute paths relative to the Nix expression expr." -r
 complete -c nix -n "__fish_seen_subcommand_from shell" -l "file" -s "f" -d "Interpret installables as attribute paths relative to the Nix expression stored in file." -r
 
-
-
 complete -c nix -n "__fish_seen_subcommand_from bundle" -l "bundler" -d "Use a custom bundler instead of the default (github:NixOS/bundlers)." -x
 complete -c nix -n "__fish_seen_subcommand_from bundle" -l "debugger" -d "start an interactive environment if evaluation fails"
 complete -c nix -n "__fish_seen_subcommand_from bundle" -l "out-link" -s "o" -d "Override the name of the symlink to the build result." -r
@@ -370,8 +357,6 @@ complete -c nix -n "__fish_seen_subcommand_from bundle" -l "update-input" -d "Up
 complete -c nix -n "__fish_seen_subcommand_from bundle" -l "derivation" -d "Operate on the store derivation rather than its outputs."
 complete -c nix -n "__fish_seen_subcommand_from bundle" -l "expr" -d "Interpret installables as attribute paths relative to the Nix expression expr." -r
 complete -c nix -n "__fish_seen_subcommand_from bundle" -l "file" -s "f" -d "Interpret installables as attribute paths relative to the Nix expression stored in file." -r
-
-
 
 complete -c nix -n "__fish_seen_subcommand_from copy" -l "debugger" -d "start an interactive environment if evaluation fails"
 complete -c nix -n "__fish_seen_subcommand_from copy" -l "from" -d "URL of the source Nix store." -x
@@ -398,8 +383,6 @@ complete -c nix -n "__fish_seen_subcommand_from copy" -l "expr" -d "Interpret in
 complete -c nix -n "__fish_seen_subcommand_from copy" -l "file" -s "f" -d "Interpret installables as attribute paths relative to the Nix expression stored in file." -r
 complete -c nix -n "__fish_seen_subcommand_from copy" -l "no-recursive" -d "Apply operation to specified paths only."
 
-
-
 complete -c nix -n "__fish_seen_subcommand_from edit" -l "debugger" -d "start an interactive environment if evaluation fails"
 complete -c nix -n "__fish_seen_subcommand_from edit" -l "arg" -d "Pass the value expr as the argument name to Nix functions." -x
 complete -c nix -n "__fish_seen_subcommand_from edit" -l "argstr" -d "Pass the string string as the argument name to Nix functions." -x
@@ -418,8 +401,6 @@ complete -c nix -n "__fish_seen_subcommand_from edit" -l "update-input" -d "Upda
 complete -c nix -n "__fish_seen_subcommand_from edit" -l "derivation" -d "Operate on the store derivation rather than its outputs."
 complete -c nix -n "__fish_seen_subcommand_from edit" -l "expr" -d "Interpret installables as attribute paths relative to the Nix expression expr." -r
 complete -c nix -n "__fish_seen_subcommand_from edit" -l "file" -s "f" -d "Interpret installables as attribute paths relative to the Nix expression stored in file." -r
-
-
 
 complete -c nix -n "__fish_seen_subcommand_from eval" -l "apply" -d "Apply the function expr to each argument." -x
 complete -c nix -n "__fish_seen_subcommand_from eval" -l "debugger" -d "start an interactive environment if evaluation fails"
@@ -445,8 +426,6 @@ complete -c nix -n "__fish_seen_subcommand_from eval" -l "derivation" -d "Operat
 complete -c nix -n "__fish_seen_subcommand_from eval" -l "expr" -d "Interpret installables as attribute paths relative to the Nix expression expr." -r
 complete -c nix -n "__fish_seen_subcommand_from eval" -l "file" -s "f" -d "Interpret installables as attribute paths relative to the Nix expression stored in file." -r
 
-
-
 complete -c nix -n "__fish_seen_subcommand_from fmt" -l "debugger" -d "start an interactive environment if evaluation fails"
 complete -c nix -n "__fish_seen_subcommand_from fmt" -l "arg" -d "Pass the value expr as the argument name to Nix functions." -x
 complete -c nix -n "__fish_seen_subcommand_from fmt" -l "argstr" -d "Pass the string string as the argument name to Nix functions." -x
@@ -466,8 +445,6 @@ complete -c nix -n "__fish_seen_subcommand_from fmt" -l "derivation" -d "Operate
 complete -c nix -n "__fish_seen_subcommand_from fmt" -l "expr" -d "Interpret installables as attribute paths relative to the Nix expression expr." -r
 complete -c nix -n "__fish_seen_subcommand_from fmt" -l "file" -s "f" -d "Interpret installables as attribute paths relative to the Nix expression stored in file." -r
 
-
-
 complete -c nix -n "__fish_seen_subcommand_from log" -l "debugger" -d "start an interactive environment if evaluation fails"
 complete -c nix -n "__fish_seen_subcommand_from log" -l "arg" -d "Pass the value expr as the argument name to Nix functions." -x
 complete -c nix -n "__fish_seen_subcommand_from log" -l "argstr" -d "Pass the string string as the argument name to Nix functions." -x
@@ -486,8 +463,6 @@ complete -c nix -n "__fish_seen_subcommand_from log" -l "update-input" -d "Updat
 complete -c nix -n "__fish_seen_subcommand_from log" -l "derivation" -d "Operate on the store derivation rather than its outputs."
 complete -c nix -n "__fish_seen_subcommand_from log" -l "expr" -d "Interpret installables as attribute paths relative to the Nix expression expr." -r
 complete -c nix -n "__fish_seen_subcommand_from log" -l "file" -s "f" -d "Interpret installables as attribute paths relative to the Nix expression stored in file." -r
-
-
 
 complete -c nix -n "__fish_seen_subcommand_from path-info" -l "closure-size" -s "S" -d "Print the sum of the sizes of the NAR serialisations of the closure of each path."
 complete -c nix -n "__fish_seen_subcommand_from path-info" -l "debugger" -d "start an interactive environment if evaluation fails"
@@ -516,7 +491,6 @@ complete -c nix -n "__fish_seen_subcommand_from path-info" -l "file" -s "f" -d "
 complete -c nix -n "__fish_seen_subcommand_from path-info" -l "recursive" -s "r" -d "Apply operation to closure of the specified paths."
 
 
-
 complete -c nix -n "__fish_seen_subcommand_from why-depends" -l "all" -s "a" -d "Show all edges in the dependency graph leading from package to dependency, rather than just a shortest path."
 complete -c nix -n "__fish_seen_subcommand_from why-depends" -l "debugger" -d "start an interactive environment if evaluation fails"
 complete -c nix -n "__fish_seen_subcommand_from why-depends" -l "precise" -d "For each edge in the dependency graph, show the files in the parent that cause the dependency."
@@ -539,8 +513,8 @@ complete -c nix -n "__fish_seen_subcommand_from why-depends" -l "expr" -d "Inter
 complete -c nix -n "__fish_seen_subcommand_from why-depends" -l "file" -s "f" -d "Interpret installables as attribute paths relative to the Nix expression stored in file." -r
 
 
-
 complete -c nix -n "__fish_seen_subcommand_from describe-stores" -l "json" -d "Produce output in JSON format, suitable for consumption by another program."
+
 
 
 
@@ -567,10 +541,7 @@ complete -c nix -n "__fish_seen_subcommand_from print-dev-env" -l "expr" -d "Int
 complete -c nix -n "__fish_seen_subcommand_from print-dev-env" -l "file" -s "f" -d "Interpret installables as attribute paths relative to the Nix expression stored in file." -r
 
 
-
 complete -c nix -n "__fish_seen_subcommand_from show-config" -l "json" -d "Produce output in JSON format, suitable for consumption by another program."
-
-
 
 complete -c nix -n "__fish_seen_subcommand_from show-derivation" -l "debugger" -d "start an interactive environment if evaluation fails"
 complete -c nix -n "__fish_seen_subcommand_from show-derivation" -l "recursive" -s "r" -d "Include the dependencies of the specified derivations."

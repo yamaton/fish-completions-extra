@@ -4,8 +4,6 @@ complete -c ufw -n "not __fish_seen_subcommand_from enable disable default loggi
 complete -c ufw -n "not __fish_seen_subcommand_from enable disable default logging allow deny reject limit delete insert prepend route reload reset status show version" -s "h" -l "help" -d "show help message and exit"
 complete -c ufw -n "not __fish_seen_subcommand_from enable disable default logging allow deny reject limit delete insert prepend route reload reset status show version" -l "dry-run" -d "don't modify anything, just show the changes"
 
-
-
 complete -k -c ufw -n __fish_use_subcommand -x -a version -d "display version information"
 complete -k -c ufw -n __fish_use_subcommand -x -a show -d "show firewall report"
 complete -k -c ufw -n __fish_use_subcommand -x -a status -d "show firewall status"
@@ -23,3 +21,32 @@ complete -k -c ufw -n __fish_use_subcommand -x -a logging -d "set logging to on|
 complete -k -c ufw -n __fish_use_subcommand -x -a default -d "set default policy"
 complete -k -c ufw -n __fish_use_subcommand -x -a disable -d "disables the firewall"
 complete -k -c ufw -n __fish_use_subcommand -x -a enable -d "enables the firewall"
+
+
+
+
+complete -k -c ufw -n "__fish_seen_subcommand_from logging; and not __fish_seen_subcommand_from on off" -x -a off -d "insert route RULE at NUM"
+complete -k -c ufw -n "__fish_seen_subcommand_from logging; and not __fish_seen_subcommand_from on off" -x -a on -d "delete route RULE"
+
+
+
+
+
+
+
+
+
+
+complete -k -c ufw -n "__fish_seen_subcommand_from route; and not __fish_seen_subcommand_from delete insert" -x -a insert -d "insert route RULE at NUM"
+complete -k -c ufw -n "__fish_seen_subcommand_from route; and not __fish_seen_subcommand_from delete insert" -x -a delete -d "delete route RULE"
+
+
+
+
+
+complete -k -c ufw -n "__fish_seen_subcommand_from status; and not __fish_seen_subcommand_from numbered verbose" -x -a verbose -d "show verbose firewall status"
+complete -k -c ufw -n "__fish_seen_subcommand_from status; and not __fish_seen_subcommand_from numbered verbose" -x -a numbered -d "show firewall status as numbered list of RULES"
+
+
+
+

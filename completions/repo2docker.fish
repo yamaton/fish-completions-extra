@@ -76,7 +76,7 @@ complete -c repo2docker -n "not __fish_seen_subcommand_from contents relative" -
 complete -c repo2docker -n "not __fish_seen_subcommand_from contents relative" -l "Repo2Docker.user_name" -d "Username of the user to create inside the built image." -x
 complete -c repo2docker -n "not __fish_seen_subcommand_from contents relative" -l "Repo2Docker.volumes" -d "Volumes to mount when running the container." -r
 
-
-
 complete -k -c repo2docker -n __fish_use_subcommand -x -a relative -d "to the working directory of the image - (\$HOME by default)"
 complete -k -c repo2docker -n __fish_use_subcommand -x -a contents -d "specified by the user."
+
+

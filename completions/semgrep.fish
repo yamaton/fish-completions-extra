@@ -2,8 +2,6 @@
 
 complete -c semgrep -n "not __fish_seen_subcommand_from ci install-semgrep-pro login logout lsp publish scan show test validate mcp" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -k -c semgrep -n __fish_use_subcommand -x -a mcp -d "Start the Semgrep MCP server"
 complete -k -c semgrep -n __fish_use_subcommand -x -a validate -d "Validate the rules (EXPERIMENTAL improvements over scan --validate)"
 complete -k -c semgrep -n __fish_use_subcommand -x -a test -d "Test the rules (EXPERIMENTAL improvements over scan --test)"
@@ -15,8 +13,6 @@ complete -k -c semgrep -n __fish_use_subcommand -x -a logout -d "Remove locally 
 complete -k -c semgrep -n __fish_use_subcommand -x -a login -d "Obtain and save credentials for semgrep.dev"
 complete -k -c semgrep -n __fish_use_subcommand -x -a install-semgrep-pro -d "Install the Semgrep Pro Engine"
 complete -k -c semgrep -n __fish_use_subcommand -x -a ci -d "Run Semgrep on a git diff (for use in CI)"
-
-
 
 complete -c semgrep -n "__fish_seen_subcommand_from ci" -s "a" -l "autofix" -d "Currently ignored."
 complete -c semgrep -n "__fish_seen_subcommand_from ci" -l "allow-local-builds" -d "Experimental: allow building projects contained in the repository."
@@ -127,8 +123,6 @@ complete -c semgrep -n "__fish_seen_subcommand_from ci" -l "x-upload-partial-res
 complete -c semgrep -n "__fish_seen_subcommand_from ci" -l "x-validate-partial-results-actual" -d "Internal flag." -x
 complete -c semgrep -n "__fish_seen_subcommand_from ci" -l "x-validate-partial-results-expected" -d "Internal flag." -x
 
-
-
 complete -c semgrep -n "__fish_seen_subcommand_from install-semgrep-pro" -l "x-eio" -d "[INTERNAL] <deprecated>"
 complete -c semgrep -n "__fish_seen_subcommand_from install-semgrep-pro" -l "x-no-python-schema-validation" -d "[INTERNAL] Skip JSON schema validation; rely on osemgrep parser to validate rules files"
 complete -c semgrep -n "__fish_seen_subcommand_from install-semgrep-pro" -l "x-parmap" -d "[INTERNAL] Rely on legacy Parmap-based parallelism"
@@ -146,13 +140,9 @@ complete -c semgrep -n "__fish_seen_subcommand_from install-semgrep-pro" -l "tra
 complete -c semgrep -n "__fish_seen_subcommand_from install-semgrep-pro" -l "trace-endpoint" -d "Endpoint to send OpenTelemetry traces to, if `--trace` is present." -x
 complete -c semgrep -n "__fish_seen_subcommand_from install-semgrep-pro" -s "v" -l "verbose" -d "Show more details about what rules are running, which files failed to parse, etc."
 
-
-
 complete -c semgrep -n "__fish_seen_subcommand_from login" -l "force" -d "Ignore saved login/provided token and force login (opens browser window)"
 complete -c semgrep -n "__fish_seen_subcommand_from login" -l "override-tty" -d "Login from a non-interactive terminal."
 complete -c semgrep -n "__fish_seen_subcommand_from login" -l "help" -d "Show this message and exit."
-
-
 
 complete -c semgrep -n "__fish_seen_subcommand_from logout" -l "x-eio" -d "[INTERNAL] <deprecated>"
 complete -c semgrep -n "__fish_seen_subcommand_from logout" -l "x-no-python-schema-validation" -d "[INTERNAL] Skip JSON schema validation; rely on osemgrep parser to validate rules files"
@@ -169,8 +159,6 @@ complete -c semgrep -n "__fish_seen_subcommand_from logout" -s "q" -l "quiet" -d
 complete -c semgrep -n "__fish_seen_subcommand_from logout" -l "trace" -d "Record traces from Semgrep scans to help debugging."
 complete -c semgrep -n "__fish_seen_subcommand_from logout" -l "trace-endpoint" -d "Endpoint to send OpenTelemetry traces to, if `--trace` is present." -x
 complete -c semgrep -n "__fish_seen_subcommand_from logout" -s "v" -l "verbose" -d "Show more details about what rules are running, which files failed to parse, etc."
-
-
 
 complete -c semgrep -n "__fish_seen_subcommand_from lsp" -l "no-x-eio-ls" -d "negates --x-eio-ls"
 complete -c semgrep -n "__fish_seen_subcommand_from lsp" -l "x-eio" -d "[INTERNAL] <deprecated>"
@@ -190,17 +178,31 @@ complete -c semgrep -n "__fish_seen_subcommand_from lsp" -l "trace" -d "Record t
 complete -c semgrep -n "__fish_seen_subcommand_from lsp" -l "trace-endpoint" -d "Endpoint to send OpenTelemetry traces to, if `--trace` is present." -x
 complete -c semgrep -n "__fish_seen_subcommand_from lsp" -s "v" -l "verbose" -d "Show more details about what rules are running, which files failed to parse, etc."
 
-
-
 complete -c semgrep -n "__fish_seen_subcommand_from publish" -l "visibility" -d "Sets visibility of the uploaded rules." -x
 complete -c semgrep -n "__fish_seen_subcommand_from publish" -l "registry-id" -d "If --visibility is set to public, this is the path the rule will have in the registry (example: python.flask.my-new-rule" -r
 complete -c semgrep -n "__fish_seen_subcommand_from publish" -l "help" -d "Show this message and exit."
 
 
+complete -c semgrep -n "__fish_seen_subcommand_from show; and not __fish_seen_subcommand_from resources" -l "help" -d "Show this help in format FMT." -x
 
-complete -c semgrep -n "__fish_seen_subcommand_from show" -l "help" -d "Show this help in format FMT." -x
+complete -k -c semgrep -n "__fish_seen_subcommand_from show; and not __fish_seen_subcommand_from resources" -x -a resources -d "[--json] [OPTION]\8230"
 
-
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -l "x-eio" -d "[INTERNAL] <deprecated>"
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -l "x-no-python-schema-validation" -d "[INTERNAL] Skip JSON schema validation; rely on osemgrep parser to validate rules files"
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -l "x-parmap" -d "[INTERNAL] Rely on legacy Parmap-based parallelism"
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -l "x-simple-profiling" -d "Upon exit, print on stderr a report showing how long certain operations took, in an unspecified text format."
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -l "json" -d "Output results in JSON format."
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -l "debug" -d "All of --verbose, but with additional debugging information."
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -l "develop" -d "Living on the edge."
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -l "experimental" -d "Enable experimental features."
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -l "help" -d "Show this help in format FMT." -x
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -l "legacy" -d "Prefer old (legacy) behavior."
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -l "no-trace" -d "negates --trace"
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -l "profile" -d "Record profiles via Pyro Caml."
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -s "q" -l "quiet" -d "Only output findings."
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -l "trace" -d "Record traces from Semgrep scans to help debugging."
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -l "trace-endpoint" -d "Endpoint to send OpenTelemetry traces to, if `--trace` is present." -x
+complete -c semgrep -n "__fish_seen_subcommand_from show; and __fish_seen_subcommand_from resources" -s "v" -l "verbose" -d "Show more details about what rules are running, which files failed to parse, etc."
 
 complete -c semgrep -n "__fish_seen_subcommand_from test" -s "f" -s "c" -l "config" -d "YAML configuration file, directory of YAML files ending in .yml|.yaml, URL of a configuration file, or Semgrep registry entry name." -r
 complete -c semgrep -n "__fish_seen_subcommand_from test" -l "json" -d "Output results in JSON format."
@@ -225,8 +227,6 @@ complete -c semgrep -n "__fish_seen_subcommand_from test" -l "x-no-python-schema
 complete -c semgrep -n "__fish_seen_subcommand_from test" -l "x-parmap" -d "[INTERNAL] Rely on legacy Parmap-based parallelism"
 complete -c semgrep -n "__fish_seen_subcommand_from test" -l "x-simple-profiling" -d "Upon exit, print on stderr a report showing how long certain operations took, in an unspecified text format."
 
-
-
 complete -c semgrep -n "__fish_seen_subcommand_from validate" -l "x-eio" -d "[INTERNAL] <deprecated>"
 complete -c semgrep -n "__fish_seen_subcommand_from validate" -l "x-no-python-schema-validation" -d "[INTERNAL] Skip JSON schema validation; rely on osemgrep parser to validate rules files"
 complete -c semgrep -n "__fish_seen_subcommand_from validate" -l "x-parmap" -d "[INTERNAL] Rely on legacy Parmap-based parallelism"
@@ -243,8 +243,6 @@ complete -c semgrep -n "__fish_seen_subcommand_from validate" -s "q" -l "quiet" 
 complete -c semgrep -n "__fish_seen_subcommand_from validate" -l "trace" -d "Record traces from Semgrep scans to help debugging."
 complete -c semgrep -n "__fish_seen_subcommand_from validate" -l "trace-endpoint" -d "Endpoint to send OpenTelemetry traces to, if `--trace` is present." -x
 complete -c semgrep -n "__fish_seen_subcommand_from validate" -s "v" -l "verbose" -d "Show more details about what rules are running, which files failed to parse, etc."
-
-
 
 complete -c semgrep -n "__fish_seen_subcommand_from mcp" -s "v" -l "version" -d "Show version and exit."
 complete -c semgrep -n "__fish_seen_subcommand_from mcp" -s "t" -l "transport" -d "Transport protocol to use: stdio or streamable-http" -x

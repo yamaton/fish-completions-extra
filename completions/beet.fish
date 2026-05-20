@@ -9,8 +9,6 @@ complete -c beet -n "not __fish_seen_subcommand_from config import list modify m
 complete -c beet -n "not __fish_seen_subcommand_from config import list modify move remove stats update write" -s "p" -l "plugins" -d "a comma-separated list of plugins to load" -x
 complete -c beet -n "not __fish_seen_subcommand_from config import list modify move remove stats update write" -s "h" -l "help" -d "show this help message and exit"
 
-
-
 complete -k -c beet -n __fish_use_subcommand -x -a write -d "write tag information to files"
 complete -k -c beet -n __fish_use_subcommand -x -a update -d "update the library"
 complete -k -c beet -n __fish_use_subcommand -x -a stats -d "show statistics about the library or a query"
@@ -21,15 +19,11 @@ complete -k -c beet -n __fish_use_subcommand -x -a list -d "query the library"
 complete -k -c beet -n __fish_use_subcommand -x -a import -d "import new music"
 complete -k -c beet -n __fish_use_subcommand -x -a config -d "show or edit the user configuration"
 
-
-
 complete -c beet -n "__fish_seen_subcommand_from config" -s "h" -l "help" -d "show this help message and exit"
 complete -c beet -n "__fish_seen_subcommand_from config" -s "p" -l "paths" -d "show files that configuration was loaded from"
 complete -c beet -n "__fish_seen_subcommand_from config" -s "e" -l "edit" -d "edit user configuration with \$EDITOR"
 complete -c beet -n "__fish_seen_subcommand_from config" -s "d" -l "defaults" -d "include the default configuration"
 complete -c beet -n "__fish_seen_subcommand_from config" -s "c" -l "clear" -d "do not redact sensitive fields"
-
-
 
 complete -c beet -n "__fish_seen_subcommand_from import" -s "h" -l "help" -d "show this help message and exit"
 complete -c beet -n "__fish_seen_subcommand_from import" -s "c" -l "copy" -d "copy tracks into library directory (default)"
@@ -55,14 +49,10 @@ complete -c beet -n "__fish_seen_subcommand_from import" -l "pretend" -d "just p
 complete -c beet -n "__fish_seen_subcommand_from import" -s "S" -l "search-id" -d "restrict matching to a specific metadata backend ID" -x
 complete -c beet -n "__fish_seen_subcommand_from import" -l "set" -d "set the given fields to the supplied values" -x
 
-
-
 complete -c beet -n "__fish_seen_subcommand_from list" -s "h" -l "help" -d "show this help message and exit"
 complete -c beet -n "__fish_seen_subcommand_from list" -s "a" -l "album" -d "match albums instead of tracks"
 complete -c beet -n "__fish_seen_subcommand_from list" -s "p" -l "path" -d "print paths for matched items or albums" -r
 complete -c beet -n "__fish_seen_subcommand_from list" -s "f" -l "format" -d "print with custom format" -x
-
-
 
 complete -c beet -n "__fish_seen_subcommand_from modify" -s "h" -l "help" -d "show this help message and exit"
 complete -c beet -n "__fish_seen_subcommand_from modify" -s "m" -l "move" -d "move files in the library directory"
@@ -73,8 +63,6 @@ complete -c beet -n "__fish_seen_subcommand_from modify" -s "a" -l "album" -d "m
 complete -c beet -n "__fish_seen_subcommand_from modify" -s "f" -l "format" -d "print with custom format" -x
 complete -c beet -n "__fish_seen_subcommand_from modify" -s "y" -l "yes" -d "skip confirmation"
 
-
-
 complete -c beet -n "__fish_seen_subcommand_from move" -s "h" -l "help" -d "show this help message and exit"
 complete -c beet -n "__fish_seen_subcommand_from move" -s "d" -l "dest" -d "destination directory" -r
 complete -c beet -n "__fish_seen_subcommand_from move" -s "c" -l "copy" -d "copy instead of moving"
@@ -83,19 +71,13 @@ complete -c beet -n "__fish_seen_subcommand_from move" -s "t" -l "timid" -d "alw
 complete -c beet -n "__fish_seen_subcommand_from move" -s "e" -l "export" -d "copy without changing the database path"
 complete -c beet -n "__fish_seen_subcommand_from move" -s "a" -l "album" -d "match albums instead of tracks"
 
-
-
 complete -c beet -n "__fish_seen_subcommand_from remove" -s "h" -l "help" -d "show this help message and exit"
 complete -c beet -n "__fish_seen_subcommand_from remove" -s "d" -l "delete" -d "also remove files from disk"
 complete -c beet -n "__fish_seen_subcommand_from remove" -s "f" -l "force" -d "do not ask when removing items"
 complete -c beet -n "__fish_seen_subcommand_from remove" -s "a" -l "album" -d "match albums instead of tracks"
 
-
-
 complete -c beet -n "__fish_seen_subcommand_from stats" -s "h" -l "help" -d "show this help message and exit"
 complete -c beet -n "__fish_seen_subcommand_from stats" -s "e" -l "exact" -d "exact size and time"
-
-
 
 complete -c beet -n "__fish_seen_subcommand_from update" -s "h" -l "help" -d "show this help message and exit"
 complete -c beet -n "__fish_seen_subcommand_from update" -s "a" -l "album" -d "match albums instead of tracks"
@@ -104,8 +86,6 @@ complete -c beet -n "__fish_seen_subcommand_from update" -s "m" -l "move" -d "mo
 complete -c beet -n "__fish_seen_subcommand_from update" -s "M" -l "nomove" -d "don't move files in library"
 complete -c beet -n "__fish_seen_subcommand_from update" -s "p" -l "pretend" -d "show all changes but do nothing"
 complete -c beet -n "__fish_seen_subcommand_from update" -s "F" -l "field" -d "list of fields to update" -x
-
-
 
 complete -c beet -n "__fish_seen_subcommand_from write" -s "h" -l "help" -d "show this help message and exit"
 complete -c beet -n "__fish_seen_subcommand_from write" -s "p" -l "pretend" -d "show all changes but do nothing"

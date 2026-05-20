@@ -13,8 +13,6 @@ complete -c dolt -n "not __fish_seen_subcommand_from init status add diff reset 
 complete -c dolt -n "not __fish_seen_subcommand_from init status add diff reset clean commit sql sql-server log show branch checkout merge conflicts cherry-pick revert clone fetch pull push config remote backup login creds ls schema table tag blame constraints migrate read-tables gc fsck filter-branch merge-base version dump docs stash profile query-diff reflog rebase" -l "use-db" -d "The name of the database to use when executing SQL queries." -r
 complete -c dolt -n "not __fish_seen_subcommand_from init status add diff reset clean commit sql sql-server log show branch checkout merge conflicts cherry-pick revert clone fetch pull push config remote backup login creds ls schema table tag blame constraints migrate read-tables gc fsck filter-branch merge-base version dump docs stash profile query-diff reflog rebase" -l "branch" -d "Name of the branch to be selected" -x
 
-
-
 complete -k -c dolt -n __fish_use_subcommand -x -a rebase -d "Reapplies commits on top of another base tip"
 complete -k -c dolt -n __fish_use_subcommand -x -a reflog -d "Show history of named refs."
 complete -k -c dolt -n __fish_use_subcommand -x -a query-diff -d "Shows table diff between two queries."
@@ -62,25 +60,17 @@ complete -k -c dolt -n __fish_use_subcommand -x -a add -d "Add table changes to 
 complete -k -c dolt -n __fish_use_subcommand -x -a status -d "Show the working tree status."
 complete -k -c dolt -n __fish_use_subcommand -x -a init -d "Create an empty Dolt data repository."
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from init" -l "name" -d "The name used in commits to this repo." -x
 complete -c dolt -n "__fish_seen_subcommand_from init" -l "email" -d "The email address used." -x
 complete -c dolt -n "__fish_seen_subcommand_from init" -l "date" -d "Specify the date used in the initial commit." -x
 complete -c dolt -n "__fish_seen_subcommand_from init" -s "b" -l "initial-branch" -d "The branch name used to initialize this database." -x
 complete -c dolt -n "__fish_seen_subcommand_from init" -l "new-format" -d "Specify this flag to use the new storage format (__DOLT__)."
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from status" -l "ignored" -d "Show tables that are ignored (according to dolt_ignore)"
-
-
 
 complete -c dolt -n "__fish_seen_subcommand_from add" -s "A" -l "all" -d "Stages any and all changes (adds, deletes, and modifications) except for ignored tables."
 complete -c dolt -n "__fish_seen_subcommand_from add" -s "f" -l "force" -d "Allow adding otherwise ignored tables."
 complete -c dolt -n "__fish_seen_subcommand_from add" -s "p" -l "patch" -d "Interactively select changes to add to the staged set."
-
-
 
 complete -c dolt -n "__fish_seen_subcommand_from diff" -s "d" -l "data" -d "Show only the data changes, do not show the schema changes (Both shown by default)."
 complete -c dolt -n "__fish_seen_subcommand_from diff" -s "s" -l "schema" -d "Show only the schema changes, do not show the data changes (Both shown by default)."
@@ -97,16 +87,10 @@ complete -c dolt -n "__fish_seen_subcommand_from diff" -l "diff-mode" -d "Determ
 complete -c dolt -n "__fish_seen_subcommand_from diff" -s "R" -l "reverse" -d "Reverses the direction of the diff."
 complete -c dolt -n "__fish_seen_subcommand_from diff" -l "name-only" -d "Only shows table names."
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from reset" -l "hard" -d "Resets the working tables and staged tables."
 complete -c dolt -n "__fish_seen_subcommand_from reset" -l "soft" -d "Does not touch the working tables, but removes all tables staged to be committed."
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from clean" -l "dry-run" -d "Tests removing untracked tables without modifying the working set."
-
-
 
 complete -c dolt -n "__fish_seen_subcommand_from commit" -s "m" -l "message" -d "Use the given <msg> as the commit message." -x
 complete -c dolt -n "__fish_seen_subcommand_from commit" -l "allow-empty" -d "Allow recording a commit that has the exact same data as its sole parent."
@@ -119,8 +103,6 @@ complete -c dolt -n "__fish_seen_subcommand_from commit" -s "A" -l "ALL" -d "Add
 complete -c dolt -n "__fish_seen_subcommand_from commit" -l "amend" -d "Amend previous commit"
 complete -c dolt -n "__fish_seen_subcommand_from commit" -s "S" -l "gpg-sign" -d "Sign the commit using GPG." -x
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from sql" -l "host" -d "and --port <port> global arguments." -x
 complete -c dolt -n "__fish_seen_subcommand_from sql" -s "q" -l "query" -d "Runs a single query and exits." -x
 complete -c dolt -n "__fish_seen_subcommand_from sql" -s "r" -l "result-format" -d "How to format result output." -x
@@ -131,8 +113,6 @@ complete -c dolt -n "__fish_seen_subcommand_from sql" -s "m" -l "message" -d "Us
 complete -c dolt -n "__fish_seen_subcommand_from sql" -s "b" -l "batch" -d "Use to enable more efficient batch processing for large SQL import scripts."
 complete -c dolt -n "__fish_seen_subcommand_from sql" -s "c" -l "continue" -d "Continue running queries on an error."
 complete -c dolt -n "__fish_seen_subcommand_from sql" -s "f" -l "file" -d "Execute statements from the file given." -r
-
-
 
 complete -c dolt -n "__fish_seen_subcommand_from sql-server" -l "config" -d "When provided configuration is taken from the yaml config file and all command line parameters are ignored." -r
 complete -c dolt -n "__fish_seen_subcommand_from sql-server" -s "H" -l "host" -d "Defines the host address that the server will run on." -x
@@ -158,8 +138,6 @@ complete -c dolt -n "__fish_seen_subcommand_from sql-server" -l "remotesapi-read
 complete -c dolt -n "__fish_seen_subcommand_from sql-server" -l "golden" -d "Provides a connection string to a MySQL instance to be used to validate query results" -x
 complete -c dolt -n "__fish_seen_subcommand_from sql-server" -l "event-scheduler" -d "Determines whether the Event Scheduler is enabled and running on the server." -x
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from log" -s "n" -l "number" -d "Limit the number of commits to output." -x
 complete -c dolt -n "__fish_seen_subcommand_from log" -l "min-parents" -d "The minimum number of parents a commit must have to be included in the log." -x
 complete -c dolt -n "__fish_seen_subcommand_from log" -l "merges" -d "Equivalent to min-parents == 2, this will limit the log to commits with 2 or more parents."
@@ -170,8 +148,6 @@ complete -c dolt -n "__fish_seen_subcommand_from log" -l "show-signature" -d "Sh
 complete -c dolt -n "__fish_seen_subcommand_from log" -l "oneline" -d "Shows logs in a compact format."
 complete -c dolt -n "__fish_seen_subcommand_from log" -l "stat" -d "Shows the diffstat for each commit."
 complete -c dolt -n "__fish_seen_subcommand_from log" -l "graph" -d "Shows the commit graph."
-
-
 
 complete -c dolt -n "__fish_seen_subcommand_from show" -l "parents" -d "Shows all parents of each commit in the log."
 complete -c dolt -n "__fish_seen_subcommand_from show" -l "decorate" -d "Shows refs next to commits." -x
@@ -188,8 +164,6 @@ complete -c dolt -n "__fish_seen_subcommand_from show" -o "sk" -l "skinny" -d "S
 complete -c dolt -n "__fish_seen_subcommand_from show" -l "merge-base" -d "Uses merge base of the first commit and second commit (or HEAD if not supplied) as the first commit"
 complete -c dolt -n "__fish_seen_subcommand_from show" -l "diff-mode" -d "Determines how to display modified rows with tabular output." -x
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from branch" -s "f" -l "force" -d "Reset <branchname> to <startpoint>, even if <branchname> exists already."
 complete -c dolt -n "__fish_seen_subcommand_from branch" -s "c" -l "copy" -d "Create a copy of a branch."
 complete -c dolt -n "__fish_seen_subcommand_from branch" -s "m" -l "move" -d "Move/rename a branch"
@@ -203,14 +177,10 @@ complete -c dolt -n "__fish_seen_subcommand_from branch" -l "datasets" -d "List 
 complete -c dolt -n "__fish_seen_subcommand_from branch" -s "r" -l "remote" -d "When in list mode, show only remote tracked branches."
 complete -c dolt -n "__fish_seen_subcommand_from branch" -l "show-current" -d "Print the name of the current branch"
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from checkout" -l "b" -d "Create a new branch named <new_branch> and start it at <start_point>." -x
 complete -c dolt -n "__fish_seen_subcommand_from checkout" -l "B" -d "Similar to '-b'." -x
 complete -c dolt -n "__fish_seen_subcommand_from checkout" -s "f" -l "force" -d "If there is any changes in working set, the force flag will wipe out the current changes and checkout the new branch."
 complete -c dolt -n "__fish_seen_subcommand_from checkout" -s "t" -l "track" -d "When creating a new branch, set up 'upstream' configuration."
-
-
 
 complete -c dolt -n "__fish_seen_subcommand_from merge" -l "no-ff" -d "Create a merge commit even when the merge resolves as a fast-forward."
 complete -c dolt -n "__fish_seen_subcommand_from merge" -l "squash" -d "Merge changes to the working set without updating the commit history"
@@ -222,17 +192,16 @@ complete -c dolt -n "__fish_seen_subcommand_from merge" -l "no-edit" -d "Use an 
 complete -c dolt -n "__fish_seen_subcommand_from merge" -l "author" -d "Specify an explicit author using the standard A U Thor <author@example.com> format." -x
 complete -c dolt -n "__fish_seen_subcommand_from merge" -l "dont-merge-json" -d "Do not attempt to automatically resolve multiple changes to the same JSON value, report a conflict instead."
 
+complete -k -c dolt -n "__fish_seen_subcommand_from conflicts; and not __fish_seen_subcommand_from resolve" -x -a resolve -d "- Removes rows from list of conflicts"
 
+complete -c dolt -n "__fish_seen_subcommand_from conflicts; and __fish_seen_subcommand_from resolve" -l "ours" -d "For all conflicts, take the version from our branch and resolve the conflict"
+complete -c dolt -n "__fish_seen_subcommand_from conflicts; and __fish_seen_subcommand_from resolve" -l "theirs" -d "For all conflicts, take the version from their branch and resolve the conflict"
 
 complete -c dolt -n "__fish_seen_subcommand_from cherry-pick" -l "abort" -d "Abort the current conflict resolution process, and revert all changes from the in-process cherry-pick operation."
 complete -c dolt -n "__fish_seen_subcommand_from cherry-pick" -l "allow-empty" -d "Allow empty commits to be cherry-picked."
 complete -c dolt -n "__fish_seen_subcommand_from cherry-pick" -l "dont-merge-json" -d "Do not attempt to automatically resolve multiple changes to the same JSON value, report a conflict instead."
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from revert" -l "author" -d "Specify an explicit author using the standard A U Thor <author@example.com> format." -x
-
-
 
 complete -c dolt -n "__fish_seen_subcommand_from clone" -l "remote" -d "Name of the remote to be added to the cloned database." -x
 complete -c dolt -n "__fish_seen_subcommand_from clone" -s "b" -l "branch" -d "The branch to be cloned." -x
@@ -244,13 +213,9 @@ complete -c dolt -n "__fish_seen_subcommand_from clone" -l "oss-creds-profile" -
 complete -c dolt -n "__fish_seen_subcommand_from clone" -s "u" -l "user" -d "User name to use when authenticating with the remote." -x
 complete -c dolt -n "__fish_seen_subcommand_from clone" -l "single-branch" -d "Clone only the history leading to the tip of a single branch, either specified by --branch or the remote's HEAD (default)."
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from fetch" -l "user" -d "User name to use when authenticating with the remote." -x
 complete -c dolt -n "__fish_seen_subcommand_from fetch" -s "p" -l "prune" -d "After fetching, remove any remote-tracking references that don't exist on the remote."
 complete -c dolt -n "__fish_seen_subcommand_from fetch" -l "silent" -d "Suppress progress information."
-
-
 
 complete -c dolt -n "__fish_seen_subcommand_from pull" -l "squash" -d "Merge changes to the working set without updating the commit history"
 complete -c dolt -n "__fish_seen_subcommand_from pull" -l "no-ff" -d "Create a merge commit even when the merge resolves as a fast-forward."
@@ -261,15 +226,11 @@ complete -c dolt -n "__fish_seen_subcommand_from pull" -l "no-edit" -d "Use an a
 complete -c dolt -n "__fish_seen_subcommand_from pull" -l "user" -d "User name to use when authenticating with the remote." -x
 complete -c dolt -n "__fish_seen_subcommand_from pull" -l "silent" -d "Suppress progress information."
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from push" -l "user" -d "User name to use when authenticating with the remote." -x
 complete -c dolt -n "__fish_seen_subcommand_from push" -s "u" -l "set-upstream" -d "For every branch that is up to date or successfully pushed, add upstream (tracking) reference, used by argument-less dolt pull and other commands."
 complete -c dolt -n "__fish_seen_subcommand_from push" -s "f" -l "force" -d "Update the remote with local history, overwriting any conflicting history in the remote."
 complete -c dolt -n "__fish_seen_subcommand_from push" -l "all" -d "Push all branches."
 complete -c dolt -n "__fish_seen_subcommand_from push" -l "silent" -d "Suppress progress information."
-
-
 
 complete -c dolt -n "__fish_seen_subcommand_from config" -l "global" -d "Use global config."
 complete -c dolt -n "__fish_seen_subcommand_from config" -l "local" -d "Use repository local config."
@@ -279,8 +240,6 @@ complete -c dolt -n "__fish_seen_subcommand_from config" -l "list" -d "List the 
 complete -c dolt -n "__fish_seen_subcommand_from config" -l "get" -d "Get the value of one or more config parameters."
 complete -c dolt -n "__fish_seen_subcommand_from config" -l "unset" -d "Unset the value of one or more config parameters."
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from remote" -s "v" -l "verbose" -d "When printing the list of remotes adds additional details."
 complete -c dolt -n "__fish_seen_subcommand_from remote" -l "aws-region" -d "Cloud provider region associated with this remote." -x
 complete -c dolt -n "__fish_seen_subcommand_from remote" -l "aws-creds-type" -d "Credential type." -r
@@ -289,26 +248,59 @@ complete -c dolt -n "__fish_seen_subcommand_from remote" -l "aws-creds-profile" 
 complete -c dolt -n "__fish_seen_subcommand_from remote" -l "oss-creds-file" -d "OSS credentials file" -r
 complete -c dolt -n "__fish_seen_subcommand_from remote" -l "oss-creds-profile" -d "OSS profile to use" -r
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from backup" -s "v" -l "verbose" -d "When printing the list of backups adds additional details."
 complete -c dolt -n "__fish_seen_subcommand_from backup" -s "f" -l "force" -d "When restoring a backup, overwrite the contents of the existing database with the same name."
 complete -c dolt -n "__fish_seen_subcommand_from backup" -l "aws-creds-file" -d "AWS credentials file" -r
 complete -c dolt -n "__fish_seen_subcommand_from backup" -l "aws-creds-profile" -d "AWS profile to use" -r
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from login" -s "e" -l "auth-endpoint" -d "Specify the endpoint used to authenticate this client." -r
 complete -c dolt -n "__fish_seen_subcommand_from login" -o "url" -l "login-url" -d "Specify the login url where the browser will add credentials." -x
 complete -c dolt -n "__fish_seen_subcommand_from login" -s "i" -l "insecure" -d "If set, makes insecure connection to remote authentication server"
 
+complete -k -c dolt -n "__fish_seen_subcommand_from creds; and not __fish_seen_subcommand_from check" -x -a check -d "- Check authenticating with a credential keypair against a doltremoteapi."
 
+complete -c dolt -n "__fish_seen_subcommand_from creds; and __fish_seen_subcommand_from check" -l "endpoint" -d "API endpoint, otherwise taken from config."
+complete -c dolt -n "__fish_seen_subcommand_from creds; and __fish_seen_subcommand_from check" -l "creds" -d "Public Key ID or Public Key for credentials, otherwise taken from config."
 
 complete -c dolt -n "__fish_seen_subcommand_from ls" -s "v" -l "verbose" -d "show the hash of the table and row count"
 complete -c dolt -n "__fish_seen_subcommand_from ls" -s "s" -l "system" -d "show system tables"
 complete -c dolt -n "__fish_seen_subcommand_from ls" -s "a" -l "all" -d "show user and system tables"
 
+complete -k -c dolt -n "__fish_seen_subcommand_from schema; and not __fish_seen_subcommand_from export import" -x -a import -d "- Creates a new table with an inferred schema."
+complete -k -c dolt -n "__fish_seen_subcommand_from schema; and not __fish_seen_subcommand_from export import" -x -a export -d "- Exports a table's schema in SQL form."
 
+
+complete -c dolt -n "__fish_seen_subcommand_from schema; and __fish_seen_subcommand_from import" -s "c" -l "create" -d "Create a table with the schema inferred from the <file> provided."
+complete -c dolt -n "__fish_seen_subcommand_from schema; and __fish_seen_subcommand_from import" -s "u" -l "update" -d "Update a table to match the inferred schema of the <file> provided."
+complete -c dolt -n "__fish_seen_subcommand_from schema; and __fish_seen_subcommand_from import" -s "r" -l "replace" -d "Replace a table with a new schema that has the inferred schema from the <file> provided."
+complete -c dolt -n "__fish_seen_subcommand_from schema; and __fish_seen_subcommand_from import" -l "dry-run" -d "Print the sql statement that would be run if executed without the flag."
+complete -c dolt -n "__fish_seen_subcommand_from schema; and __fish_seen_subcommand_from import" -l "keep-types" -d "When a column already exists in the table, and it's also in the <file> provided, use the type from the table."
+complete -c dolt -n "__fish_seen_subcommand_from schema; and __fish_seen_subcommand_from import" -l "file-type" -d "Explicitly define the type of the file if it can't be inferred from the file extension." -r
+complete -c dolt -n "__fish_seen_subcommand_from schema; and __fish_seen_subcommand_from import" -l "pks" -d "List of columns used as the primary key cols." -x
+complete -c dolt -n "__fish_seen_subcommand_from schema; and __fish_seen_subcommand_from import" -s "m" -l "map" -d "A file that can map a column name in <file> to a new value." -r
+complete -c dolt -n "__fish_seen_subcommand_from schema; and __fish_seen_subcommand_from import" -l "float-threshold" -d "Minimum value at which the fractional component of a value must exceed in order to be considered a float." -x
+complete -c dolt -n "__fish_seen_subcommand_from schema; and __fish_seen_subcommand_from import" -l "delim" -d "Specify a delimiter for a csv style file with a non-comma delimiter." -r
+
+complete -k -c dolt -n "__fish_seen_subcommand_from table; and not __fish_seen_subcommand_from import export" -x -a export -d "- Export a table to a file."
+complete -k -c dolt -n "__fish_seen_subcommand_from table; and not __fish_seen_subcommand_from import export" -x -a import -d "- Creates, overwrites, replaces, or updates a table from the data in a file."
+
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from import" -s "c" -l "create-table" -d "Create a new table, or overwrite an existing table (with the -f flag) from the imported data."
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from import" -s "u" -l "update-table" -d "Update an existing table with the imported data."
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from import" -s "a" -l "append-table" -d "Require that the operation will not modify any rows in the table."
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from import" -s "r" -l "replace-table" -d "Replace existing table with imported data while preserving the original schema."
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from import" -s "f" -l "force" -d "If a create operation is being executed, data already exists in the destination, the force flag will allow the target to be overwritten."
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from import" -l "continue" -d "Continue importing when row import errors are encountered."
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from import" -l "quiet" -d "Suppress any warning messages about invalid rows when using the --continue flag."
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from import" -l "disable-fk-checks" -d "Disables foreign key checks."
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from import" -s "s" -l "schema" -d "The schema for the output data." -r
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from import" -s "m" -l "map" -d "A file that lays out how fields should be mapped from input data to output data." -r
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from import" -o "pk" -l "pk" -d "Explicitly define the name of the field in the schema which should be used as the primary key." -x
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from import" -l "file-type" -d "Explicitly define the type of the file if it can't be inferred from the file extension." -r
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from import" -l "delim" -d "Specify a delimiter for a csv style file with a non-comma delimiter." -r
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from import" -l "all-text" -d "Treats all fields as text."
+
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from export" -s "f" -l "force" -d "If data already exists in the destination, the force flag will allow the target to be overwritten."
+complete -c dolt -n "__fish_seen_subcommand_from table; and __fish_seen_subcommand_from export" -l "file-type" -d "Explicitly define the type of the file if it can't be inferred from the file extension." -r
 
 complete -c dolt -n "__fish_seen_subcommand_from tag" -s "m" -l "message" -d "Use the given <msg> as the tag message." -x
 complete -c dolt -n "__fish_seen_subcommand_from tag" -s "v" -l "verbose" -d "list tags along with their metadata."
@@ -316,23 +308,19 @@ complete -c dolt -n "__fish_seen_subcommand_from tag" -s "d" -l "delete" -d "Del
 complete -c dolt -n "__fish_seen_subcommand_from tag" -l "author" -d "Specify an explicit author using the standard A U Thor <author@example.com> format." -x
 
 
+complete -k -c dolt -n "__fish_seen_subcommand_from constraints; and not __fish_seen_subcommand_from verify" -x -a verify -d "- Command to verify that the constraints on the given table(s) are satisfied."
+
+complete -c dolt -n "__fish_seen_subcommand_from constraints; and __fish_seen_subcommand_from verify" -s "a" -l "all" -d "Verifies that all rows in the database do not violate constraints instead of just rows modified or inserted in the working set."
+complete -c dolt -n "__fish_seen_subcommand_from constraints; and __fish_seen_subcommand_from verify" -s "o" -l "output-only" -d "Disables writing violated constraints to the constraint violations table."
 
 complete -c dolt -n "__fish_seen_subcommand_from migrate" -l "drop-conflicts" -d "Drop any conflicts visited during the migration"
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from read-tables" -s "d" -l "dir" -d "directory to create and put retrieved table data." -r
-
-
 
 complete -c dolt -n "__fish_seen_subcommand_from gc" -s "s" -l "shallow" -d "perform a fast, but incomplete garbage collection pass"
 complete -c dolt -n "__fish_seen_subcommand_from gc" -s "f" -l "full" -d "perform a full garbage collection, including the old generation"
 
-
-
 complete -c dolt -n "__fish_seen_subcommand_from fsck" -l "quiet" -d "Don't show progress."
-
-
 
 complete -c dolt -n "__fish_seen_subcommand_from filter-branch" -s "v" -l "verbose" -d "logs more information"
 complete -c dolt -n "__fish_seen_subcommand_from filter-branch" -s "b" -l "branches" -d "filter all branches"
@@ -342,11 +330,8 @@ complete -c dolt -n "__fish_seen_subcommand_from filter-branch" -s "c" -l "conti
 complete -c dolt -n "__fish_seen_subcommand_from filter-branch" -s "q" -l "query" -d "Queries to run, separated by semicolons." -x
 
 
-
 complete -c dolt -n "__fish_seen_subcommand_from version" -s "f" -l "feature" -d "display the feature version of this repository."
 complete -c dolt -n "__fish_seen_subcommand_from version" -s "v" -l "verbose" -d "display verbose details, including the storage format of this repository."
-
-
 
 complete -c dolt -n "__fish_seen_subcommand_from dump" -s "r" -l "result-format" -d "Define the type of the output file." -r
 complete -c dolt -n "__fish_seen_subcommand_from dump" -o "fn" -l "file-name" -d "Define file name for dump file." -r
@@ -358,12 +343,11 @@ complete -c dolt -n "__fish_seen_subcommand_from dump" -o "na" -l "no-autocommit
 complete -c dolt -n "__fish_seen_subcommand_from dump" -l "schema-only" -d "Dump a table's schema, without including any data, to the output SQL file."
 complete -c dolt -n "__fish_seen_subcommand_from dump" -l "no-create-db" -d "Do not write `CREATE DATABASE` statements in SQL files."
 
+complete -k -c dolt -n "__fish_seen_subcommand_from docs; and not __fish_seen_subcommand_from print" -x -a print -d "- Prints Dolt Docs to stdout"
 
 
 complete -c dolt -n "__fish_seen_subcommand_from stash" -s "u" -l "include-untracked" -d "Untracked tables are also stashed."
 complete -c dolt -n "__fish_seen_subcommand_from stash" -s "a" -l "all" -d "All tables are stashed, including untracked and ignored tables."
-
-
 
 complete -c dolt -n "__fish_seen_subcommand_from profile" -s "u" -l "user" -d "Defines the local superuser (defaults to `root`)." -x
 complete -c dolt -n "__fish_seen_subcommand_from profile" -s "p" -l "password" -d "Defines the password for the user." -x
@@ -379,10 +363,7 @@ complete -c dolt -n "__fish_seen_subcommand_from profile" -l "branch" -d "Name o
 complete -c dolt -n "__fish_seen_subcommand_from profile" -s "v" -l "verbose" -d "Includes full details when printing list of profiles."
 
 
-
 complete -c dolt -n "__fish_seen_subcommand_from reflog" -l "all" -d "Show all refs, including hidden refs, such as DoltHub workspace refs"
-
-
 
 complete -c dolt -n "__fish_seen_subcommand_from rebase" -l "empty" -d "How to handle commits that are not empty to start, but which become empty after rebasing." -x
 complete -c dolt -n "__fish_seen_subcommand_from rebase" -l "abort" -d "Abort an interactive rebase and return the working set to the pre-rebase state"

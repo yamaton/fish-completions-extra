@@ -21,13 +21,9 @@ complete -c croc -n "not __fish_seen_subcommand_from send relay help" -l "thrott
 complete -c croc -n "not __fish_seen_subcommand_from send relay help" -l "help" -s "h" -d "show help (default: false)"
 complete -c croc -n "not __fish_seen_subcommand_from send relay help" -l "version" -s "v" -d "print the version (default: false)"
 
-
-
 complete -k -c croc -n __fish_use_subcommand -x -a help -d "shows a list of commands or help for one command"
 complete -k -c croc -n __fish_use_subcommand -x -a relay -d "start your own relay (optional)"
 complete -k -c croc -n __fish_use_subcommand -x -a send -d "send file(s), or folder (see options with croc send -h)"
-
-
 
 complete -c croc -n "__fish_seen_subcommand_from send" -l "zip" -d "zip folder before sending (default: false)"
 complete -c croc -n "__fish_seen_subcommand_from send" -l "code" -s "c" -d "codephrase used to connect to relay" -x
@@ -38,12 +34,8 @@ complete -c croc -n "__fish_seen_subcommand_from send" -l "no-multi" -d "disable
 complete -c croc -n "__fish_seen_subcommand_from send" -l "ports" -d "ports of the local relay (optional) (default: \"9009,9010,9011,9012,9013\")" -x
 complete -c croc -n "__fish_seen_subcommand_from send" -l "help" -s "h" -d "show help (default: false)"
 
-
-
 complete -c croc -n "__fish_seen_subcommand_from relay" -l "host" -d "host of the relay" -x
 complete -c croc -n "__fish_seen_subcommand_from relay" -l "ports" -d "ports of the relay (default: \"9009,9010,9011,9012,9013\")" -x
 complete -c croc -n "__fish_seen_subcommand_from relay" -l "help" -s "h" -d "show help (default: false)"
-
-
 
 complete -c croc -n "__fish_seen_subcommand_from help" -l "help" -s "h" -d "show help (default: false)"

@@ -14,8 +14,6 @@ complete -c ffsend -n "not __fish_seen_subcommand_from upload download debug del
 complete -c ffsend -n "not __fish_seen_subcommand_from upload download debug delete exists generate help history info parameters password version" -s "t" -l "timeout" -d "Request timeout (0 to disable) [env: FFSEND_TIMEOUT]" -x
 complete -c ffsend -n "not __fish_seen_subcommand_from upload download debug delete exists generate help history info parameters password version" -s "T" -l "transfer-timeout" -d "Transfer timeout (0 to disable) [env: FFSEND_TRANSFER_TIMEOUT]" -x
 
-
-
 complete -k -c ffsend -n __fish_use_subcommand -x -a version -d "Determine the Send server version [aliases: v]"
 complete -k -c ffsend -n __fish_use_subcommand -x -a password -d "Change the password of a shared file [aliases: pass, p]"
 complete -k -c ffsend -n __fish_use_subcommand -x -a parameters -d "Change parameters of a shared file [aliases: params]"
@@ -28,8 +26,6 @@ complete -k -c ffsend -n __fish_use_subcommand -x -a delete -d "Delete a shared 
 complete -k -c ffsend -n __fish_use_subcommand -x -a debug -d "View debug information [aliases: dbg]"
 complete -k -c ffsend -n __fish_use_subcommand -x -a download -d "Download files [aliases: d, down]"
 complete -k -c ffsend -n __fish_use_subcommand -x -a upload -d "Upload files [aliases: u, up]"
-
-
 
 complete -c ffsend -n "__fish_seen_subcommand_from upload" -s "a" -l "archive" -d "Archive the upload in a single file"
 complete -c ffsend -n "__fish_seen_subcommand_from upload" -s "c" -l "copy" -d "Copy the share link to your clipboard"
@@ -57,8 +53,6 @@ complete -c ffsend -n "__fish_seen_subcommand_from upload" -s "p" -l "password" 
 complete -c ffsend -n "__fish_seen_subcommand_from upload" -s "t" -l "timeout" -d "Request timeout (0 to disable) [env: FFSEND_TIMEOUT]" -x
 complete -c ffsend -n "__fish_seen_subcommand_from upload" -s "T" -l "transfer-timeout" -d "Transfer timeout (0 to disable) [env: FFSEND_TRANSFER_TIMEOUT]" -x
 
-
-
 complete -c ffsend -n "__fish_seen_subcommand_from download" -s "e" -l "extract" -d "Extract an archived file"
 complete -c ffsend -n "__fish_seen_subcommand_from download" -s "f" -l "force" -d "Force the action, ignore warnings"
 complete -c ffsend -n "__fish_seen_subcommand_from download" -s "h" -l "help" -d "Prints help information"
@@ -75,8 +69,6 @@ complete -c ffsend -n "__fish_seen_subcommand_from download" -s "p" -l "password
 complete -c ffsend -n "__fish_seen_subcommand_from download" -s "t" -l "timeout" -d "Request timeout (0 to disable) [env: FFSEND_TIMEOUT]" -x
 complete -c ffsend -n "__fish_seen_subcommand_from download" -s "T" -l "transfer-timeout" -d "Transfer timeout (0 to disable) [env: FFSEND_TRANSFER_TIMEOUT]" -x
 
-
-
 complete -c ffsend -n "__fish_seen_subcommand_from debug" -s "f" -l "force" -d "Force the action, ignore warnings"
 complete -c ffsend -n "__fish_seen_subcommand_from debug" -l "help" -d "Prints help information"
 complete -c ffsend -n "__fish_seen_subcommand_from debug" -s "i" -l "incognito" -d "Don't update local history for actions"
@@ -89,8 +81,6 @@ complete -c ffsend -n "__fish_seen_subcommand_from debug" -l "basic-auth" -d "Pr
 complete -c ffsend -n "__fish_seen_subcommand_from debug" -s "H" -l "history" -d "Use the specified history file [env: FFSEND_HISTORY]" -r
 complete -c ffsend -n "__fish_seen_subcommand_from debug" -s "t" -l "timeout" -d "Request timeout (0 to disable) [env: FFSEND_TIMEOUT]" -x
 complete -c ffsend -n "__fish_seen_subcommand_from debug" -s "T" -l "transfer-timeout" -d "Transfer timeout (0 to disable) [env: FFSEND_TRANSFER_TIMEOUT]" -x
-
-
 
 complete -c ffsend -n "__fish_seen_subcommand_from delete" -s "f" -l "force" -d "Force the action, ignore warnings"
 complete -c ffsend -n "__fish_seen_subcommand_from delete" -s "h" -l "help" -d "Prints help information"
@@ -106,8 +96,6 @@ complete -c ffsend -n "__fish_seen_subcommand_from delete" -s "o" -l "owner" -d 
 complete -c ffsend -n "__fish_seen_subcommand_from delete" -s "t" -l "timeout" -d "Request timeout (0 to disable) [env: FFSEND_TIMEOUT]" -x
 complete -c ffsend -n "__fish_seen_subcommand_from delete" -s "T" -l "transfer-timeout" -d "Transfer timeout (0 to disable) [env: FFSEND_TRANSFER_TIMEOUT]" -x
 
-
-
 complete -c ffsend -n "__fish_seen_subcommand_from exists" -s "f" -l "force" -d "Force the action, ignore warnings"
 complete -c ffsend -n "__fish_seen_subcommand_from exists" -s "h" -l "help" -d "Prints help information"
 complete -c ffsend -n "__fish_seen_subcommand_from exists" -s "i" -l "incognito" -d "Don't update local history for actions"
@@ -121,20 +109,35 @@ complete -c ffsend -n "__fish_seen_subcommand_from exists" -s "H" -l "history" -
 complete -c ffsend -n "__fish_seen_subcommand_from exists" -s "t" -l "timeout" -d "Request timeout (0 to disable) [env: FFSEND_TIMEOUT]" -x
 complete -c ffsend -n "__fish_seen_subcommand_from exists" -s "T" -l "transfer-timeout" -d "Transfer timeout (0 to disable) [env: FFSEND_TRANSFER_TIMEOUT]" -x
 
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and not __fish_seen_subcommand_from completions help" -s "f" -l "force" -d "Force the action, ignore warnings"
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and not __fish_seen_subcommand_from completions help" -s "h" -l "help" -d "Prints help information"
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and not __fish_seen_subcommand_from completions help" -s "i" -l "incognito" -d "Don't update local history for actions"
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and not __fish_seen_subcommand_from completions help" -s "I" -l "no-interact" -d "Not interactive, do not prompt"
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and not __fish_seen_subcommand_from completions help" -s "q" -l "quiet" -d "Produce output suitable for logging and automation"
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and not __fish_seen_subcommand_from completions help" -s "v" -l "verbose" -d "Enable verbose information and logging"
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and not __fish_seen_subcommand_from completions help" -s "y" -l "yes" -d "Assume yes for prompts"
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and not __fish_seen_subcommand_from completions help" -s "A" -l "api" -d "Server API version to use, one of: 2, 3: Send API versions auto, -: probe server to determine [env: FFSEND_API]" -x
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and not __fish_seen_subcommand_from completions help" -l "basic-auth" -d "Protected proxy HTTP basic authentication credentials (not FxA) [env: FFSEND_BASIC_AUTH]" -x
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and not __fish_seen_subcommand_from completions help" -s "H" -l "history" -d "Use the specified history file [env: FFSEND_HISTORY]" -r
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and not __fish_seen_subcommand_from completions help" -s "t" -l "timeout" -d "Request timeout (0 to disable) [env: FFSEND_TIMEOUT]" -x
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and not __fish_seen_subcommand_from completions help" -s "T" -l "transfer-timeout" -d "Transfer timeout (0 to disable) [env: FFSEND_TRANSFER_TIMEOUT]" -x
 
+complete -k -c ffsend -n "__fish_seen_subcommand_from generate; and not __fish_seen_subcommand_from completions help" -x -a help -d "Prints this message or the help of the given subcommand(s)"
+complete -k -c ffsend -n "__fish_seen_subcommand_from generate; and not __fish_seen_subcommand_from completions help" -x -a completions -d "Shell completions"
 
-complete -c ffsend -n "__fish_seen_subcommand_from generate" -s "f" -l "force" -d "Force the action, ignore warnings"
-complete -c ffsend -n "__fish_seen_subcommand_from generate" -s "h" -l "help" -d "Prints help information"
-complete -c ffsend -n "__fish_seen_subcommand_from generate" -s "i" -l "incognito" -d "Don't update local history for actions"
-complete -c ffsend -n "__fish_seen_subcommand_from generate" -s "I" -l "no-interact" -d "Not interactive, do not prompt"
-complete -c ffsend -n "__fish_seen_subcommand_from generate" -s "q" -l "quiet" -d "Produce output suitable for logging and automation"
-complete -c ffsend -n "__fish_seen_subcommand_from generate" -s "v" -l "verbose" -d "Enable verbose information and logging"
-complete -c ffsend -n "__fish_seen_subcommand_from generate" -s "y" -l "yes" -d "Assume yes for prompts"
-complete -c ffsend -n "__fish_seen_subcommand_from generate" -s "A" -l "api" -d "Server API version to use, one of: 2, 3: Send API versions auto, -: probe server to determine [env: FFSEND_API]" -x
-complete -c ffsend -n "__fish_seen_subcommand_from generate" -l "basic-auth" -d "Protected proxy HTTP basic authentication credentials (not FxA) [env: FFSEND_BASIC_AUTH]" -x
-complete -c ffsend -n "__fish_seen_subcommand_from generate" -s "H" -l "history" -d "Use the specified history file [env: FFSEND_HISTORY]" -r
-complete -c ffsend -n "__fish_seen_subcommand_from generate" -s "t" -l "timeout" -d "Request timeout (0 to disable) [env: FFSEND_TIMEOUT]" -x
-complete -c ffsend -n "__fish_seen_subcommand_from generate" -s "T" -l "transfer-timeout" -d "Transfer timeout (0 to disable) [env: FFSEND_TRANSFER_TIMEOUT]" -x
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and __fish_seen_subcommand_from completions" -s "f" -l "force" -d "Force the action, ignore warnings"
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and __fish_seen_subcommand_from completions" -s "h" -l "help" -d "Prints help information"
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and __fish_seen_subcommand_from completions" -s "i" -l "incognito" -d "Don't update local history for actions"
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and __fish_seen_subcommand_from completions" -s "I" -l "no-interact" -d "Not interactive, do not prompt"
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and __fish_seen_subcommand_from completions" -s "q" -l "quiet" -d "Produce output suitable for logging and automation"
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and __fish_seen_subcommand_from completions" -s "v" -l "verbose" -d "Enable verbose information and logging"
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and __fish_seen_subcommand_from completions" -s "y" -l "yes" -d "Assume yes for prompts"
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and __fish_seen_subcommand_from completions" -s "A" -l "api" -d "Server API version to use, one of: 2, 3: Send API versions auto, -: probe server to determine [env: FFSEND_API]" -x
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and __fish_seen_subcommand_from completions" -l "basic-auth" -d "Protected proxy HTTP basic authentication credentials (not FxA) [env: FFSEND_BASIC_AUTH]" -x
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and __fish_seen_subcommand_from completions" -s "H" -l "history" -d "Use the specified history file [env: FFSEND_HISTORY]" -r
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and __fish_seen_subcommand_from completions" -s "o" -l "output" -d "Shell completion files output directory" -r
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and __fish_seen_subcommand_from completions" -s "t" -l "timeout" -d "Request timeout (0 to disable) [env: FFSEND_TIMEOUT]" -x
+complete -c ffsend -n "__fish_seen_subcommand_from generate; and __fish_seen_subcommand_from completions" -s "T" -l "transfer-timeout" -d "Transfer timeout (0 to disable) [env: FFSEND_TRANSFER_TIMEOUT]" -x
 
 
 
@@ -153,8 +156,6 @@ complete -c ffsend -n "__fish_seen_subcommand_from history" -s "R" -l "rm" -d "R
 complete -c ffsend -n "__fish_seen_subcommand_from history" -s "t" -l "timeout" -d "Request timeout (0 to disable) [env: FFSEND_TIMEOUT]" -x
 complete -c ffsend -n "__fish_seen_subcommand_from history" -s "T" -l "transfer-timeout" -d "Transfer timeout (0 to disable) [env: FFSEND_TRANSFER_TIMEOUT]" -x
 
-
-
 complete -c ffsend -n "__fish_seen_subcommand_from info" -s "f" -l "force" -d "Force the action, ignore warnings"
 complete -c ffsend -n "__fish_seen_subcommand_from info" -s "h" -l "help" -d "Prints help information"
 complete -c ffsend -n "__fish_seen_subcommand_from info" -s "i" -l "incognito" -d "Don't update local history for actions"
@@ -169,8 +170,6 @@ complete -c ffsend -n "__fish_seen_subcommand_from info" -s "o" -l "owner" -d "S
 complete -c ffsend -n "__fish_seen_subcommand_from info" -s "p" -l "password" -d "Unlock a password protected file" -r
 complete -c ffsend -n "__fish_seen_subcommand_from info" -s "t" -l "timeout" -d "Request timeout (0 to disable) [env: FFSEND_TIMEOUT]" -x
 complete -c ffsend -n "__fish_seen_subcommand_from info" -s "T" -l "transfer-timeout" -d "Transfer timeout (0 to disable) [env: FFSEND_TRANSFER_TIMEOUT]" -x
-
-
 
 complete -c ffsend -n "__fish_seen_subcommand_from parameters" -s "f" -l "force" -d "Force the action, ignore warnings"
 complete -c ffsend -n "__fish_seen_subcommand_from parameters" -s "h" -l "help" -d "Prints help information"
@@ -187,8 +186,6 @@ complete -c ffsend -n "__fish_seen_subcommand_from parameters" -s "o" -l "owner"
 complete -c ffsend -n "__fish_seen_subcommand_from parameters" -s "t" -l "timeout" -d "Request timeout (0 to disable) [env: FFSEND_TIMEOUT]" -x
 complete -c ffsend -n "__fish_seen_subcommand_from parameters" -s "T" -l "transfer-timeout" -d "Transfer timeout (0 to disable) [env: FFSEND_TRANSFER_TIMEOUT]" -x
 
-
-
 complete -c ffsend -n "__fish_seen_subcommand_from password" -s "f" -l "force" -d "Force the action, ignore warnings"
 complete -c ffsend -n "__fish_seen_subcommand_from password" -s "P" -l "gen-passphrase" -d "Protect the file with a generated passphrase"
 complete -c ffsend -n "__fish_seen_subcommand_from password" -s "h" -l "help" -d "Prints help information"
@@ -204,8 +201,6 @@ complete -c ffsend -n "__fish_seen_subcommand_from password" -s "o" -l "owner" -
 complete -c ffsend -n "__fish_seen_subcommand_from password" -s "p" -l "password" -d "Specify a password, do not prompt" -x
 complete -c ffsend -n "__fish_seen_subcommand_from password" -s "t" -l "timeout" -d "Request timeout (0 to disable) [env: FFSEND_TIMEOUT]" -x
 complete -c ffsend -n "__fish_seen_subcommand_from password" -s "T" -l "transfer-timeout" -d "Transfer timeout (0 to disable) [env: FFSEND_TRANSFER_TIMEOUT]" -x
-
-
 
 complete -c ffsend -n "__fish_seen_subcommand_from version" -s "f" -l "force" -d "Force the action, ignore warnings"
 complete -c ffsend -n "__fish_seen_subcommand_from version" -l "help" -d "Prints help information"

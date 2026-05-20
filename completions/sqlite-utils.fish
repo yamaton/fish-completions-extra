@@ -3,8 +3,6 @@
 complete -c sqlite-utils -n "not __fish_seen_subcommand_from query add-column add-foreign-key add-foreign-keys add-geometry-column analyze analyze-tables bulk convert create-database create-index create-spatial-index create-table create-view disable-fts disable-wal drop-table drop-view dump duplicate enable-counts enable-fts enable-wal extract index-foreign-keys indexes insert insert-files install memory optimize populate-fts rebuild-fts reset-counts rows schema search tables transform triggers uninstall upsert vacuum views" -l "version" -d "Show the version and exit."
 complete -c sqlite-utils -n "not __fish_seen_subcommand_from query add-column add-foreign-key add-foreign-keys add-geometry-column analyze analyze-tables bulk convert create-database create-index create-spatial-index create-table create-view disable-fts disable-wal drop-table drop-view dump duplicate enable-counts enable-fts enable-wal extract index-foreign-keys indexes insert insert-files install memory optimize populate-fts rebuild-fts reset-counts rows schema search tables transform triggers uninstall upsert vacuum views" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -k -c sqlite-utils -n __fish_use_subcommand -x -a views -d "List the views in the database"
 complete -k -c sqlite-utils -n __fish_use_subcommand -x -a vacuum -d "Run VACUUM against the database"
 complete -k -c sqlite-utils -n __fish_use_subcommand -x -a upsert -d "Upsert records based on their primary key."
@@ -50,8 +48,6 @@ complete -k -c sqlite-utils -n __fish_use_subcommand -x -a add-foreign-key -d "A
 complete -k -c sqlite-utils -n __fish_use_subcommand -x -a add-column -d "Add a column to the specified table"
 complete -k -c sqlite-utils -n __fish_use_subcommand -x -a query -d "Execute SQL query and return the results as JSON"
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from query" -l "attach" -d "Additional databases to attach - specify alias and filepath" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from query" -l "nl" -d "Output newline-delimited JSON"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from query" -l "arrays" -d "Output rows as arrays instead of objects"
@@ -68,8 +64,6 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from query" -l "functions" -
 complete -c sqlite-utils -n "__fish_seen_subcommand_from query" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from query" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from add-column" -l "fk" -d "Table to reference as a foreign key" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from add-column" -l "fk-col" -d "Referenced column on that foreign key table - if omitted will automatically use the primary key" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from add-column" -l "not-null-default" -d "Add NOT NULL DEFAULT 'TEXT' constraint" -x
@@ -77,18 +71,12 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from add-column" -l "ignore"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from add-column" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from add-column" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from add-foreign-key" -l "ignore" -d "If foreign key already exists, do nothing"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from add-foreign-key" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from add-foreign-key" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from add-foreign-keys" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from add-foreign-keys" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from add-geometry-column" -s "t" -l "type" -d "Specify a geometry type for this column." -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from add-geometry-column" -l "srid" -d "Spatial Reference ID." -x
@@ -97,11 +85,7 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from add-geometry-column" -l
 complete -c sqlite-utils -n "__fish_seen_subcommand_from add-geometry-column" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from add-geometry-column" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from analyze" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from analyze-tables" -s "c" -l "column" -d "Specific columns to analyze" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from analyze-tables" -l "save" -d "Save results to _analyze_tables table"
@@ -110,8 +94,6 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from analyze-tables" -l "no-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from analyze-tables" -l "no-least" -d "Skip least common values"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from analyze-tables" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from analyze-tables" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from bulk" -l "batch-size" -d "Commit every X records" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from bulk" -l "functions" -d "Python code defining one or more custom SQL functions" -x
@@ -131,8 +113,6 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from bulk" -l "encoding" -d 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from bulk" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from bulk" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from convert" -l "import" -d "\"value\" is a variable with the column value to be converted." -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from convert" -l "import" -d "Python modules to import" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from convert" -l "dry-run" -d "Show results of running this against first 10 rows"
@@ -146,14 +126,10 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from convert" -l "no-skip-fa
 complete -c sqlite-utils -n "__fish_seen_subcommand_from convert" -s "s" -l "silent" -d "Don't show a progress bar"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from convert" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-database" -l "enable-wal" -d "Enable WAL mode on the created database"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-database" -l "init-spatialite" -d "Enable SpatiaLite on the created database"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-database" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-database" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-index" -l "name" -d "Explicit name for the new index" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-index" -l "unique" -d "Make this a unique index"
@@ -162,12 +138,8 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from create-index" -l "analy
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-index" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-index" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-spatial-index" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-spatial-index" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-table" -l "pk" -d "Column to use as primary key" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-table" -l "not-null" -d "Columns that should be created as NOT NULL" -x
@@ -179,52 +151,34 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from create-table" -l "trans
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-table" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-table" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-view" -l "ignore" -d "If view already exists, do nothing"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-view" -l "replace" -d "If view already exists, replace it"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-view" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from create-view" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from disable-fts" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from disable-fts" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from disable-wal" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from disable-wal" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from drop-table" -l "ignore" -d "If table does not exist, do nothing"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from drop-table" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from drop-table" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from drop-view" -l "ignore" -d "If view does not exist, do nothing"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from drop-view" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from drop-view" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from dump" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from dump" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from duplicate" -l "ignore" -d "If table does not exist, do nothing"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from duplicate" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from duplicate" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from enable-counts" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from enable-counts" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from enable-fts" -l "fts4" -d "Use FTS4"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from enable-fts" -l "fts5" -d "Use FTS5"
@@ -234,12 +188,8 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from enable-fts" -l "replace
 complete -c sqlite-utils -n "__fish_seen_subcommand_from enable-fts" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from enable-fts" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from enable-wal" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from enable-wal" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from extract" -l "table" -d "Name of the other table to extract columns to" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from extract" -l "fk-column" -d "Name of the foreign key column to add to the table" -x
@@ -247,12 +197,8 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from extract" -l "rename" -d
 complete -c sqlite-utils -n "__fish_seen_subcommand_from extract" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from extract" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from index-foreign-keys" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from index-foreign-keys" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from indexes" -l "aux" -d "Include auxiliary columns"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from indexes" -l "nl" -d "Output newline-delimited JSON"
@@ -265,8 +211,6 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from indexes" -l "fmt" -d "T
 complete -c sqlite-utils -n "__fish_seen_subcommand_from indexes" -l "json-cols" -d "Detect JSON cols and output them as JSON, not escaped strings"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from indexes" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from indexes" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from insert" -l "text" -d "When using --text your function can return an iterator of rows to insert." -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from insert" -l "pk" -d "Columns to use as the primary key, e.g. id" -x
@@ -296,8 +240,6 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from insert" -l "replace" -d
 complete -c sqlite-utils -n "__fish_seen_subcommand_from insert" -l "truncate" -d "Truncate table before inserting records, if table already exists"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from insert" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from insert-files" -s "c" -l "column" -d "Column definitions for the table" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from insert-files" -l "pk" -d "Column to use as primary key" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from insert-files" -l "alter" -d "Alter table to add missing columns"
@@ -310,12 +252,8 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from insert-files" -s "s" -l
 complete -c sqlite-utils -n "__fish_seen_subcommand_from insert-files" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from insert-files" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from install" -s "U" -l "upgrade" -d "Upgrade packages to latest version"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from install" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from memory" -l "functions" -d "Python code defining one or more custom SQL functions" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from memory" -l "attach" -d "Additional databases to attach - specify alias and filepath" -r
@@ -340,28 +278,18 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from memory" -l "analyze" -d
 complete -c sqlite-utils -n "__fish_seen_subcommand_from memory" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from memory" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from optimize" -l "no-vacuum" -d "Don't run VACUUM"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from optimize" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from optimize" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from populate-fts" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from populate-fts" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from rebuild-fts" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from rebuild-fts" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from reset-counts" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from reset-counts" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from rows" -s "c" -l "column" -d "Columns to return" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from rows" -l "where" -d "Optional where clause" -x
@@ -380,12 +308,8 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from rows" -l "json-cols" -d
 complete -c sqlite-utils -n "__fish_seen_subcommand_from rows" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from rows" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from schema" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from schema" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from search" -s "o" -l "order" -d "Order by ('column' or 'column desc')" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from search" -s "c" -l "column" -d "Columns to return" -x
@@ -403,8 +327,6 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from search" -l "json-cols" 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from search" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from search" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from tables" -l "fts4" -d "Just show FTS4 enabled tables"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from tables" -l "fts5" -d "Just show FTS5 enabled tables"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from tables" -l "counts" -d "Include row counts per table"
@@ -421,8 +343,6 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from tables" -l "schema" -d 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from tables" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from tables" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from transform" -l "type" -d "Change column type to INTEGER, TEXT, FLOAT or BLOB" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from transform" -l "drop" -d "Drop this column" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from transform" -l "rename" -d "Rename this column to X" -x
@@ -438,8 +358,6 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from transform" -l "sql" -d 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from transform" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from transform" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from triggers" -l "nl" -d "Output newline-delimited JSON"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from triggers" -l "arrays" -d "Output rows as arrays instead of objects"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from triggers" -l "csv" -d "Output CSV"
@@ -451,12 +369,8 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from triggers" -l "json-cols
 complete -c sqlite-utils -n "__fish_seen_subcommand_from triggers" -l "load-extension" -d "Path to SQLite extension, with optional :entrypoint" -r
 complete -c sqlite-utils -n "__fish_seen_subcommand_from triggers" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from uninstall" -s "y" -l "yes" -d "Don't ask for confirmation"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from uninstall" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from upsert" -l "pk" -d "Columns to use as the primary key, e.g. id [required]" -x
 complete -c sqlite-utils -n "__fish_seen_subcommand_from upsert" -l "flatten" -d "Flatten nested JSON objects, so {\"a\": {\"b\": 1}} becomes {\"a_b\": 1}"
@@ -482,11 +396,7 @@ complete -c sqlite-utils -n "__fish_seen_subcommand_from upsert" -l "load-extens
 complete -c sqlite-utils -n "__fish_seen_subcommand_from upsert" -l "silent" -d "Do not show progress bar"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from upsert" -s "h" -l "help" -d "Show this message and exit."
 
-
-
 complete -c sqlite-utils -n "__fish_seen_subcommand_from vacuum" -s "h" -l "help" -d "Show this message and exit."
-
-
 
 complete -c sqlite-utils -n "__fish_seen_subcommand_from views" -l "counts" -d "Include row counts per view"
 complete -c sqlite-utils -n "__fish_seen_subcommand_from views" -l "nl" -d "Output newline-delimited JSON"

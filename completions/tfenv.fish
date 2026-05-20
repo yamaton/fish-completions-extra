@@ -8,3 +8,11 @@ complete -k -c tfenv -n __fish_use_subcommand -x -a list -d "List all installed 
 complete -k -c tfenv -n __fish_use_subcommand -x -a uninstall -d "Uninstall a specific version of Terraform"
 complete -k -c tfenv -n __fish_use_subcommand -x -a use -d "Switch a version to use"
 complete -k -c tfenv -n __fish_use_subcommand -x -a install -d "Install a specific version of Terraform"
+
+
+
+
+
+
+
+

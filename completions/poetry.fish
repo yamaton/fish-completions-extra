@@ -10,8 +10,6 @@ complete -c poetry -n "not __fish_seen_subcommand_from about add build check con
 complete -c poetry -n "not __fish_seen_subcommand_from about add build check config export help init install list lock new publish remove run search shell show update version cache debug env self source list" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "not __fish_seen_subcommand_from about add build check config export help init install list lock new publish remove run search shell show update version cache debug env self source list" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
 
-
-
 complete -k -c poetry -n __fish_use_subcommand -x -a list -d "List all subcommands"
 complete -k -c poetry -n __fish_use_subcommand -x -a source -d "Source configuration for project"
 complete -k -c poetry -n __fish_use_subcommand -x -a self -d "Manage Poetry itself"
@@ -39,8 +37,6 @@ complete -k -c poetry -n __fish_use_subcommand -x -a build -d "Builds a package,
 complete -k -c poetry -n __fish_use_subcommand -x -a add -d "Adds a new dependency to pyproject.toml."
 complete -k -c poetry -n __fish_use_subcommand -x -a about -d "Shows information about Poetry."
 
-
-
 complete -c poetry -n "__fish_seen_subcommand_from about" -s "h" -l "help" -d "Display help for the given command."
 complete -c poetry -n "__fish_seen_subcommand_from about" -s "q" -l "quiet" -d "Do not output any message."
 complete -c poetry -n "__fish_seen_subcommand_from about" -s "V" -l "version" -d "Display this application version."
@@ -50,8 +46,6 @@ complete -c poetry -n "__fish_seen_subcommand_from about" -s "n" -l "no-interact
 complete -c poetry -n "__fish_seen_subcommand_from about" -l "no-plugins" -d "Disables plugins."
 complete -c poetry -n "__fish_seen_subcommand_from about" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from about" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
-
-
 
 complete -c poetry -n "__fish_seen_subcommand_from add" -s "G" -l "group" -d "The group to add the dependency to." -x
 complete -c poetry -n "__fish_seen_subcommand_from add" -s "D" -l "dev" -d "Add as a development dependency."
@@ -74,8 +68,6 @@ complete -c poetry -n "__fish_seen_subcommand_from add" -l "no-plugins" -d "Disa
 complete -c poetry -n "__fish_seen_subcommand_from add" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from add" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
 
-
-
 complete -c poetry -n "__fish_seen_subcommand_from build" -s "f" -l "format" -d "Limit the format to either sdist or wheel." -x
 complete -c poetry -n "__fish_seen_subcommand_from build" -s "h" -l "help" -d "Display help for the given command."
 complete -c poetry -n "__fish_seen_subcommand_from build" -s "q" -l "quiet" -d "Do not output any message."
@@ -87,8 +79,6 @@ complete -c poetry -n "__fish_seen_subcommand_from build" -l "no-plugins" -d "Di
 complete -c poetry -n "__fish_seen_subcommand_from build" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from build" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
 
-
-
 complete -c poetry -n "__fish_seen_subcommand_from check" -s "h" -l "help" -d "Display help for the given command."
 complete -c poetry -n "__fish_seen_subcommand_from check" -s "q" -l "quiet" -d "Do not output any message."
 complete -c poetry -n "__fish_seen_subcommand_from check" -s "V" -l "version" -d "Display this application version."
@@ -98,8 +88,6 @@ complete -c poetry -n "__fish_seen_subcommand_from check" -s "n" -l "no-interact
 complete -c poetry -n "__fish_seen_subcommand_from check" -l "no-plugins" -d "Disables plugins."
 complete -c poetry -n "__fish_seen_subcommand_from check" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from check" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
-
-
 
 complete -c poetry -n "__fish_seen_subcommand_from config" -l "list" -d "List configuration settings."
 complete -c poetry -n "__fish_seen_subcommand_from config" -l "unset" -d "Unset configuration setting."
@@ -113,8 +101,6 @@ complete -c poetry -n "__fish_seen_subcommand_from config" -s "n" -l "no-interac
 complete -c poetry -n "__fish_seen_subcommand_from config" -l "no-plugins" -d "Disables plugins."
 complete -c poetry -n "__fish_seen_subcommand_from config" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from config" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
-
-
 
 complete -c poetry -n "__fish_seen_subcommand_from export" -s "f" -l "format" -d "Format to export to." -x
 complete -c poetry -n "__fish_seen_subcommand_from export" -s "o" -l "output" -d "The name of the output file." -r
@@ -136,8 +122,6 @@ complete -c poetry -n "__fish_seen_subcommand_from export" -l "no-plugins" -d "D
 complete -c poetry -n "__fish_seen_subcommand_from export" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from export" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
 
-
-
 complete -c poetry -n "__fish_seen_subcommand_from help" -s "h" -l "help" -d "Display help for the given command."
 complete -c poetry -n "__fish_seen_subcommand_from help" -s "q" -l "quiet" -d "Do not output any message."
 complete -c poetry -n "__fish_seen_subcommand_from help" -s "V" -l "version" -d "Display this application version."
@@ -147,8 +131,6 @@ complete -c poetry -n "__fish_seen_subcommand_from help" -s "n" -l "no-interacti
 complete -c poetry -n "__fish_seen_subcommand_from help" -l "no-plugins" -d "Disables plugins."
 complete -c poetry -n "__fish_seen_subcommand_from help" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from help" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
-
-
 
 complete -c poetry -n "__fish_seen_subcommand_from init" -l "name" -d "Name of the package." -x
 complete -c poetry -n "__fish_seen_subcommand_from init" -l "description" -d "Description of the package." -x
@@ -166,8 +148,6 @@ complete -c poetry -n "__fish_seen_subcommand_from init" -s "n" -l "no-interacti
 complete -c poetry -n "__fish_seen_subcommand_from init" -l "no-plugins" -d "Disables plugins."
 complete -c poetry -n "__fish_seen_subcommand_from init" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from init" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
-
-
 
 complete -c poetry -n "__fish_seen_subcommand_from install" -l "without" -d "The dependency groups to ignore." -x
 complete -c poetry -n "__fish_seen_subcommand_from install" -l "with" -d "The optional dependency groups to include." -x
@@ -192,8 +172,6 @@ complete -c poetry -n "__fish_seen_subcommand_from install" -l "no-plugins" -d "
 complete -c poetry -n "__fish_seen_subcommand_from install" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from install" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
 
-
-
 complete -c poetry -n "__fish_seen_subcommand_from list" -s "h" -l "help" -d "Display help for the given command."
 complete -c poetry -n "__fish_seen_subcommand_from list" -s "q" -l "quiet" -d "Do not output any message."
 complete -c poetry -n "__fish_seen_subcommand_from list" -s "V" -l "version" -d "Display this application version."
@@ -203,8 +181,6 @@ complete -c poetry -n "__fish_seen_subcommand_from list" -s "n" -l "no-interacti
 complete -c poetry -n "__fish_seen_subcommand_from list" -l "no-plugins" -d "Disables plugins."
 complete -c poetry -n "__fish_seen_subcommand_from list" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from list" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
-
-
 
 complete -c poetry -n "__fish_seen_subcommand_from lock" -l "no-update" -d "Do not update locked versions, only refresh lock file."
 complete -c poetry -n "__fish_seen_subcommand_from lock" -l "check" -d "Check that the poetry.lock file corresponds to the current version of pyproject.toml."
@@ -218,8 +194,6 @@ complete -c poetry -n "__fish_seen_subcommand_from lock" -l "no-plugins" -d "Dis
 complete -c poetry -n "__fish_seen_subcommand_from lock" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from lock" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
 
-
-
 complete -c poetry -n "__fish_seen_subcommand_from new" -l "name" -d "Set the resulting package name." -x
 complete -c poetry -n "__fish_seen_subcommand_from new" -l "src" -d "Use the src layout for the project."
 complete -c poetry -n "__fish_seen_subcommand_from new" -l "readme" -d "Specify the readme file format." -r
@@ -232,8 +206,6 @@ complete -c poetry -n "__fish_seen_subcommand_from new" -s "n" -l "no-interactio
 complete -c poetry -n "__fish_seen_subcommand_from new" -l "no-plugins" -d "Disables plugins."
 complete -c poetry -n "__fish_seen_subcommand_from new" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from new" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
-
-
 
 complete -c poetry -n "__fish_seen_subcommand_from publish" -s "r" -l "repository" -d "The repository to publish the package to." -x
 complete -c poetry -n "__fish_seen_subcommand_from publish" -s "u" -l "username" -d "The username to access the repository." -x
@@ -253,8 +225,6 @@ complete -c poetry -n "__fish_seen_subcommand_from publish" -l "no-plugins" -d "
 complete -c poetry -n "__fish_seen_subcommand_from publish" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from publish" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
 
-
-
 complete -c poetry -n "__fish_seen_subcommand_from remove" -s "G" -l "group" -d "The group to remove the dependency from." -x
 complete -c poetry -n "__fish_seen_subcommand_from remove" -s "D" -l "dev" -d "Remove a package from the development dependencies."
 complete -c poetry -n "__fish_seen_subcommand_from remove" -l "dry-run" -d "Output the operations but do not execute anything (implicitly enables --verbose)."
@@ -269,8 +239,6 @@ complete -c poetry -n "__fish_seen_subcommand_from remove" -l "no-plugins" -d "D
 complete -c poetry -n "__fish_seen_subcommand_from remove" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from remove" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
 
-
-
 complete -c poetry -n "__fish_seen_subcommand_from run" -s "h" -l "help" -d "Display help for the given command."
 complete -c poetry -n "__fish_seen_subcommand_from run" -s "q" -l "quiet" -d "Do not output any message."
 complete -c poetry -n "__fish_seen_subcommand_from run" -s "V" -l "version" -d "Display this application version."
@@ -280,8 +248,6 @@ complete -c poetry -n "__fish_seen_subcommand_from run" -s "n" -l "no-interactio
 complete -c poetry -n "__fish_seen_subcommand_from run" -l "no-plugins" -d "Disables plugins."
 complete -c poetry -n "__fish_seen_subcommand_from run" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from run" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
-
-
 
 complete -c poetry -n "__fish_seen_subcommand_from search" -s "h" -l "help" -d "Display help for the given command."
 complete -c poetry -n "__fish_seen_subcommand_from search" -s "q" -l "quiet" -d "Do not output any message."
@@ -293,8 +259,6 @@ complete -c poetry -n "__fish_seen_subcommand_from search" -l "no-plugins" -d "D
 complete -c poetry -n "__fish_seen_subcommand_from search" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from search" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
 
-
-
 complete -c poetry -n "__fish_seen_subcommand_from shell" -s "h" -l "help" -d "Display help for the given command."
 complete -c poetry -n "__fish_seen_subcommand_from shell" -s "q" -l "quiet" -d "Do not output any message."
 complete -c poetry -n "__fish_seen_subcommand_from shell" -s "V" -l "version" -d "Display this application version."
@@ -304,8 +268,6 @@ complete -c poetry -n "__fish_seen_subcommand_from shell" -s "n" -l "no-interact
 complete -c poetry -n "__fish_seen_subcommand_from shell" -l "no-plugins" -d "Disables plugins."
 complete -c poetry -n "__fish_seen_subcommand_from shell" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from shell" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
-
-
 
 complete -c poetry -n "__fish_seen_subcommand_from show" -l "without" -d "The dependency groups to ignore." -x
 complete -c poetry -n "__fish_seen_subcommand_from show" -l "with" -d "The optional dependency groups to include." -x
@@ -327,8 +289,6 @@ complete -c poetry -n "__fish_seen_subcommand_from show" -l "no-plugins" -d "Dis
 complete -c poetry -n "__fish_seen_subcommand_from show" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from show" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
 
-
-
 complete -c poetry -n "__fish_seen_subcommand_from update" -l "without" -d "The dependency groups to ignore." -x
 complete -c poetry -n "__fish_seen_subcommand_from update" -l "with" -d "The optional dependency groups to include." -x
 complete -c poetry -n "__fish_seen_subcommand_from update" -l "only" -d "The only dependency groups to include." -x
@@ -345,8 +305,6 @@ complete -c poetry -n "__fish_seen_subcommand_from update" -l "no-plugins" -d "D
 complete -c poetry -n "__fish_seen_subcommand_from update" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from update" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
 
-
-
 complete -c poetry -n "__fish_seen_subcommand_from version" -s "s" -l "short" -d "Output the version number only"
 complete -c poetry -n "__fish_seen_subcommand_from version" -l "dry-run" -d "Do not update pyproject.toml file"
 complete -c poetry -n "__fish_seen_subcommand_from version" -s "h" -l "help" -d "Display help for the given command."
@@ -358,3 +316,45 @@ complete -c poetry -n "__fish_seen_subcommand_from version" -s "n" -l "no-intera
 complete -c poetry -n "__fish_seen_subcommand_from version" -l "no-plugins" -d "Disables plugins."
 complete -c poetry -n "__fish_seen_subcommand_from version" -l "no-cache" -d "Disables Poetry source caches."
 complete -c poetry -n "__fish_seen_subcommand_from version" -s "C" -l "directory" -d "The working directory for the Poetry command (defaults to the current working directory)." -r
+
+complete -k -c poetry -n "__fish_seen_subcommand_from cache; and not __fish_seen_subcommand_from clear list" -x -a list -d "List Poetry's caches."
+complete -k -c poetry -n "__fish_seen_subcommand_from cache; and not __fish_seen_subcommand_from clear list" -x -a clear -d "Clears a Poetry cache by name."
+
+
+
+complete -k -c poetry -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info resolve" -x -a resolve -d "Debugs dependency resolution."
+complete -k -c poetry -n "__fish_seen_subcommand_from debug; and not __fish_seen_subcommand_from info resolve" -x -a info -d "Shows debug information."
+
+
+
+complete -k -c poetry -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from info list remove use" -x -a use -d "Activates or creates a new virtualenv for the current project."
+complete -k -c poetry -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from info list remove use" -x -a remove -d "Remove virtual environments associated with the project."
+complete -k -c poetry -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from info list remove use" -x -a list -d "Lists all virtualenvs associated with the current project."
+complete -k -c poetry -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from info list remove use" -x -a info -d "Displays information about the current environment."
+
+
+
+
+
+complete -k -c poetry -n "__fish_seen_subcommand_from self; and not __fish_seen_subcommand_from add install lock remove show update" -x -a update -d "Updates Poetry to the latest version."
+complete -k -c poetry -n "__fish_seen_subcommand_from self; and not __fish_seen_subcommand_from add install lock remove show update" -x -a show -d "Show packages from Poetry's runtime environment."
+complete -k -c poetry -n "__fish_seen_subcommand_from self; and not __fish_seen_subcommand_from add install lock remove show update" -x -a remove -d "Remove additional packages from Poetry's runtime environment."
+complete -k -c poetry -n "__fish_seen_subcommand_from self; and not __fish_seen_subcommand_from add install lock remove show update" -x -a lock -d "Lock the Poetry installation's system requirements."
+complete -k -c poetry -n "__fish_seen_subcommand_from self; and not __fish_seen_subcommand_from add install lock remove show update" -x -a install -d "Install locked packages (incl. addons) required by this Poetry installation."
+complete -k -c poetry -n "__fish_seen_subcommand_from self; and not __fish_seen_subcommand_from add install lock remove show update" -x -a add -d "Add additional packages to Poetry's runtime environment."
+
+
+
+
+
+complete -k -c poetry -n "__fish_seen_subcommand_from self; and __fish_seen_subcommand_from show; and not __fish_seen_subcommand_from plugins" -x -a plugins -d "Shows information about the currently installed plugins."
+
+
+
+complete -k -c poetry -n "__fish_seen_subcommand_from source; and not __fish_seen_subcommand_from add remove show" -x -a show -d "Show information about sources configured for the project."
+complete -k -c poetry -n "__fish_seen_subcommand_from source; and not __fish_seen_subcommand_from add remove show" -x -a remove -d "Remove source configured for the project."
+complete -k -c poetry -n "__fish_seen_subcommand_from source; and not __fish_seen_subcommand_from add remove show" -x -a add -d "Add source configuration for project."
+
+
+
+

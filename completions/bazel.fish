@@ -21,8 +21,6 @@ complete -k -c bazel -n __fish_use_subcommand -x -a build -d "Builds the specifi
 complete -k -c bazel -n __fish_use_subcommand -x -a aquery -d "Analyzes the given targets and queries the action graph."
 complete -k -c bazel -n __fish_use_subcommand -x -a analyze-profile -d "Analyzes build profile data."
 
-
-
 complete -c bazel -n "__fish_seen_subcommand_from analyze-profile" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from analyze-profile" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
 complete -c bazel -n "__fish_seen_subcommand_from analyze-profile" -l "experimental_enable_bzlmod" -d "If true, Bazel tries to load external repositories from the Bzlmod system before looking into the WORKSPACE file." -r
@@ -148,8 +146,6 @@ complete -c bazel -n "__fish_seen_subcommand_from analyze-profile" -l "tls_clien
 complete -c bazel -n "__fish_seen_subcommand_from analyze-profile" -l "tls_client_key" -d "Specify the TLS client key to use; you also need to provide a client certificate to enable client authentication." -x
 complete -c bazel -n "__fish_seen_subcommand_from analyze-profile" -l "ui_actions_shown" -d "Number of concurrent actions shown in the detailed progress bar; each action is shown on a separate line." -x
 complete -c bazel -n "__fish_seen_subcommand_from analyze-profile" -l "watchfs" -d "On Linux/macOS: If true, bazel tries to use the operating system's file watch service for local changes instead of scanning every file for a change." -r
-
-
 
 complete -c bazel -n "__fish_seen_subcommand_from aquery" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from aquery" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
@@ -700,8 +696,6 @@ complete -c bazel -n "__fish_seen_subcommand_from aquery" -l "worker_sandboxing"
 complete -c bazel -n "__fish_seen_subcommand_from aquery" -l "worker_verbose" -d "If enabled, prints verbose messages when workers are started, shutdown, ..." -x
 complete -c bazel -n "__fish_seen_subcommand_from aquery" -l "workspace_status_command" -d "A command invoked at the beginning of the build to provide status information about the workspace in the form of key/value pairs." -r
 
-
-
 complete -c bazel -n "__fish_seen_subcommand_from build" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from build" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
 complete -c bazel -n "__fish_seen_subcommand_from build" -l "experimental_enable_bzlmod" -d "If true, Bazel tries to load external repositories from the Bzlmod system before looking into the WORKSPACE file." -r
@@ -1233,8 +1227,6 @@ complete -c bazel -n "__fish_seen_subcommand_from build" -l "worker_quit_after_b
 complete -c bazel -n "__fish_seen_subcommand_from build" -l "worker_sandboxing" -d "If enabled, workers will be executed in a sandboxed environment." -x
 complete -c bazel -n "__fish_seen_subcommand_from build" -l "worker_verbose" -d "If enabled, prints verbose messages when workers are started, shutdown, ..." -x
 complete -c bazel -n "__fish_seen_subcommand_from build" -l "workspace_status_command" -d "A command invoked at the beginning of the build to provide status information about the workspace in the form of key/value pairs." -r
-
-
 
 complete -c bazel -n "__fish_seen_subcommand_from canonicalize-flags" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from canonicalize-flags" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
@@ -1772,8 +1764,6 @@ complete -c bazel -n "__fish_seen_subcommand_from canonicalize-flags" -l "worker
 complete -c bazel -n "__fish_seen_subcommand_from canonicalize-flags" -l "worker_verbose" -d "If enabled, prints verbose messages when workers are started, shutdown, ..." -x
 complete -c bazel -n "__fish_seen_subcommand_from canonicalize-flags" -l "workspace_status_command" -d "A command invoked at the beginning of the build to provide status information about the workspace in the form of key/value pairs." -r
 
-
-
 complete -c bazel -n "__fish_seen_subcommand_from clean" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from clean" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
 complete -c bazel -n "__fish_seen_subcommand_from clean" -l "experimental_enable_bzlmod" -d "If true, Bazel tries to load external repositories from the Bzlmod system before looking into the WORKSPACE file." -r
@@ -2310,8 +2300,6 @@ complete -c bazel -n "__fish_seen_subcommand_from clean" -l "worker_sandboxing" 
 complete -c bazel -n "__fish_seen_subcommand_from clean" -l "worker_verbose" -d "If enabled, prints verbose messages when workers are started, shutdown, ..." -x
 complete -c bazel -n "__fish_seen_subcommand_from clean" -l "workspace_status_command" -d "A command invoked at the beginning of the build to provide status information about the workspace in the form of key/value pairs." -r
 
-
-
 complete -c bazel -n "__fish_seen_subcommand_from coverage" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from coverage" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
 complete -c bazel -n "__fish_seen_subcommand_from coverage" -l "experimental_enable_bzlmod" -d "If true, Bazel tries to load external repositories from the Bzlmod system before looking into the WORKSPACE file." -r
@@ -2846,8 +2834,6 @@ complete -c bazel -n "__fish_seen_subcommand_from coverage" -l "worker_quit_afte
 complete -c bazel -n "__fish_seen_subcommand_from coverage" -l "worker_sandboxing" -d "If enabled, workers will be executed in a sandboxed environment." -x
 complete -c bazel -n "__fish_seen_subcommand_from coverage" -l "worker_verbose" -d "If enabled, prints verbose messages when workers are started, shutdown, ..." -x
 complete -c bazel -n "__fish_seen_subcommand_from coverage" -l "workspace_status_command" -d "A command invoked at the beginning of the build to provide status information about the workspace in the form of key/value pairs." -r
-
-
 
 complete -c bazel -n "__fish_seen_subcommand_from cquery" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from cquery" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
@@ -3397,8 +3383,6 @@ complete -c bazel -n "__fish_seen_subcommand_from cquery" -l "worker_sandboxing"
 complete -c bazel -n "__fish_seen_subcommand_from cquery" -l "worker_verbose" -d "If enabled, prints verbose messages when workers are started, shutdown, ..." -x
 complete -c bazel -n "__fish_seen_subcommand_from cquery" -l "workspace_status_command" -d "A command invoked at the beginning of the build to provide status information about the workspace in the form of key/value pairs." -r
 
-
-
 complete -c bazel -n "__fish_seen_subcommand_from dump" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from dump" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
 complete -c bazel -n "__fish_seen_subcommand_from dump" -l "experimental_enable_bzlmod" -d "If true, Bazel tries to load external repositories from the Bzlmod system before looking into the WORKSPACE file." -r
@@ -3529,8 +3513,6 @@ complete -c bazel -n "__fish_seen_subcommand_from dump" -l "tls_client_certifica
 complete -c bazel -n "__fish_seen_subcommand_from dump" -l "tls_client_key" -d "Specify the TLS client key to use; you also need to provide a client certificate to enable client authentication." -x
 complete -c bazel -n "__fish_seen_subcommand_from dump" -l "ui_actions_shown" -d "Number of concurrent actions shown in the detailed progress bar; each action is shown on a separate line." -x
 complete -c bazel -n "__fish_seen_subcommand_from dump" -l "watchfs" -d "On Linux/macOS: If true, bazel tries to use the operating system's file watch service for local changes instead of scanning every file for a change." -r
-
-
 
 complete -c bazel -n "__fish_seen_subcommand_from fetch" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from fetch" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
@@ -3706,8 +3688,6 @@ complete -c bazel -n "__fish_seen_subcommand_from fetch" -l "tls_client_key" -d 
 complete -c bazel -n "__fish_seen_subcommand_from fetch" -l "ui_actions_shown" -d "Number of concurrent actions shown in the detailed progress bar; each action is shown on a separate line." -x
 complete -c bazel -n "__fish_seen_subcommand_from fetch" -l "watchfs" -d "On Linux/macOS: If true, bazel tries to use the operating system's file watch service for local changes instead of scanning every file for a change." -r
 
-
-
 complete -c bazel -n "__fish_seen_subcommand_from help" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from help" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
 complete -c bazel -n "__fish_seen_subcommand_from help" -l "experimental_enable_bzlmod" -d "If true, Bazel tries to load external repositories from the Bzlmod system before looking into the WORKSPACE file." -r
@@ -3835,8 +3815,6 @@ complete -c bazel -n "__fish_seen_subcommand_from help" -l "tls_client_certifica
 complete -c bazel -n "__fish_seen_subcommand_from help" -l "tls_client_key" -d "Specify the TLS client key to use; you also need to provide a client certificate to enable client authentication." -x
 complete -c bazel -n "__fish_seen_subcommand_from help" -l "ui_actions_shown" -d "Number of concurrent actions shown in the detailed progress bar; each action is shown on a separate line." -x
 complete -c bazel -n "__fish_seen_subcommand_from help" -l "watchfs" -d "On Linux/macOS: If true, bazel tries to use the operating system's file watch service for local changes instead of scanning every file for a change." -r
-
-
 
 complete -c bazel -n "__fish_seen_subcommand_from info" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from info" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
@@ -4371,8 +4349,6 @@ complete -c bazel -n "__fish_seen_subcommand_from info" -l "worker_sandboxing" -
 complete -c bazel -n "__fish_seen_subcommand_from info" -l "worker_verbose" -d "If enabled, prints verbose messages when workers are started, shutdown, ..." -x
 complete -c bazel -n "__fish_seen_subcommand_from info" -l "workspace_status_command" -d "A command invoked at the beginning of the build to provide status information about the workspace in the form of key/value pairs." -r
 
-
-
 complete -c bazel -n "__fish_seen_subcommand_from license" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from license" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
 complete -c bazel -n "__fish_seen_subcommand_from license" -l "experimental_enable_bzlmod" -d "If true, Bazel tries to load external repositories from the Bzlmod system before looking into the WORKSPACE file." -r
@@ -4497,8 +4473,6 @@ complete -c bazel -n "__fish_seen_subcommand_from license" -l "tls_client_certif
 complete -c bazel -n "__fish_seen_subcommand_from license" -l "tls_client_key" -d "Specify the TLS client key to use; you also need to provide a client certificate to enable client authentication." -x
 complete -c bazel -n "__fish_seen_subcommand_from license" -l "ui_actions_shown" -d "Number of concurrent actions shown in the detailed progress bar; each action is shown on a separate line." -x
 complete -c bazel -n "__fish_seen_subcommand_from license" -l "watchfs" -d "On Linux/macOS: If true, bazel tries to use the operating system's file watch service for local changes instead of scanning every file for a change." -r
-
-
 
 complete -c bazel -n "__fish_seen_subcommand_from mobile-install" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from mobile-install" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
@@ -5042,8 +5016,6 @@ complete -c bazel -n "__fish_seen_subcommand_from mobile-install" -l "worker_san
 complete -c bazel -n "__fish_seen_subcommand_from mobile-install" -l "worker_verbose" -d "If enabled, prints verbose messages when workers are started, shutdown, ..." -x
 complete -c bazel -n "__fish_seen_subcommand_from mobile-install" -l "workspace_status_command" -d "A command invoked at the beginning of the build to provide status information about the workspace in the form of key/value pairs." -r
 
-
-
 complete -c bazel -n "__fish_seen_subcommand_from print_action" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from print_action" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
 complete -c bazel -n "__fish_seen_subcommand_from print_action" -l "experimental_enable_bzlmod" -d "If true, Bazel tries to load external repositories from the Bzlmod system before looking into the WORKSPACE file." -r
@@ -5577,8 +5549,6 @@ complete -c bazel -n "__fish_seen_subcommand_from print_action" -l "worker_sandb
 complete -c bazel -n "__fish_seen_subcommand_from print_action" -l "worker_verbose" -d "If enabled, prints verbose messages when workers are started, shutdown, ..." -x
 complete -c bazel -n "__fish_seen_subcommand_from print_action" -l "workspace_status_command" -d "A command invoked at the beginning of the build to provide status information about the workspace in the form of key/value pairs." -r
 
-
-
 complete -c bazel -n "__fish_seen_subcommand_from query" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from query" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
 complete -c bazel -n "__fish_seen_subcommand_from query" -l "experimental_enable_bzlmod" -d "If true, Bazel tries to load external repositories from the Bzlmod system before looking into the WORKSPACE file." -r
@@ -5771,8 +5741,6 @@ complete -c bazel -n "__fish_seen_subcommand_from query" -l "tls_client_certific
 complete -c bazel -n "__fish_seen_subcommand_from query" -l "tls_client_key" -d "Specify the TLS client key to use; you also need to provide a client certificate to enable client authentication." -x
 complete -c bazel -n "__fish_seen_subcommand_from query" -l "ui_actions_shown" -d "Number of concurrent actions shown in the detailed progress bar; each action is shown on a separate line." -x
 complete -c bazel -n "__fish_seen_subcommand_from query" -l "watchfs" -d "On Linux/macOS: If true, bazel tries to use the operating system's file watch service for local changes instead of scanning every file for a change." -r
-
-
 
 complete -c bazel -n "__fish_seen_subcommand_from run" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from run" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
@@ -6307,8 +6275,6 @@ complete -c bazel -n "__fish_seen_subcommand_from run" -l "worker_sandboxing" -d
 complete -c bazel -n "__fish_seen_subcommand_from run" -l "worker_verbose" -d "If enabled, prints verbose messages when workers are started, shutdown, ..." -x
 complete -c bazel -n "__fish_seen_subcommand_from run" -l "workspace_status_command" -d "A command invoked at the beginning of the build to provide status information about the workspace in the form of key/value pairs." -r
 
-
-
 complete -c bazel -n "__fish_seen_subcommand_from shutdown" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from shutdown" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
 complete -c bazel -n "__fish_seen_subcommand_from shutdown" -l "experimental_enable_bzlmod" -d "If true, Bazel tries to load external repositories from the Bzlmod system before looking into the WORKSPACE file." -r
@@ -6434,8 +6400,6 @@ complete -c bazel -n "__fish_seen_subcommand_from shutdown" -l "tls_client_certi
 complete -c bazel -n "__fish_seen_subcommand_from shutdown" -l "tls_client_key" -d "Specify the TLS client key to use; you also need to provide a client certificate to enable client authentication." -x
 complete -c bazel -n "__fish_seen_subcommand_from shutdown" -l "ui_actions_shown" -d "Number of concurrent actions shown in the detailed progress bar; each action is shown on a separate line." -x
 complete -c bazel -n "__fish_seen_subcommand_from shutdown" -l "watchfs" -d "On Linux/macOS: If true, bazel tries to use the operating system's file watch service for local changes instead of scanning every file for a change." -r
-
-
 
 complete -c bazel -n "__fish_seen_subcommand_from sync" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from sync" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
@@ -6612,8 +6576,6 @@ complete -c bazel -n "__fish_seen_subcommand_from sync" -l "tls_client_certifica
 complete -c bazel -n "__fish_seen_subcommand_from sync" -l "tls_client_key" -d "Specify the TLS client key to use; you also need to provide a client certificate to enable client authentication." -x
 complete -c bazel -n "__fish_seen_subcommand_from sync" -l "ui_actions_shown" -d "Number of concurrent actions shown in the detailed progress bar; each action is shown on a separate line." -x
 complete -c bazel -n "__fish_seen_subcommand_from sync" -l "watchfs" -d "On Linux/macOS: If true, bazel tries to use the operating system's file watch service for local changes instead of scanning every file for a change." -r
-
-
 
 complete -c bazel -n "__fish_seen_subcommand_from test" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from test" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r
@@ -7149,8 +7111,6 @@ complete -c bazel -n "__fish_seen_subcommand_from test" -l "worker_quit_after_bu
 complete -c bazel -n "__fish_seen_subcommand_from test" -l "worker_sandboxing" -d "If enabled, workers will be executed in a sandboxed environment." -x
 complete -c bazel -n "__fish_seen_subcommand_from test" -l "worker_verbose" -d "If enabled, prints verbose messages when workers are started, shutdown, ..." -x
 complete -c bazel -n "__fish_seen_subcommand_from test" -l "workspace_status_command" -d "A command invoked at the beginning of the build to provide status information about the workspace in the form of key/value pairs." -r
-
-
 
 complete -c bazel -n "__fish_seen_subcommand_from version" -l "check_direct_dependencies" -d "Check if the direct `bazel_dep` dependencies declared in the root module are the same versions you get in the resolved dependency graph." -r
 complete -c bazel -n "__fish_seen_subcommand_from version" -l "distdir" -d "Additional places to search for archives before accessing the network to download them." -r

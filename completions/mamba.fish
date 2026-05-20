@@ -3,8 +3,6 @@
 complete -c mamba -n "not __fish_seen_subcommand_from activate deactivate clean compare config create info init install list package remove rename run search update notices repoquery doctor env" -s "h" -l "help" -d "Show this help message and exit."
 complete -c mamba -n "not __fish_seen_subcommand_from activate deactivate clean compare config create info init install list package remove rename run search update notices repoquery doctor env" -s "V" -l "version" -d "Show the conda version number and exit."
 
-
-
 complete -k -c mamba -n __fish_use_subcommand -x -a env -d "(legacy) conda commands available from mamba env"
 complete -k -c mamba -n __fish_use_subcommand -x -a doctor -d "A subcommand that displays environment health report"
 complete -k -c mamba -n __fish_use_subcommand -x -a repoquery -d "Query repositories using mamba."
@@ -43,16 +41,12 @@ complete -c mamba -n "__fish_seen_subcommand_from clean" -s "q" -l "quiet" -d "D
 complete -c mamba -n "__fish_seen_subcommand_from clean" -s "v" -l "verbose" -d "Can be used multiple times."
 complete -c mamba -n "__fish_seen_subcommand_from clean" -s "y" -l "yes" -d "Sets any confirmation values to 'yes' automatically."
 
-
-
 complete -c mamba -n "__fish_seen_subcommand_from compare" -s "h" -l "help" -d "Show this help message and exit."
 complete -c mamba -n "__fish_seen_subcommand_from compare" -l "json" -d "Report all output as json."
 complete -c mamba -n "__fish_seen_subcommand_from compare" -s "v" -l "verbose" -d "Use once for info, twice for debug, three times for trace."
 complete -c mamba -n "__fish_seen_subcommand_from compare" -s "q" -l "quiet" -d "Do not display progress bar."
 complete -c mamba -n "__fish_seen_subcommand_from compare" -s "n" -l "name" -d "Name of environment." -x
 complete -c mamba -n "__fish_seen_subcommand_from compare" -s "p" -l "prefix" -d "Full path to environment location (i.e. prefix)." -r
-
-
 
 complete -c mamba -n "__fish_seen_subcommand_from config" -s "h" -l "help" -d "Show this help message and exit."
 complete -c mamba -n "__fish_seen_subcommand_from config" -l "json" -d "Report all output as json."
@@ -73,8 +67,6 @@ complete -c mamba -n "__fish_seen_subcommand_from config" -l "set" -d "Set a boo
 complete -c mamba -n "__fish_seen_subcommand_from config" -l "remove" -d "Remove a configuration value from a list key." -x
 complete -c mamba -n "__fish_seen_subcommand_from config" -l "remove-key" -d "Remove a configuration key (and all its values)." -x
 complete -c mamba -n "__fish_seen_subcommand_from config" -l "stdin" -d "Apply configuration information given in yaml format piped through stdin."
-
-
 
 complete -c mamba -n "__fish_seen_subcommand_from create" -s "h" -l "help" -d "Show this help message and exit."
 complete -c mamba -n "__fish_seen_subcommand_from create" -l "clone" -d "Create a new environment as a copy of an existing local environment." -x
@@ -107,8 +99,6 @@ complete -c mamba -n "__fish_seen_subcommand_from create" -s "y" -l "yes" -d "Se
 complete -c mamba -n "__fish_seen_subcommand_from create" -l "download-only" -d "Solve an environment and ensure package caches are populated, but exit prior to unlinking and linking packages into the prefix."
 complete -c mamba -n "__fish_seen_subcommand_from create" -l "show-channel-urls" -d "Show channel urls."
 
-
-
 complete -c mamba -n "__fish_seen_subcommand_from info" -s "h" -l "help" -d "Show this help message and exit."
 complete -c mamba -n "__fish_seen_subcommand_from info" -s "a" -l "all" -d "Show all information."
 complete -c mamba -n "__fish_seen_subcommand_from info" -l "base" -d "Display base environment path."
@@ -118,8 +108,6 @@ complete -c mamba -n "__fish_seen_subcommand_from info" -l "unsafe-channels" -d 
 complete -c mamba -n "__fish_seen_subcommand_from info" -l "json" -d "Report all output as json."
 complete -c mamba -n "__fish_seen_subcommand_from info" -s "v" -l "verbose" -d "Use once for info, twice for debug, three times for trace."
 complete -c mamba -n "__fish_seen_subcommand_from info" -s "q" -l "quiet" -d "Do not display progress bar."
-
-
 
 complete -c mamba -n "__fish_seen_subcommand_from init" -s "h" -l "help" -d "Show this help message and exit."
 complete -c mamba -n "__fish_seen_subcommand_from init" -l "all" -d "Initialize all currently available shells."
@@ -131,8 +119,6 @@ complete -c mamba -n "__fish_seen_subcommand_from init" -l "reverse" -d "Undo ef
 complete -c mamba -n "__fish_seen_subcommand_from init" -l "json" -d "Report all output as json."
 complete -c mamba -n "__fish_seen_subcommand_from init" -s "v" -l "verbose" -d "Use once for info, twice for debug, three times for trace."
 complete -c mamba -n "__fish_seen_subcommand_from init" -s "q" -l "quiet" -d "Do not display progress bar."
-
-
 
 complete -c mamba -n "__fish_seen_subcommand_from install" -s "h" -l "help" -d "Show this help message and exit."
 complete -c mamba -n "__fish_seen_subcommand_from install" -l "revision" -d "Revert to the specified REVISION." -x
@@ -172,8 +158,6 @@ complete -c mamba -n "__fish_seen_subcommand_from install" -s "y" -l "yes" -d "S
 complete -c mamba -n "__fish_seen_subcommand_from install" -l "download-only" -d "Solve an environment and ensure package caches are populated, but exit prior to unlinking and linking packages into the prefix."
 complete -c mamba -n "__fish_seen_subcommand_from install" -l "show-channel-urls" -d "Show channel urls."
 
-
-
 complete -c mamba -n "__fish_seen_subcommand_from list" -s "h" -l "help" -d "Show this help message and exit."
 complete -c mamba -n "__fish_seen_subcommand_from list" -l "show-channel-urls" -d "Show channel urls."
 complete -c mamba -n "__fish_seen_subcommand_from list" -l "reverse" -d "List installed packages in reverse order."
@@ -190,8 +174,6 @@ complete -c mamba -n "__fish_seen_subcommand_from list" -l "json" -d "Report all
 complete -c mamba -n "__fish_seen_subcommand_from list" -s "v" -l "verbose" -d "Use once for info, twice for debug, three times for trace."
 complete -c mamba -n "__fish_seen_subcommand_from list" -s "q" -l "quiet" -d "Do not display progress bar."
 
-
-
 complete -c mamba -n "__fish_seen_subcommand_from package" -s "h" -l "help" -d "Show this help message and exit."
 complete -c mamba -n "__fish_seen_subcommand_from package" -s "w" -l "which" -d "Given some file's PATH, print which conda package the file came from." -r
 complete -c mamba -n "__fish_seen_subcommand_from package" -s "r" -l "reset" -d "Remove all untracked files and exit."
@@ -201,8 +183,6 @@ complete -c mamba -n "__fish_seen_subcommand_from package" -l "pkg-version" -d "
 complete -c mamba -n "__fish_seen_subcommand_from package" -l "pkg-build" -d "Designate package build number of the package being created." -x
 complete -c mamba -n "__fish_seen_subcommand_from package" -s "n" -l "name" -d "Name of environment." -x
 complete -c mamba -n "__fish_seen_subcommand_from package" -s "p" -l "prefix" -d "Full path to environment location (i.e. prefix)." -r
-
-
 
 complete -c mamba -n "__fish_seen_subcommand_from remove" -s "h" -l "help" -d "Show this help message and exit."
 complete -c mamba -n "__fish_seen_subcommand_from remove" -l "dev" -d "Use `sys.executable -m conda` in wrapper scripts instead of CONDA_EXE."
@@ -228,15 +208,11 @@ complete -c mamba -n "__fish_seen_subcommand_from remove" -s "q" -l "quiet" -d "
 complete -c mamba -n "__fish_seen_subcommand_from remove" -s "v" -l "verbose" -d "Can be used multiple times."
 complete -c mamba -n "__fish_seen_subcommand_from remove" -s "y" -l "yes" -d "Sets any confirmation values to 'yes' automatically."
 
-
-
 complete -c mamba -n "__fish_seen_subcommand_from rename" -s "h" -l "help" -d "Show this help message and exit."
 complete -c mamba -n "__fish_seen_subcommand_from rename" -l "force" -d "Force rename of an environment."
 complete -c mamba -n "__fish_seen_subcommand_from rename" -s "d" -l "dry-run" -d "Only display what would have been done by the current command, arguments, and other flags."
 complete -c mamba -n "__fish_seen_subcommand_from rename" -s "n" -l "name" -d "Name of environment." -x
 complete -c mamba -n "__fish_seen_subcommand_from rename" -s "p" -l "prefix" -d "Full path to environment location (i.e. prefix)." -r
-
-
 
 complete -c mamba -n "__fish_seen_subcommand_from run" -s "h" -l "help" -d "Show this help message and exit."
 complete -c mamba -n "__fish_seen_subcommand_from run" -s "v" -l "verbose" -d "Use once for info, twice for debug, three times for trace."
@@ -246,8 +222,6 @@ complete -c mamba -n "__fish_seen_subcommand_from run" -l "cwd" -d "Current work
 complete -c mamba -n "__fish_seen_subcommand_from run" -l "no-capture-output" -l "live-stream" -d "Don't capture stdout/stderr (standard out/standard error)."
 complete -c mamba -n "__fish_seen_subcommand_from run" -s "n" -l "name" -d "Name of environment." -x
 complete -c mamba -n "__fish_seen_subcommand_from run" -s "p" -l "prefix" -d "Full path to environment location (i.e. prefix)." -r
-
-
 
 complete -c mamba -n "__fish_seen_subcommand_from search" -s "h" -l "help" -d "Show this help message and exit."
 complete -c mamba -n "__fish_seen_subcommand_from search" -l "envs" -d "Search all of the current user's environments."
@@ -264,8 +238,6 @@ complete -c mamba -n "__fish_seen_subcommand_from search" -l "offline" -d "Offli
 complete -c mamba -n "__fish_seen_subcommand_from search" -l "json" -d "Report all output as json."
 complete -c mamba -n "__fish_seen_subcommand_from search" -s "v" -l "verbose" -d "Use once for info, twice for debug, three times for trace."
 complete -c mamba -n "__fish_seen_subcommand_from search" -s "q" -l "quiet" -d "Do not display progress bar."
-
-
 
 complete -c mamba -n "__fish_seen_subcommand_from update" -s "h" -l "help" -d "Show this help message and exit."
 complete -c mamba -n "__fish_seen_subcommand_from update" -l "file" -d "Read package versions from the given file." -r
@@ -302,8 +274,6 @@ complete -c mamba -n "__fish_seen_subcommand_from update" -s "y" -l "yes" -d "Se
 complete -c mamba -n "__fish_seen_subcommand_from update" -l "download-only" -d "Solve an environment and ensure package caches are populated, but exit prior to unlinking and linking packages into the prefix."
 complete -c mamba -n "__fish_seen_subcommand_from update" -l "show-channel-urls" -d "Show channel urls."
 
-
-
 complete -c mamba -n "__fish_seen_subcommand_from notices" -s "h" -l "help" -d "Show this help message and exit."
 complete -c mamba -n "__fish_seen_subcommand_from notices" -s "c" -l "channel" -d "Additional channel to search for packages." -r
 complete -c mamba -n "__fish_seen_subcommand_from notices" -l "use-local" -d "Use locally built packages."
@@ -311,10 +281,148 @@ complete -c mamba -n "__fish_seen_subcommand_from notices" -l "override-channels
 complete -c mamba -n "__fish_seen_subcommand_from notices" -l "repodata-fn" -d "Specify file name of repodata on the remote server where your channels are configured or within local backups." -r
 complete -c mamba -n "__fish_seen_subcommand_from notices" -l "experimental" -d "jlap: Download incremental package index data from repodata.jlap; implies 'lock'." -x
 
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and not __fish_seen_subcommand_from whoneeds depends search" -s "h" -l "help" -d "Show this help message and exit."
+
+complete -k -c mamba -n "__fish_seen_subcommand_from repoquery; and not __fish_seen_subcommand_from whoneeds depends search" -x -a search -d "shows all available package versions"
+complete -k -c mamba -n "__fish_seen_subcommand_from repoquery; and not __fish_seen_subcommand_from whoneeds depends search" -x -a depends -d "shows dependencies of this package"
+complete -k -c mamba -n "__fish_seen_subcommand_from repoquery; and not __fish_seen_subcommand_from whoneeds depends search" -x -a whoneeds -d "shows packages that depend on this package"
+
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from whoneeds" -s "p" -l "platform" -d "--no-installed" -x
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from whoneeds" -l "pretty" -d "-a, --all-channels Look at all channels (for depends / whoneeds)"
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from whoneeds" -s "t" -l "tree" -d "--recursive"
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from whoneeds" -s "h" -l "help" -d "Show this help message and exit."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from whoneeds" -s "c" -l "channel" -d "Additional channel to search for packages." -r
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from whoneeds" -l "use-local" -d "Use locally built packages."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from whoneeds" -l "override-channels" -d "Do not search default or .condarc channels."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from whoneeds" -l "repodata-fn" -d "Specify file name of repodata on the remote server where your channels are configured or within local backups." -r
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from whoneeds" -l "experimental" -d "jlap: Download incremental package index data from repodata.jlap; implies 'lock'." -x
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from whoneeds" -s "C" -l "use-index-cache" -d "Use cache of channel index files, even if it has expired."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from whoneeds" -s "k" -l "insecure" -d "Allow conda to perform \"insecure\" SSL connections and transfers."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from whoneeds" -l "offline" -d "Offline mode."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from whoneeds" -l "json" -d "Report all output as json."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from whoneeds" -s "v" -l "verbose" -d "Use once for info, twice for debug, three times for trace."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from whoneeds" -s "q" -l "quiet" -d "Do not display progress bar."
+
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from depends" -s "p" -l "platform" -d "--no-installed" -x
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from depends" -l "pretty" -d "-a, --all-channels Look at all channels (for depends / whoneeds)"
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from depends" -s "t" -l "tree" -d "--recursive"
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from depends" -s "h" -l "help" -d "Show this help message and exit."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from depends" -s "c" -l "channel" -d "Additional channel to search for packages." -r
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from depends" -l "use-local" -d "Use locally built packages."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from depends" -l "override-channels" -d "Do not search default or .condarc channels."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from depends" -l "repodata-fn" -d "Specify file name of repodata on the remote server where your channels are configured or within local backups." -r
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from depends" -l "experimental" -d "jlap: Download incremental package index data from repodata.jlap; implies 'lock'." -x
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from depends" -s "C" -l "use-index-cache" -d "Use cache of channel index files, even if it has expired."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from depends" -s "k" -l "insecure" -d "Allow conda to perform \"insecure\" SSL connections and transfers."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from depends" -l "offline" -d "Offline mode."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from depends" -l "json" -d "Report all output as json."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from depends" -s "v" -l "verbose" -d "Use once for info, twice for debug, three times for trace."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from depends" -s "q" -l "quiet" -d "Do not display progress bar."
+
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from search" -s "p" -l "platform" -d "--no-installed" -x
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from search" -l "pretty" -d "-a, --all-channels Look at all channels (for depends / whoneeds)"
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from search" -s "h" -l "help" -d "Show this help message and exit."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from search" -s "c" -l "channel" -d "Additional channel to search for packages." -r
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from search" -l "use-local" -d "Use locally built packages."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from search" -l "override-channels" -d "Do not search default or .condarc channels."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from search" -l "repodata-fn" -d "Specify file name of repodata on the remote server where your channels are configured or within local backups." -r
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from search" -l "experimental" -d "jlap: Download incremental package index data from repodata.jlap; implies 'lock'." -x
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from search" -s "C" -l "use-index-cache" -d "Use cache of channel index files, even if it has expired."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from search" -s "k" -l "insecure" -d "Allow conda to perform \"insecure\" SSL connections and transfers."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from search" -l "offline" -d "Offline mode."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from search" -l "json" -d "Report all output as json."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from search" -s "v" -l "verbose" -d "Use once for info, twice for debug, three times for trace."
+complete -c mamba -n "__fish_seen_subcommand_from repoquery; and __fish_seen_subcommand_from search" -s "q" -l "quiet" -d "Do not display progress bar."
+
+complete -k -c mamba -n "__fish_seen_subcommand_from doctor; and not __fish_seen_subcommand_from gram" -x -a gram -d "Files/NVIDIA Corporation/NVIDIA"
 
 
-complete -c mamba -n "__fish_seen_subcommand_from repoquery" -s "h" -l "help" -d "Show this help message and exit."
+complete -c mamba -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from create export list remove update config" -s "h" -l "help" -d "Show this help message and exit."
 
+complete -k -c mamba -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from create export list remove update config" -x -a config -d "Configure a conda environment"
+complete -k -c mamba -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from create export list remove update config" -x -a update -d "Update the current environment based on environment file"
+complete -k -c mamba -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from create export list remove update config" -x -a remove -d "Remove an environment"
+complete -k -c mamba -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from create export list remove update config" -x -a list -d "List the Conda environments"
+complete -k -c mamba -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from create export list remove update config" -x -a export -d "Export a given environment"
+complete -k -c mamba -n "__fish_seen_subcommand_from env; and not __fish_seen_subcommand_from create export list remove update config" -x -a create -d "Create an environment based on an environment definition file. If using an environment.yml file (the default), you can name the environment in the first line of the file with 'name: envname' or you can specify the environment name in the CLI command using the -n/--name argument. The name specified in the CLI will override the name specified in the environment.yml file. Unless you are in the directory containing the environment definition file, use -f to specify the file path of the environment definition file you want to use."
 
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -s "h" -l "help" -d "Show this help message and exit."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -s "f" -l "file" -d "Environment definition file (default: environment.yml)" -r
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -l "force" -d "Force creation of environment (removing a previously-existing environment of the same name)."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -s "d" -l "dry-run" -d "Only display what can be done with the current command, arguments, and other flags."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -l "no-default-packages" -d "Ignore create_default_packages in the .condarc file."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -l "solver" -d "Choose which solver backend to use." -x
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -l "experimental-solver" -d "DEPRECATED." -x
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -s "n" -l "name" -d "Name of environment." -x
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -s "p" -l "prefix" -d "Full path to environment location (i.e. prefix)." -r
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -s "C" -l "use-index-cache" -d "Use cache of channel index files, even if it has expired."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -s "k" -l "insecure" -d "Allow conda to perform \"insecure\" SSL connections and transfers."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -l "offline" -d "Offline mode."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -l "json" -d "Report all output as json."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -s "v" -l "verbose" -d "Use once for info, twice for debug, three times for trace."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from create" -s "q" -l "quiet" -d "Do not display progress bar."
 
-complete -c mamba -n "__fish_seen_subcommand_from env" -s "h" -l "help" -d "Show this help message and exit."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from export" -s "h" -l "help" -d "Show this help message and exit."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from export" -s "c" -l "channel" -d "Additional channel to include in the export" -x
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from export" -l "override-channels" -d "Do not include .condarc channels"
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from export" -s "f" -l "file" -d "File name or path for the exported environment." -r
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from export" -l "no-builds" -d "Remove build specification from dependencies"
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from export" -l "ignore-channels" -d "Do not include channel names with package names."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from export" -l "from-history" -d "Build environment spec from explicit specs in history"
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from export" -s "n" -l "name" -d "Name of environment." -x
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from export" -s "p" -l "prefix" -d "Full path to environment location (i.e. prefix)." -r
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from export" -l "json" -d "Report all output as json."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from export" -s "v" -l "verbose" -d "Use once for info, twice for debug, three times for trace."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from export" -s "q" -l "quiet" -d "Do not display progress bar."
+
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from list" -s "h" -l "help" -d "Show this help message and exit."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from list" -l "json" -d "Report all output as json."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from list" -s "v" -l "verbose" -d "Use once for info, twice for debug, three times for trace."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from list" -s "q" -l "quiet" -d "Do not display progress bar."
+
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from remove" -s "h" -l "help" -d "Show this help message and exit."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from remove" -l "solver" -d "Choose which solver backend to use." -x
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from remove" -l "experimental-solver" -d "DEPRECATED." -x
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from remove" -s "n" -l "name" -d "Name of environment." -x
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from remove" -s "p" -l "prefix" -d "Full path to environment location (i.e. prefix)." -r
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from remove" -s "d" -l "dry-run" -d "Only display what would have been done."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from remove" -l "json" -d "Report all output as json."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from remove" -s "q" -l "quiet" -d "Do not display progress bar."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from remove" -s "v" -l "verbose" -d "Can be used multiple times."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from remove" -s "y" -l "yes" -d "Sets any confirmation values to 'yes' automatically."
+
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from update" -s "h" -l "help" -d "Show this help message and exit."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from update" -s "f" -l "file" -d "environment definition (default: environment.yml)" -r
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from update" -l "prune" -d "remove installed packages not defined in environment.yml"
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from update" -l "solver" -d "Choose which solver backend to use." -x
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from update" -l "experimental-solver" -d "DEPRECATED." -x
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from update" -s "n" -l "name" -d "Name of environment." -x
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from update" -s "p" -l "prefix" -d "Full path to environment location (i.e. prefix)." -r
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from update" -l "json" -d "Report all output as json."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from update" -s "v" -l "verbose" -d "Use once for info, twice for debug, three times for trace."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from update" -s "q" -l "quiet" -d "Do not display progress bar."
+
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and not __fish_seen_subcommand_from vars" -s "h" -l "help" -d "Show this help message and exit."
+
+complete -k -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and not __fish_seen_subcommand_from vars" -x -a vars -d "Interact with environment variables associated with Conda environments"
+
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and not __fish_seen_subcommand_from list set unset" -s "h" -l "help" -d "Show this help message and exit."
+
+complete -k -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and not __fish_seen_subcommand_from list set unset" -x -a unset -d "Unset environment variables for a conda environment"
+complete -k -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and not __fish_seen_subcommand_from list set unset" -x -a set -d "Set environment variables for a conda environment"
+complete -k -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and not __fish_seen_subcommand_from list set unset" -x -a list -d "List environment variables for a conda environment"
+
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and __fish_seen_subcommand_from list" -s "h" -l "help" -d "Show this help message and exit."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and __fish_seen_subcommand_from list" -s "n" -l "name" -d "Name of environment." -x
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and __fish_seen_subcommand_from list" -s "p" -l "prefix" -d "Full path to environment location (i.e. prefix)." -r
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and __fish_seen_subcommand_from list" -l "json" -d "Report all output as json."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and __fish_seen_subcommand_from list" -s "v" -l "verbose" -d "Use once for info, twice for debug, three times for trace."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and __fish_seen_subcommand_from list" -s "q" -l "quiet" -d "Do not display progress bar."
+
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and __fish_seen_subcommand_from set" -s "h" -l "help" -d "Show this help message and exit."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and __fish_seen_subcommand_from set" -s "n" -l "name" -d "Name of environment." -x
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and __fish_seen_subcommand_from set" -s "p" -l "prefix" -d "Full path to environment location (i.e. prefix)." -r
+
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and __fish_seen_subcommand_from unset" -s "h" -l "help" -d "Show this help message and exit."
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and __fish_seen_subcommand_from unset" -s "n" -l "name" -d "Name of environment." -x
+complete -c mamba -n "__fish_seen_subcommand_from env; and __fish_seen_subcommand_from config; and __fish_seen_subcommand_from vars; and __fish_seen_subcommand_from unset" -s "p" -l "prefix" -d "Full path to environment location (i.e. prefix)." -r

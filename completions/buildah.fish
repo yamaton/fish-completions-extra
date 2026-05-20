@@ -12,8 +12,6 @@ complete -c buildah -n "not __fish_seen_subcommand_from add bud commit config co
 complete -c buildah -n "not __fish_seen_subcommand_from add bud commit config containers copy from images info inspect login logout manifest mount pull push rename rm rmi run tag umount unshare version" -l "userns-uid-map" -d "default ctrID:hostID:length UID mapping to use" -x
 complete -c buildah -n "not __fish_seen_subcommand_from add bud commit config containers copy from images info inspect login logout manifest mount pull push rename rm rmi run tag umount unshare version" -s "v" -l "version" -d "version for buildah"
 
-
-
 complete -k -c buildah -n __fish_use_subcommand -x -a version -d "Display the Buildah version information"
 complete -k -c buildah -n __fish_use_subcommand -x -a unshare -d "Run a command in a modified user namespace"
 complete -k -c buildah -n __fish_use_subcommand -x -a umount -d "Unmount the root file system of the specified working containers"
@@ -39,8 +37,6 @@ complete -k -c buildah -n __fish_use_subcommand -x -a commit -d "Create an image
 complete -k -c buildah -n __fish_use_subcommand -x -a bud -d "Build an image using instructions in a Dockerfile"
 complete -k -c buildah -n __fish_use_subcommand -x -a add -d "Add content to the container"
 
-
-
 complete -c buildah -n "__fish_seen_subcommand_from add" -l "add-history" -d "add an entry for this operation to the image's history."
 complete -c buildah -n "__fish_seen_subcommand_from add" -l "chmod" -d "set the access permissions of the destination content" -x
 complete -c buildah -n "__fish_seen_subcommand_from add" -l "chown" -d "set the user and group ownership of the destination content" -x
@@ -49,8 +45,6 @@ complete -c buildah -n "__fish_seen_subcommand_from add" -l "from" -d "use the s
 complete -c buildah -n "__fish_seen_subcommand_from add" -s "h" -l "help" -d "help for add"
 complete -c buildah -n "__fish_seen_subcommand_from add" -l "ignorefile" -d "path to .dockerignore file" -r
 complete -c buildah -n "__fish_seen_subcommand_from add" -s "q" -l "quiet" -d "don't output a digest of the newly-added/copied content"
-
-
 
 complete -c buildah -n "__fish_seen_subcommand_from bud" -l "add-host" -d "add a custom host-to-IP mapping (host:ip) (default [])" -x
 complete -c buildah -n "__fish_seen_subcommand_from bud" -l "annotation" -d "Set metadata for an image (default [])" -x
@@ -124,8 +118,6 @@ complete -c buildah -n "__fish_seen_subcommand_from bud" -l "uts" -d "private, :
 complete -c buildah -n "__fish_seen_subcommand_from bud" -l "variant" -d "override the variant of the specified image" -x
 complete -c buildah -n "__fish_seen_subcommand_from bud" -s "v" -l "volume" -d "bind mount a volume into the container" -x
 
-
-
 complete -c buildah -n "__fish_seen_subcommand_from commit" -l "authfile" -d "path of the authentication file." -r
 complete -c buildah -n "__fish_seen_subcommand_from commit" -l "cert-dir" -d "use certificates at the specified path to access the registry" -r
 complete -c buildah -n "__fish_seen_subcommand_from commit" -l "creds" -d "use [username[:password]] for accessing the registry" -x
@@ -142,8 +134,6 @@ complete -c buildah -n "__fish_seen_subcommand_from commit" -l "sign-by" -d "sig
 complete -c buildah -n "__fish_seen_subcommand_from commit" -l "squash" -d "produce an image with only one layer"
 complete -c buildah -n "__fish_seen_subcommand_from commit" -l "timestamp" -d "set created timestamp to epoch seconds to allow for deterministic builds, defaults to current time" -x
 complete -c buildah -n "__fish_seen_subcommand_from commit" -l "tls-verify" -d "Require HTTPS and verify certificates when accessing the registry."
-
-
 
 complete -c buildah -n "__fish_seen_subcommand_from config" -l "add-history" -d "add an entry for this operation to the image's history."
 complete -c buildah -n "__fish_seen_subcommand_from config" -s "a" -l "annotation" -d "add annotation e.g. annotation=value, for the target image (default [])" -x
@@ -173,8 +163,6 @@ complete -c buildah -n "__fish_seen_subcommand_from config" -s "u" -l "user" -d 
 complete -c buildah -n "__fish_seen_subcommand_from config" -s "v" -l "volume" -d "add default volume path to be created for containers based on image (default [])" -r
 complete -c buildah -n "__fish_seen_subcommand_from config" -l "workingdir" -d "set working directory for containers based on image" -r
 
-
-
 complete -c buildah -n "__fish_seen_subcommand_from containers" -s "a" -l "all" -d "also list non-buildah containers"
 complete -c buildah -n "__fish_seen_subcommand_from containers" -s "f" -l "filter" -d "filter output based on conditions provided" -x
 complete -c buildah -n "__fish_seen_subcommand_from containers" -l "format" -d "pretty-print containers using a Go template" -x
@@ -184,8 +172,6 @@ complete -c buildah -n "__fish_seen_subcommand_from containers" -s "n" -l "nohea
 complete -c buildah -n "__fish_seen_subcommand_from containers" -l "notruncate" -d "do not truncate output"
 complete -c buildah -n "__fish_seen_subcommand_from containers" -s "q" -l "quiet" -d "display only container IDs"
 
-
-
 complete -c buildah -n "__fish_seen_subcommand_from copy" -l "add-history" -d "add an entry for this operation to the image's history."
 complete -c buildah -n "__fish_seen_subcommand_from copy" -l "chmod" -d "set the access permissions of the destination content" -x
 complete -c buildah -n "__fish_seen_subcommand_from copy" -l "chown" -d "set the user and group ownership of the destination content" -x
@@ -194,8 +180,6 @@ complete -c buildah -n "__fish_seen_subcommand_from copy" -l "from" -d "use the 
 complete -c buildah -n "__fish_seen_subcommand_from copy" -s "h" -l "help" -d "help for copy"
 complete -c buildah -n "__fish_seen_subcommand_from copy" -l "ignorefile" -d "path to .dockerignore file" -r
 complete -c buildah -n "__fish_seen_subcommand_from copy" -s "q" -l "quiet" -d "don't output a digest of the newly-added/copied content"
-
-
 
 complete -c buildah -n "__fish_seen_subcommand_from from" -l "add-host" -d "add a custom host-to-IP mapping (host:ip) (default [])" -x
 complete -c buildah -n "__fish_seen_subcommand_from from" -l "arch" -d "set the ARCH of the image to the provided value instead of the architecture of the host (default \"amd64\")" -x
@@ -243,8 +227,6 @@ complete -c buildah -n "__fish_seen_subcommand_from from" -l "uts" -d "private, 
 complete -c buildah -n "__fish_seen_subcommand_from from" -l "variant" -d "override the variant of the specified image" -x
 complete -c buildah -n "__fish_seen_subcommand_from from" -s "v" -l "volume" -d "bind mount a volume into the container" -x
 
-
-
 complete -c buildah -n "__fish_seen_subcommand_from images" -s "a" -l "all" -d "show all images, including intermediate images from a build"
 complete -c buildah -n "__fish_seen_subcommand_from images" -l "digests" -d "show digests"
 complete -c buildah -n "__fish_seen_subcommand_from images" -s "f" -l "filter" -d "filter output based on conditions provided" -x
@@ -256,18 +238,12 @@ complete -c buildah -n "__fish_seen_subcommand_from images" -l "no-trunc" -d "do
 complete -c buildah -n "__fish_seen_subcommand_from images" -s "n" -l "noheading" -d "do not print column headings"
 complete -c buildah -n "__fish_seen_subcommand_from images" -s "q" -l "quiet" -d "display only image IDs"
 
-
-
 complete -c buildah -n "__fish_seen_subcommand_from info" -l "format" -d "use format as a Go template to format the output" -x
 complete -c buildah -n "__fish_seen_subcommand_from info" -s "h" -l "help" -d "help for info"
-
-
 
 complete -c buildah -n "__fish_seen_subcommand_from inspect" -s "f" -l "format" -d "use format as a Go template to format the output" -x
 complete -c buildah -n "__fish_seen_subcommand_from inspect" -s "h" -l "help" -d "help for inspect"
 complete -c buildah -n "__fish_seen_subcommand_from inspect" -s "t" -l "type" -d "look at the item of the specified type (container or image) and name (default \"container\")" -x
-
-
 
 complete -c buildah -n "__fish_seen_subcommand_from login" -l "authfile" -d "path of the authentication file." -r
 complete -c buildah -n "__fish_seen_subcommand_from login" -l "cert-dir" -d "use certificates at the specified path to access the registry" -r
@@ -278,21 +254,13 @@ complete -c buildah -n "__fish_seen_subcommand_from login" -l "password-stdin" -
 complete -c buildah -n "__fish_seen_subcommand_from login" -l "tls-verify" -d "require HTTPS and verify certificates when accessing the registry."
 complete -c buildah -n "__fish_seen_subcommand_from login" -s "u" -l "username" -d "Username for registry" -x
 
-
-
 complete -c buildah -n "__fish_seen_subcommand_from logout" -s "a" -l "all" -d "Remove the cached credentials for all registries in the auth file"
 complete -c buildah -n "__fish_seen_subcommand_from logout" -l "authfile" -d "path of the authentication file." -r
 complete -c buildah -n "__fish_seen_subcommand_from logout" -s "h" -l "help" -d "help for logout"
 
-
-
 complete -c buildah -n "__fish_seen_subcommand_from manifest" -s "h" -l "help" -d "help for manifest"
 
-
-
 complete -c buildah -n "__fish_seen_subcommand_from mount" -s "h" -l "help" -d "help for mount"
-
-
 
 complete -c buildah -n "__fish_seen_subcommand_from pull" -s "a" -l "all-tags" -d "download all tagged images in the repository"
 complete -c buildah -n "__fish_seen_subcommand_from pull" -l "arch" -d "prefer ARCH instead of the architecture of the machine for choosing images (default \"amd64\")" -x
@@ -307,8 +275,6 @@ complete -c buildah -n "__fish_seen_subcommand_from pull" -s "q" -l "quiet" -d "
 complete -c buildah -n "__fish_seen_subcommand_from pull" -l "remove-signatures" -d "don't copy signatures when pulling image"
 complete -c buildah -n "__fish_seen_subcommand_from pull" -l "tls-verify" -d "require HTTPS and verify certificates when accessing the registry."
 complete -c buildah -n "__fish_seen_subcommand_from pull" -l "variant" -d "override the variant of the specified image" -x
-
-
 
 complete -c buildah -n "__fish_seen_subcommand_from push" -l "all" -d "push all of the images referenced by the manifest list"
 complete -c buildah -n "__fish_seen_subcommand_from push" -l "authfile" -d "path of the authentication file." -r
@@ -326,23 +292,15 @@ complete -c buildah -n "__fish_seen_subcommand_from push" -l "rm" -d "remove the
 complete -c buildah -n "__fish_seen_subcommand_from push" -l "sign-by" -d "sign the image using a GPG key with the specified FINGERPRINT" -x
 complete -c buildah -n "__fish_seen_subcommand_from push" -l "tls-verify" -d "require HTTPS and verify certificates when accessing the registry."
 
-
-
 complete -c buildah -n "__fish_seen_subcommand_from rename" -s "h" -l "help" -d "help for rename"
-
-
 
 complete -c buildah -n "__fish_seen_subcommand_from rm" -s "a" -l "all" -d "remove all containers"
 complete -c buildah -n "__fish_seen_subcommand_from rm" -s "h" -l "help" -d "help for rm"
-
-
 
 complete -c buildah -n "__fish_seen_subcommand_from rmi" -s "a" -l "all" -d "remove all images"
 complete -c buildah -n "__fish_seen_subcommand_from rmi" -s "f" -l "force" -d "force removal of the image and any containers using the image"
 complete -c buildah -n "__fish_seen_subcommand_from rmi" -s "h" -l "help" -d "help for rmi"
 complete -c buildah -n "__fish_seen_subcommand_from rmi" -s "p" -l "prune" -d "prune dangling images"
-
-
 
 complete -c buildah -n "__fish_seen_subcommand_from run" -l "add-history" -d "add an entry for this operation to the image's history."
 complete -c buildah -n "__fish_seen_subcommand_from run" -l "cap-add" -d "add the specified capability (default [])" -x
@@ -364,20 +322,12 @@ complete -c buildah -n "__fish_seen_subcommand_from run" -l "user" -d "user[:gro
 complete -c buildah -n "__fish_seen_subcommand_from run" -l "uts" -d "private, :path of UTS namespace to join, or 'host'" -r
 complete -c buildah -n "__fish_seen_subcommand_from run" -s "v" -l "volume" -d "bind mount a host location into the container while running the command" -x
 
-
-
 complete -c buildah -n "__fish_seen_subcommand_from tag" -s "h" -l "help" -d "help for tag"
-
-
 
 complete -c buildah -n "__fish_seen_subcommand_from umount" -s "a" -l "all" -d "umount all of the currently mounted containers"
 complete -c buildah -n "__fish_seen_subcommand_from umount" -s "h" -l "help" -d "help for umount"
 
-
-
 complete -c buildah -n "__fish_seen_subcommand_from unshare" -s "h" -l "help" -d "help for unshare"
 complete -c buildah -n "__fish_seen_subcommand_from unshare" -l "mount" -d "mount the specified containers (default [])" -x
-
-
 
 complete -c buildah -n "__fish_seen_subcommand_from version" -s "h" -l "help" -d "help for version"

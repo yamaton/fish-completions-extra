@@ -18,3 +18,31 @@ complete -k -c asdf -n __fish_use_subcommand -x -a current -d "Display current v
 complete -k -c asdf -n __fish_use_subcommand -x -a uninstall -d "Remove a specific version of a package"
 complete -k -c asdf -n __fish_use_subcommand -x -a install -d "Install all the package versions listed in the .tool-versions file"
 complete -k -c asdf -n __fish_use_subcommand -x -a plugin -d ""
+
+complete -k -c asdf -n "__fish_seen_subcommand_from plugin; and not __fish_seen_subcommand_from add list remove update" -x -a update -d "Update a plugin"
+complete -k -c asdf -n "__fish_seen_subcommand_from plugin; and not __fish_seen_subcommand_from add list remove update" -x -a remove -d "Remove plugin and package versions"
+complete -k -c asdf -n "__fish_seen_subcommand_from plugin; and not __fish_seen_subcommand_from add list remove update" -x -a list -d "List installed plugins"
+complete -k -c asdf -n "__fish_seen_subcommand_from plugin; and not __fish_seen_subcommand_from add list remove update" -x -a add -d "Add a plugin"
+
+
+complete -c asdf -n "__fish_seen_subcommand_from plugin; and __fish_seen_subcommand_from list" -l "urls" -d "Show git URLs"
+complete -c asdf -n "__fish_seen_subcommand_from plugin; and __fish_seen_subcommand_from list" -l "refs" -d "Show git-ref"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

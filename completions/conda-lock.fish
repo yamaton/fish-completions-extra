@@ -3,13 +3,9 @@
 complete -c conda-lock -n "not __fish_seen_subcommand_from lock install render" -l "version" -d "Show the version and exit."
 complete -c conda-lock -n "not __fish_seen_subcommand_from lock install render" -l "help" -d "Show this message and exit."
 
-
-
 complete -k -c conda-lock -n __fish_use_subcommand -x -a render -d "Render multi-platform lockfile into single-platform env or..."
 complete -k -c conda-lock -n __fish_use_subcommand -x -a install -d "Create an environment from the lockfile"
 complete -k -c conda-lock -n __fish_use_subcommand -x -a lock -d "Generate fully reproducible lock files for conda environments."
-
-
 
 complete -c conda-lock -n "__fish_seen_subcommand_from lock" -l "conda" -d "path (or name) of the conda/mamba executable to use." -r
 complete -c conda-lock -n "__fish_seen_subcommand_from lock" -l "mamba" -l "no-mamba" -d "don't attempt to use or install mamba."
@@ -34,8 +30,6 @@ complete -c conda-lock -n "__fish_seen_subcommand_from lock" -l "md" -l "metadat
 complete -c conda-lock -n "__fish_seen_subcommand_from lock" -l "mdy" -l "metadata-yaml" -l "metadata-json" -d "YAML or JSON file(s) containing structured metadata to add to metadata section of the lockfile." -r
 complete -c conda-lock -n "__fish_seen_subcommand_from lock" -l "help" -d "Show this message and exit."
 
-
-
 complete -c conda-lock -n "__fish_seen_subcommand_from install" -l "conda" -d "path (or name) of the conda/mamba executable to use." -r
 complete -c conda-lock -n "__fish_seen_subcommand_from install" -l "mamba" -l "no-mamba" -d "don't attempt to use or install mamba."
 complete -c conda-lock -n "__fish_seen_subcommand_from install" -l "micromamba" -l "no-micromamba" -d "don't attempt to use or install micromamba."
@@ -49,8 +43,6 @@ complete -c conda-lock -n "__fish_seen_subcommand_from install" -l "log-level" -
 complete -c conda-lock -n "__fish_seen_subcommand_from install" -l "dev" -l "no-dev" -d "install dev dependencies from the lockfile (where applicable)"
 complete -c conda-lock -n "__fish_seen_subcommand_from install" -s "E" -l "extras" -d "include extra dependencies from the lockfile (where applicable)" -r
 complete -c conda-lock -n "__fish_seen_subcommand_from install" -l "help" -d "Show this message and exit."
-
-
 
 complete -c conda-lock -n "__fish_seen_subcommand_from render" -l "dev-dependencies" -l "no-dev-dependencies" -d "include dev dependencies in the lockfile (where applicable)"
 complete -c conda-lock -n "__fish_seen_subcommand_from render" -s "k" -l "kind" -d "Kind of lock file(s) to generate." -r

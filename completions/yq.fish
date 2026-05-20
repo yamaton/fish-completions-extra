@@ -31,15 +31,11 @@ complete -c yq -n "not __fish_seen_subcommand_from completion eval eval-all help
 complete -c yq -n "not __fish_seen_subcommand_from completion eval eval-all help shell-completion" -l "xml-skip-proc-inst" -d "skip over process instructions (e.g. <?xml version=\"1\"?>)"
 complete -c yq -n "not __fish_seen_subcommand_from completion eval eval-all help shell-completion" -l "xml-strict-mode" -d "enables strict parsing of XML."
 
-
-
 complete -k -c yq -n __fish_use_subcommand -x -a shell-completion -d "Generate completion script"
 complete -k -c yq -n __fish_use_subcommand -x -a help -d "Help about any command"
 complete -k -c yq -n __fish_use_subcommand -x -a eval-all -d "Loads _all_ yaml documents of _all_ yaml files and runs expression once"
 complete -k -c yq -n __fish_use_subcommand -x -a eval -d "(default) Apply the expression to each document in each yaml file in sequence"
 complete -k -c yq -n __fish_use_subcommand -x -a completion -d "Generate the autocompletion script for the specified shell"
-
-
 
 complete -c yq -n "__fish_seen_subcommand_from completion" -s "h" -l "help" -d "help for eval"
 complete -c yq -n "__fish_seen_subcommand_from completion" -s "C" -l "colors" -d "force print with colors"
@@ -71,8 +67,6 @@ complete -c yq -n "__fish_seen_subcommand_from completion" -l "xml-skip-directiv
 complete -c yq -n "__fish_seen_subcommand_from completion" -l "xml-skip-proc-inst" -d "skip over process instructions (e.g. <?xml version=\"1\"?>)"
 complete -c yq -n "__fish_seen_subcommand_from completion" -l "xml-strict-mode" -d "enables strict parsing of XML."
 
-
-
 complete -c yq -n "__fish_seen_subcommand_from eval" -s "h" -l "help" -d "help for eval"
 complete -c yq -n "__fish_seen_subcommand_from eval" -s "C" -l "colors" -d "force print with colors"
 complete -c yq -n "__fish_seen_subcommand_from eval" -s "e" -l "exit-status" -d "set exit status if there are no matches or null or false is returned"
@@ -103,8 +97,6 @@ complete -c yq -n "__fish_seen_subcommand_from eval" -l "xml-skip-directives" -d
 complete -c yq -n "__fish_seen_subcommand_from eval" -l "xml-skip-proc-inst" -d "skip over process instructions (e.g. <?xml version=\"1\"?>)"
 complete -c yq -n "__fish_seen_subcommand_from eval" -l "xml-strict-mode" -d "enables strict parsing of XML."
 
-
-
 complete -c yq -n "__fish_seen_subcommand_from eval-all" -s "h" -l "help" -d "help for eval-all"
 complete -c yq -n "__fish_seen_subcommand_from eval-all" -s "C" -l "colors" -d "force print with colors"
 complete -c yq -n "__fish_seen_subcommand_from eval-all" -s "e" -l "exit-status" -d "set exit status if there are no matches or null or false is returned"
@@ -134,7 +126,6 @@ complete -c yq -n "__fish_seen_subcommand_from eval-all" -l "xml-raw-token" -d "
 complete -c yq -n "__fish_seen_subcommand_from eval-all" -l "xml-skip-directives" -d "skip over directives (e.g. <!DOCTYPE thing cat>)"
 complete -c yq -n "__fish_seen_subcommand_from eval-all" -l "xml-skip-proc-inst" -d "skip over process instructions (e.g. <?xml version=\"1\"?>)"
 complete -c yq -n "__fish_seen_subcommand_from eval-all" -l "xml-strict-mode" -d "enables strict parsing of XML."
-
 
 
 complete -c yq -n "__fish_seen_subcommand_from shell-completion" -s "h" -l "help" -d "help for shell-completion"

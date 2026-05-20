@@ -33,17 +33,32 @@ complete -c popeye -n "not __fish_seen_subcommand_from completion version" -s "s
 complete -c popeye -n "not __fish_seen_subcommand_from completion version" -l "token" -d "Bearer token for authentication to the API server" -x
 complete -c popeye -n "not __fish_seen_subcommand_from completion version" -l "user" -d "The name of the kubeconfig user to use" -x
 
-
-
 complete -k -c popeye -n __fish_use_subcommand -x -a version -d "Prints version/build info"
 complete -k -c popeye -n __fish_use_subcommand -x -a completion -d "generate the autocompletion script for the specified shell"
 
+complete -c popeye -n "__fish_seen_subcommand_from completion; and not __fish_seen_subcommand_from bash fish powershell zsh" -s "h" -l "help" -d "help for completion"
+complete -c popeye -n "__fish_seen_subcommand_from completion; and not __fish_seen_subcommand_from bash fish powershell zsh" -s "c" -l "clear" -d "Clears the screen before a run"
 
+complete -k -c popeye -n "__fish_seen_subcommand_from completion; and not __fish_seen_subcommand_from bash fish powershell zsh" -x -a zsh -d "generate the autocompletion script for zsh"
+complete -k -c popeye -n "__fish_seen_subcommand_from completion; and not __fish_seen_subcommand_from bash fish powershell zsh" -x -a powershell -d "generate the autocompletion script for powershell"
+complete -k -c popeye -n "__fish_seen_subcommand_from completion; and not __fish_seen_subcommand_from bash fish powershell zsh" -x -a fish -d "generate the autocompletion script for fish"
+complete -k -c popeye -n "__fish_seen_subcommand_from completion; and not __fish_seen_subcommand_from bash fish powershell zsh" -x -a bash -d "generate the autocompletion script for bash"
 
-complete -c popeye -n "__fish_seen_subcommand_from completion" -s "h" -l "help" -d "help for completion"
-complete -c popeye -n "__fish_seen_subcommand_from completion" -s "c" -l "clear" -d "Clears the screen before a run"
+complete -c popeye -n "__fish_seen_subcommand_from completion; and __fish_seen_subcommand_from bash" -s "h" -l "help" -d "help for bash"
+complete -c popeye -n "__fish_seen_subcommand_from completion; and __fish_seen_subcommand_from bash" -l "no-descriptions" -d "disable completion descriptions"
+complete -c popeye -n "__fish_seen_subcommand_from completion; and __fish_seen_subcommand_from bash" -s "c" -l "clear" -d "Clears the screen before a run"
 
+complete -c popeye -n "__fish_seen_subcommand_from completion; and __fish_seen_subcommand_from fish" -s "h" -l "help" -d "help for fish"
+complete -c popeye -n "__fish_seen_subcommand_from completion; and __fish_seen_subcommand_from fish" -l "no-descriptions" -d "disable completion descriptions"
+complete -c popeye -n "__fish_seen_subcommand_from completion; and __fish_seen_subcommand_from fish" -s "c" -l "clear" -d "Clears the screen before a run"
 
+complete -c popeye -n "__fish_seen_subcommand_from completion; and __fish_seen_subcommand_from powershell" -s "h" -l "help" -d "help for powershell"
+complete -c popeye -n "__fish_seen_subcommand_from completion; and __fish_seen_subcommand_from powershell" -l "no-descriptions" -d "disable completion descriptions"
+complete -c popeye -n "__fish_seen_subcommand_from completion; and __fish_seen_subcommand_from powershell" -s "c" -l "clear" -d "Clears the screen before a run"
+
+complete -c popeye -n "__fish_seen_subcommand_from completion; and __fish_seen_subcommand_from zsh" -s "h" -l "help" -d "help for zsh"
+complete -c popeye -n "__fish_seen_subcommand_from completion; and __fish_seen_subcommand_from zsh" -l "no-descriptions" -d "disable completion descriptions"
+complete -c popeye -n "__fish_seen_subcommand_from completion; and __fish_seen_subcommand_from zsh" -s "c" -l "clear" -d "Clears the screen before a run"
 
 complete -c popeye -n "__fish_seen_subcommand_from version" -s "h" -l "help" -d "help for version"
 complete -c popeye -n "__fish_seen_subcommand_from version" -s "c" -l "clear" -d "Clears the screen before a run"

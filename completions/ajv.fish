@@ -32,15 +32,11 @@ complete -c ajv -n "not __fish_seen_subcommand_from validate compile migrate tes
 complete -c ajv -n "not __fish_seen_subcommand_from validate compile migrate test help" -l "code.lines" -d "generate multi-line code"
 complete -c ajv -n "not __fish_seen_subcommand_from validate compile migrate test help" -l "code.optimize" -d "code optimization" -x
 
-
-
 complete -k -c ajv -n __fish_use_subcommand -x -a help -d "Show help"
 complete -k -c ajv -n __fish_use_subcommand -x -a test -d "Test data validation result"
 complete -k -c ajv -n __fish_use_subcommand -x -a migrate -d "Migrate schema(s) to draft-07 or draft-2019-09"
 complete -k -c ajv -n __fish_use_subcommand -x -a compile -d "Compile schema(s)"
 complete -k -c ajv -n __fish_use_subcommand -x -a validate -d "Validate data file(s) against schema"
-
-
 
 complete -c ajv -n "__fish_seen_subcommand_from validate" -s "s" -d "JSON schema to validate against (required)" -r
 complete -c ajv -n "__fish_seen_subcommand_from validate" -s "d" -d "to be validated (required)" -r
@@ -73,8 +69,6 @@ complete -c ajv -n "__fish_seen_subcommand_from validate" -l "code.es5" -d "gene
 complete -c ajv -n "__fish_seen_subcommand_from validate" -l "code.lines" -d "generate multi-line code"
 complete -c ajv -n "__fish_seen_subcommand_from validate" -l "code.optimize" -d "code optimization" -x
 
-
-
 complete -c ajv -n "__fish_seen_subcommand_from compile" -s "s" -d "JSON schema to validate against (required)" -r
 complete -c ajv -n "__fish_seen_subcommand_from compile" -s "r" -d "referenced schema(s)" -r
 complete -c ajv -n "__fish_seen_subcommand_from compile" -s "m" -d "meta schema(s)" -r
@@ -104,15 +98,11 @@ complete -c ajv -n "__fish_seen_subcommand_from compile" -l "code.es5" -d "gener
 complete -c ajv -n "__fish_seen_subcommand_from compile" -l "code.lines" -d "generate multi-line code"
 complete -c ajv -n "__fish_seen_subcommand_from compile" -l "code.optimize" -d "code optimization" -x
 
-
-
 complete -c ajv -n "__fish_seen_subcommand_from migrate" -s "s" -d "JSON schema(s) to migrate to draft-07 or draft-2019-09" -r
 complete -c ajv -n "__fish_seen_subcommand_from migrate" -s "o" -d "output file for migrated schema (only allowed for a single schema)" -r
 complete -c ajv -n "__fish_seen_subcommand_from migrate" -l "spec" -d "JSON schema specification to use" -x
 complete -c ajv -n "__fish_seen_subcommand_from migrate" -l "indent" -d "indentation in migrated schema JSON file, 4 by default" -r
 complete -c ajv -n "__fish_seen_subcommand_from migrate" -l "validate-schema" -d "skip schema validation" -x
-
-
 
 complete -c ajv -n "__fish_seen_subcommand_from test" -s "s" -d "JSON schema to validate against (required)" -r
 complete -c ajv -n "__fish_seen_subcommand_from test" -s "d" -d "to be validated (required)" -r
@@ -144,3 +134,12 @@ complete -c ajv -n "__fish_seen_subcommand_from test" -l "own-properties" -d "on
 complete -c ajv -n "__fish_seen_subcommand_from test" -l "code.es5" -d "generate ES5 code"
 complete -c ajv -n "__fish_seen_subcommand_from test" -l "code.lines" -d "generate multi-line code"
 complete -c ajv -n "__fish_seen_subcommand_from test" -l "code.optimize" -d "code optimization" -x
+
+complete -k -c ajv -n "__fish_seen_subcommand_from help; and not __fish_seen_subcommand_from validate compile migrate test" -x -a test -d ""
+complete -k -c ajv -n "__fish_seen_subcommand_from help; and not __fish_seen_subcommand_from validate compile migrate test" -x -a migrate -d ""
+complete -k -c ajv -n "__fish_seen_subcommand_from help; and not __fish_seen_subcommand_from validate compile migrate test" -x -a compile -d ""
+complete -k -c ajv -n "__fish_seen_subcommand_from help; and not __fish_seen_subcommand_from validate compile migrate test" -x -a validate -d ""
+
+
+
+

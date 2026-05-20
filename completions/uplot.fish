@@ -4,8 +4,6 @@ complete -c uplot -n "not __fish_seen_subcommand_from barplot histogram lineplot
 complete -c uplot -n "not __fish_seen_subcommand_from barplot histogram lineplot lineplots scatter density boxplot count colors" -l "help" -d "print command specific help menu"
 complete -c uplot -n "not __fish_seen_subcommand_from barplot histogram lineplot lineplots scatter density boxplot count colors" -l "version" -d "print the version of YouPlot"
 
-
-
 complete -k -c uplot -n __fish_use_subcommand -x -a colors -d "show the list of available colors"
 complete -k -c uplot -n __fish_use_subcommand -x -a count -d "draw a baplot based on the number of occurrences (slow)"
 complete -k -c uplot -n __fish_use_subcommand -x -a boxplot -d "draw a horizontal boxplot"
@@ -15,8 +13,6 @@ complete -k -c uplot -n __fish_use_subcommand -x -a lineplots -d "draw a line ch
 complete -k -c uplot -n __fish_use_subcommand -x -a lineplot -d "draw a line chart"
 complete -k -c uplot -n __fish_use_subcommand -x -a histogram -d "draw a horizontal histogram"
 complete -k -c uplot -n __fish_use_subcommand -x -a barplot -d "draw a horizontal barplot"
-
-
 
 complete -c uplot -n "__fish_seen_subcommand_from barplot" -l "xscale" -d "axis scaling (log, ln, log10, lg, log2, lb)" -x
 complete -c uplot -n "__fish_seen_subcommand_from barplot" -l "fmt" -d "xy : header is like x, y..." -x
@@ -45,8 +41,6 @@ complete -c uplot -n "__fish_seen_subcommand_from barplot" -l "help" -d "print s
 complete -c uplot -n "__fish_seen_subcommand_from barplot" -l "config" -d "specify a config file" -r
 complete -c uplot -n "__fish_seen_subcommand_from barplot" -l "debug" -d "print preprocessed data"
 
-
-
 complete -c uplot -n "__fish_seen_subcommand_from histogram" -s "n" -l "nbins" -d "approximate number of bins" -x
 complete -c uplot -n "__fish_seen_subcommand_from histogram" -l "closed" -d "side of the intervals to be closed [left]" -x
 complete -c uplot -n "__fish_seen_subcommand_from histogram" -l "symbol" -d "character to be used to plot the bars" -x
@@ -73,8 +67,6 @@ complete -c uplot -n "__fish_seen_subcommand_from histogram" -l "encoding" -d "s
 complete -c uplot -n "__fish_seen_subcommand_from histogram" -l "help" -d "print sub-command help menu"
 complete -c uplot -n "__fish_seen_subcommand_from histogram" -l "config" -d "specify a config file" -r
 complete -c uplot -n "__fish_seen_subcommand_from histogram" -l "debug" -d "print preprocessed data"
-
-
 
 complete -c uplot -n "__fish_seen_subcommand_from lineplot" -l "xlim" -d "plotting range for the x coordinate" -x
 complete -c uplot -n "__fish_seen_subcommand_from lineplot" -l "ylim" -d "plotting range for the y coordinate" -x
@@ -106,8 +98,6 @@ complete -c uplot -n "__fish_seen_subcommand_from lineplot" -l "help" -d "print 
 complete -c uplot -n "__fish_seen_subcommand_from lineplot" -l "config" -d "specify a config file" -r
 complete -c uplot -n "__fish_seen_subcommand_from lineplot" -l "debug" -d "print preprocessed data"
 
-
-
 complete -c uplot -n "__fish_seen_subcommand_from lineplots" -l "xlim" -d "plotting range for the x coordinate" -x
 complete -c uplot -n "__fish_seen_subcommand_from lineplots" -l "ylim" -d "plotting range for the y coordinate" -x
 complete -c uplot -n "__fish_seen_subcommand_from lineplots" -l "fmt" -d "xyxy : header is like x1, y1, x2, y2, x3, y3..." -x
@@ -137,8 +127,6 @@ complete -c uplot -n "__fish_seen_subcommand_from lineplots" -l "encoding" -d "s
 complete -c uplot -n "__fish_seen_subcommand_from lineplots" -l "help" -d "print sub-command help menu"
 complete -c uplot -n "__fish_seen_subcommand_from lineplots" -l "config" -d "specify a config file" -r
 complete -c uplot -n "__fish_seen_subcommand_from lineplots" -l "debug" -d "print preprocessed data"
-
-
 
 complete -c uplot -n "__fish_seen_subcommand_from scatter" -l "xlim" -d "plotting range for the x coordinate" -x
 complete -c uplot -n "__fish_seen_subcommand_from scatter" -l "ylim" -d "plotting range for the y coordinate" -x
@@ -170,8 +158,6 @@ complete -c uplot -n "__fish_seen_subcommand_from scatter" -l "help" -d "print s
 complete -c uplot -n "__fish_seen_subcommand_from scatter" -l "config" -d "specify a config file" -r
 complete -c uplot -n "__fish_seen_subcommand_from scatter" -l "debug" -d "print preprocessed data"
 
-
-
 complete -c uplot -n "__fish_seen_subcommand_from density" -l "xlim" -d "plotting range for the x coordinate" -x
 complete -c uplot -n "__fish_seen_subcommand_from density" -l "ylim" -d "plotting range for the y coordinate" -x
 complete -c uplot -n "__fish_seen_subcommand_from density" -l "fmt" -d "xyxy : header is like x1, y1, x2, y2, x3, y3..." -x
@@ -202,8 +188,6 @@ complete -c uplot -n "__fish_seen_subcommand_from density" -l "help" -d "print s
 complete -c uplot -n "__fish_seen_subcommand_from density" -l "config" -d "specify a config file" -r
 complete -c uplot -n "__fish_seen_subcommand_from density" -l "debug" -d "print preprocessed data"
 
-
-
 complete -c uplot -n "__fish_seen_subcommand_from boxplot" -l "xlim" -d "plotting range for the x coordinate" -x
 complete -c uplot -n "__fish_seen_subcommand_from boxplot" -s "O" -l "pass" -d "file to output input data to [stdout] for inserting YouPlot in the middle of Unix pipes" -r
 complete -c uplot -n "__fish_seen_subcommand_from boxplot" -s "o" -l "output" -d "file to output plots to [stdout] If no option is specified, plot will print to stderr" -r
@@ -228,8 +212,6 @@ complete -c uplot -n "__fish_seen_subcommand_from boxplot" -l "encoding" -d "spe
 complete -c uplot -n "__fish_seen_subcommand_from boxplot" -l "help" -d "print sub-command help menu"
 complete -c uplot -n "__fish_seen_subcommand_from boxplot" -l "config" -d "specify a config file" -r
 complete -c uplot -n "__fish_seen_subcommand_from boxplot" -l "debug" -d "print preprocessed data"
-
-
 
 complete -c uplot -n "__fish_seen_subcommand_from count" -l "xscale" -d "axis scaling (log, ln, log10, lg, log2, lb)" -x
 complete -c uplot -n "__fish_seen_subcommand_from count" -l "symbol" -d "character to be used to plot the bars" -x
@@ -257,8 +239,6 @@ complete -c uplot -n "__fish_seen_subcommand_from count" -l "encoding" -d "speci
 complete -c uplot -n "__fish_seen_subcommand_from count" -l "help" -d "print sub-command help menu"
 complete -c uplot -n "__fish_seen_subcommand_from count" -l "config" -d "specify a config file" -r
 complete -c uplot -n "__fish_seen_subcommand_from count" -l "debug" -d "print preprocessed data"
-
-
 
 complete -c uplot -n "__fish_seen_subcommand_from colors" -s "n" -l "names" -d "show color names only"
 complete -c uplot -n "__fish_seen_subcommand_from colors" -s "O" -l "pass" -d "file to output input data to [stdout] for inserting YouPlot in the middle of Unix pipes" -r

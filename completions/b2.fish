@@ -2,8 +2,6 @@
 
 complete -c b2 -n "not __fish_seen_subcommand_from authorize-account cancel-all-unfinished-large-files cancel-large-file clear-account copy-file-by-id create-bucket create-key delete-bucket delete-file-version delete-key download-file-by-id download-file-by-name get-account-info get-bucket get-file-info get-download-auth get-download-url-with-auth hide-file list-buckets list-keys list-parts list-unfinished-large-files ls rm make-url make-friendly-url sync update-bucket upload-file update-file-legal-hold update-file-retention replication-setup replication-delete replication-pause replication-unpause replication-status version license" -s "h" -l "help" -d "show this help message and exit"
 
-
-
 complete -k -c b2 -n __fish_use_subcommand -x -a license -d "Prints the license of B2 Command line tool and all libraries shipped with it."
 complete -k -c b2 -n __fish_use_subcommand -x -a version -d "Prints the version number of this tool."
 complete -k -c b2 -n __fish_use_subcommand -x -a replication-status -d "Inspects files in only source or both source and destination buckets (potentially from different accounts) and provides detailed replication statistics."
@@ -43,27 +41,17 @@ complete -k -c b2 -n __fish_use_subcommand -x -a cancel-large-file -d "Cancels a
 complete -k -c b2 -n __fish_use_subcommand -x -a cancel-all-unfinished-large-files -d "Lists all large files that have been started but not finished and cancels them. Any parts that have been uploaded will be deleted."
 complete -k -c b2 -n __fish_use_subcommand -x -a authorize-account -d "Prompts for Backblaze applicationKeyId and applicationKey (unless they are given on the command line)."
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from authorize-account" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from authorize-account" -l "profile" -d "set profile" -r
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from cancel-all-unfinished-large-files" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from cancel-all-unfinished-large-files" -l "profile" -d "set profile" -r
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from cancel-large-file" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from cancel-large-file" -l "profile" -d "set profile" -r
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from clear-account" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from clear-account" -l "profile" -d "set profile" -r
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from copy-file-by-id" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from copy-file-by-id" -l "profile" -d "set profile" -r
@@ -80,8 +68,6 @@ complete -c b2 -n "__fish_seen_subcommand_from copy-file-by-id" -l "fileRetentio
 complete -c b2 -n "__fish_seen_subcommand_from copy-file-by-id" -l "retainUntil" -d "" -x
 complete -c b2 -n "__fish_seen_subcommand_from copy-file-by-id" -l "legalHold" -d "" -x
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from create-bucket" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from create-bucket" -l "profile" -d "set profile" -r
 complete -c b2 -n "__fish_seen_subcommand_from create-bucket" -l "bucketInfo" -d "" -x
@@ -92,8 +78,6 @@ complete -c b2 -n "__fish_seen_subcommand_from create-bucket" -l "replication" -
 complete -c b2 -n "__fish_seen_subcommand_from create-bucket" -l "defaultServerSideEncryption" -d "" -x
 complete -c b2 -n "__fish_seen_subcommand_from create-bucket" -l "defaultServerSideEncryptionAlgorithm" -d "" -x
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from create-key" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from create-key" -l "profile" -d "set profile" -r
 complete -c b2 -n "__fish_seen_subcommand_from create-key" -l "bucket" -d "" -x
@@ -101,22 +85,14 @@ complete -c b2 -n "__fish_seen_subcommand_from create-key" -l "namePrefix" -d ""
 complete -c b2 -n "__fish_seen_subcommand_from create-key" -l "duration" -d "" -x
 complete -c b2 -n "__fish_seen_subcommand_from create-key" -l "allCapabilities" -d ""
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from delete-bucket" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from delete-bucket" -l "profile" -d "set profile" -r
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from delete-file-version" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from delete-file-version" -l "profile" -d "set profile" -r
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from delete-key" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from delete-key" -l "profile" -d "set profile" -r
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from download-file-by-id" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from download-file-by-id" -l "profile" -d "set profile" -r
@@ -128,8 +104,6 @@ complete -c b2 -n "__fish_seen_subcommand_from download-file-by-id" -l "write-bu
 complete -c b2 -n "__fish_seen_subcommand_from download-file-by-id" -l "skip-hash-verification" -d ""
 complete -c b2 -n "__fish_seen_subcommand_from download-file-by-id" -l "max-download-streams-per-file" -d "" -r
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from download-file-by-name" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from download-file-by-name" -l "profile" -d "set profile" -r
 complete -c b2 -n "__fish_seen_subcommand_from download-file-by-name" -l "noProgress" -d ""
@@ -140,61 +114,39 @@ complete -c b2 -n "__fish_seen_subcommand_from download-file-by-name" -l "write-
 complete -c b2 -n "__fish_seen_subcommand_from download-file-by-name" -l "skip-hash-verification" -d ""
 complete -c b2 -n "__fish_seen_subcommand_from download-file-by-name" -l "max-download-streams-per-file" -d "" -r
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from get-account-info" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from get-account-info" -l "profile" -d "set profile" -r
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from get-bucket" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from get-bucket" -l "profile" -d "set profile" -r
 complete -c b2 -n "__fish_seen_subcommand_from get-bucket" -l "showSize" -d "Show file size"
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from get-file-info" -s "h" -l "help" -d "show this help message and exit"
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from get-download-auth" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from get-download-auth" -l "profile" -d "set profile" -r
 complete -c b2 -n "__fish_seen_subcommand_from get-download-auth" -l "prefix" -d "set prefix" -x
 complete -c b2 -n "__fish_seen_subcommand_from get-download-auth" -l "duration" -d "set duration" -x
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from get-download-url-with-auth" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from get-download-url-with-auth" -l "profile" -d "set profile" -r
 complete -c b2 -n "__fish_seen_subcommand_from get-download-url-with-auth" -l "duration" -d "set duration" -x
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from hide-file" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from hide-file" -l "profile" -d "set profile" -r
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from list-buckets" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from list-buckets" -l "profile" -d "set profile" -r
 complete -c b2 -n "__fish_seen_subcommand_from list-buckets" -l "json" -d "Get outputs as JSON"
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from list-keys" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from list-keys" -l "profile" -d "set profile" -r
 complete -c b2 -n "__fish_seen_subcommand_from list-keys" -l "long" -d "Get detailed outputs"
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from list-parts" -s "h" -l "help" -d "show this help message and exit"
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from list-unfinished-large-files" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from list-unfinished-large-files" -l "profile" -d "set profile" -r
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from ls" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from ls" -l "profile" -d "set profile" -r
@@ -204,8 +156,6 @@ complete -c b2 -n "__fish_seen_subcommand_from ls" -l "replication" -d "replicat
 complete -c b2 -n "__fish_seen_subcommand_from ls" -l "versions" -d "Show versions"
 complete -c b2 -n "__fish_seen_subcommand_from ls" -l "recursive" -d "Show outputs recursively"
 complete -c b2 -n "__fish_seen_subcommand_from ls" -l "withWildCard" -d "Use wildcard"
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from rm" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from rm" -l "profile" -d "set profile" -r
@@ -217,17 +167,11 @@ complete -c b2 -n "__fish_seen_subcommand_from rm" -l "versions" -d "Show versio
 complete -c b2 -n "__fish_seen_subcommand_from rm" -l "recursive" -d "Show outputs recursively"
 complete -c b2 -n "__fish_seen_subcommand_from rm" -l "withWildCard" -d "Use wildcard"
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from make-url" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from make-url" -l "profile" -d "set profile" -r
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from make-friendly-url" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from make-friendly-url" -l "profile" -d "set profile" -r
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from sync" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from sync" -l "profile" -d "set profile" -r
@@ -258,8 +202,6 @@ complete -c b2 -n "__fish_seen_subcommand_from sync" -l "replaceNewer" -d ""
 complete -c b2 -n "__fish_seen_subcommand_from sync" -l "delete" -d ""
 complete -c b2 -n "__fish_seen_subcommand_from sync" -l "keepDays" -d "" -x
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from update-bucket" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from update-bucket" -l "profile" -d "set profile" -r
 complete -c b2 -n "__fish_seen_subcommand_from update-bucket" -l "bucketInfo" -d "" -x
@@ -271,8 +213,6 @@ complete -c b2 -n "__fish_seen_subcommand_from update-bucket" -l "replication" -
 complete -c b2 -n "__fish_seen_subcommand_from update-bucket" -l "fileLockEnabled" -d "If given, the bucket will have the file lock mechanism enabled."
 complete -c b2 -n "__fish_seen_subcommand_from update-bucket" -l "defaultServerSideEncryption" -d "" -x
 complete -c b2 -n "__fish_seen_subcommand_from update-bucket" -l "defaultServerSideEncryptionAlgorithm" -d "" -x
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from upload-file" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from upload-file" -l "profile" -d "set profile" -r
@@ -290,19 +230,13 @@ complete -c b2 -n "__fish_seen_subcommand_from upload-file" -l "fileRetentionMod
 complete -c b2 -n "__fish_seen_subcommand_from upload-file" -l "retainUntil" -d "" -x
 complete -c b2 -n "__fish_seen_subcommand_from upload-file" -l "incrementalMode" -d ""
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from update-file-legal-hold" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from update-file-legal-hold" -l "profile" -d "set profile" -r
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from update-file-retention" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from update-file-retention" -l "profile" -d "set profile" -r
 complete -c b2 -n "__fish_seen_subcommand_from update-file-retention" -l "retainUntil" -d "Retain until the TIMESTAMP" -x
 complete -c b2 -n "__fish_seen_subcommand_from update-file-retention" -l "bypassGovernance" -d "set bypass governance"
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from replication-setup" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from replication-setup" -l "profile" -d "set profile" -r
@@ -312,22 +246,14 @@ complete -c b2 -n "__fish_seen_subcommand_from replication-setup" -l "priority" 
 complete -c b2 -n "__fish_seen_subcommand_from replication-setup" -l "file-name-prefix" -d "only replicate files starting with PREFIX" -r
 complete -c b2 -n "__fish_seen_subcommand_from replication-setup" -l "include-existing-files" -d "if given, also replicates files uploaded prior to creation of the replication rule"
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from replication-delete" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from replication-delete" -l "profile" -d "set profile" -r
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from replication-pause" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from replication-pause" -l "profile" -d "set profile" -r
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from replication-unpause" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from replication-unpause" -l "profile" -d "set profile" -r
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from replication-status" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from replication-status" -l "profile" -d "set profile" -r
@@ -338,12 +264,8 @@ complete -c b2 -n "__fish_seen_subcommand_from replication-status" -l "output-fo
 complete -c b2 -n "__fish_seen_subcommand_from replication-status" -l "noProgress" -d ""
 complete -c b2 -n "__fish_seen_subcommand_from replication-status" -l "columns" -d "" -x
 
-
-
 complete -c b2 -n "__fish_seen_subcommand_from version" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from version" -l "profile" -d "set profile" -r
-
-
 
 complete -c b2 -n "__fish_seen_subcommand_from license" -s "h" -l "help" -d "show this help message and exit"
 complete -c b2 -n "__fish_seen_subcommand_from license" -l "profile" -d "set profile" -r

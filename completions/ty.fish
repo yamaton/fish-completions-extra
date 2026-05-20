@@ -3,14 +3,10 @@
 complete -c ty -n "not __fish_seen_subcommand_from check server version help" -s "h" -l "help" -d "Print help"
 complete -c ty -n "not __fish_seen_subcommand_from check server version help" -s "V" -l "version" -d "Print version"
 
-
-
 complete -k -c ty -n __fish_use_subcommand -x -a help -d "Print this message or the help of the given subcommand(s)"
 complete -k -c ty -n __fish_use_subcommand -x -a version -d "Display ty's version"
 complete -k -c ty -n __fish_use_subcommand -x -a server -d "Start the language server"
 complete -k -c ty -n __fish_use_subcommand -x -a check -d "Check a project for type errors"
-
-
 
 complete -c ty -n "__fish_seen_subcommand_from check" -l "add-ignore" -d "Adds `ty: ignore` comments to suppress all rule diagnostics"
 complete -c ty -n "__fish_seen_subcommand_from check" -l "project" -d "Run the command within the given project directory." -r
@@ -34,10 +30,7 @@ complete -c ty -n "__fish_seen_subcommand_from check" -l "exclude" -d "Glob patt
 complete -c ty -n "__fish_seen_subcommand_from check" -l "no-progress" -d "Hide all progress outputs."
 complete -c ty -n "__fish_seen_subcommand_from check" -l "color" -d "Control when colored output is used" -x
 
-
-
 complete -c ty -n "__fish_seen_subcommand_from server" -s "h" -l "help" -d "Print help"
 
-
-
 complete -c ty -n "__fish_seen_subcommand_from version" -s "h" -l "help" -d "Print help"
+

@@ -7,8 +7,6 @@ complete -c pdm -n "not __fish_seen_subcommand_from add build cache completion c
 complete -c pdm -n "not __fish_seen_subcommand_from add build cache completion config export fix import info init install list lock publish remove run search show sync update use venv" -s "I" -l "ignore-python" -d "Ignore the Python path saved in .pdm-python."
 complete -c pdm -n "not __fish_seen_subcommand_from add build cache completion config export fix import info init install list lock publish remove run search show sync update use venv" -l "pep582" -d "Print the command line to be eval'd by the shell" -x
 
-
-
 complete -k -c pdm -n __fish_use_subcommand -x -a venv -d "Virtualenv management"
 complete -k -c pdm -n __fish_use_subcommand -x -a use -d "Use the given python version or path as base interpreter"
 complete -k -c pdm -n __fish_use_subcommand -x -a update -d "Update package(s) in pyproject.toml"
@@ -31,8 +29,6 @@ complete -k -c pdm -n __fish_use_subcommand -x -a completion -d "Generate comple
 complete -k -c pdm -n __fish_use_subcommand -x -a cache -d "Control the caches of PDM"
 complete -k -c pdm -n __fish_use_subcommand -x -a build -d "Build artifacts for distribution"
 complete -k -c pdm -n __fish_use_subcommand -x -a add -d "Add package(s) to pyproject.toml and install them"
-
-
 
 complete -c pdm -n "__fish_seen_subcommand_from add" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from add" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
@@ -60,8 +56,6 @@ complete -c pdm -n "__fish_seen_subcommand_from add" -l "no-self" -d "Don't inst
 complete -c pdm -n "__fish_seen_subcommand_from add" -l "fail-fast" -s "x" -d "Abort on first installation error"
 complete -c pdm -n "__fish_seen_subcommand_from add" -l "no-isolation" -d "Do not isolate the build in a clean environment"
 
-
-
 complete -c pdm -n "__fish_seen_subcommand_from build" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from build" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
 complete -c pdm -n "__fish_seen_subcommand_from build" -s "p" -l "project" -d "Specify another path as the project root, which changes the base of pyproject.toml and __pypackages__" -r
@@ -73,16 +67,10 @@ complete -c pdm -n "__fish_seen_subcommand_from build" -s "d" -l "dest" -d "Targ
 complete -c pdm -n "__fish_seen_subcommand_from build" -l "no-clean" -d "Do not clean the target directory"
 complete -c pdm -n "__fish_seen_subcommand_from build" -l "config-setting" -s "C" -d "Pass options to the backend." -x
 
-
-
 complete -c pdm -n "__fish_seen_subcommand_from cache" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from cache" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
 
-
-
 complete -c pdm -n "__fish_seen_subcommand_from completion" -s "h" -l "help" -d "Show this help message and exit."
-
-
 
 complete -c pdm -n "__fish_seen_subcommand_from config" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from config" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
@@ -91,8 +79,6 @@ complete -c pdm -n "__fish_seen_subcommand_from config" -s "p" -l "project" -d "
 complete -c pdm -n "__fish_seen_subcommand_from config" -s "l" -l "local" -d "Set config in the project's local configuration file"
 complete -c pdm -n "__fish_seen_subcommand_from config" -s "d" -l "delete" -d "Unset a configuration key"
 complete -c pdm -n "__fish_seen_subcommand_from config" -s "e" -l "edit" -d "Edit the configuration file in the default editor(defined by EDITOR env var)"
-
-
 
 complete -c pdm -n "__fish_seen_subcommand_from export" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from export" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
@@ -109,15 +95,11 @@ complete -c pdm -n "__fish_seen_subcommand_from export" -l "no-default" -d "Don'
 complete -c pdm -n "__fish_seen_subcommand_from export" -s "d" -l "dev" -d "Select dev dependencies"
 complete -c pdm -n "__fish_seen_subcommand_from export" -l "prod" -l "production" -d "Unselect dev dependencies"
 
-
-
 complete -c pdm -n "__fish_seen_subcommand_from fix" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from fix" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
 complete -c pdm -n "__fish_seen_subcommand_from fix" -s "g" -l "global" -d "Use the global project, supply the project root with `-p` option"
 complete -c pdm -n "__fish_seen_subcommand_from fix" -s "p" -l "project" -d "Specify another path as the project root, which changes the base of pyproject.toml and __pypackages__" -r
 complete -c pdm -n "__fish_seen_subcommand_from fix" -l "dry-run" -d "Only show the problems"
-
-
 
 complete -c pdm -n "__fish_seen_subcommand_from import" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from import" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
@@ -126,8 +108,6 @@ complete -c pdm -n "__fish_seen_subcommand_from import" -s "p" -l "project" -d "
 complete -c pdm -n "__fish_seen_subcommand_from import" -s "d" -l "dev" -d "import packages into dev dependencies"
 complete -c pdm -n "__fish_seen_subcommand_from import" -s "G" -l "group" -d "Specify the target dependency group to import into" -x
 complete -c pdm -n "__fish_seen_subcommand_from import" -s "f" -l "format" -d "Specify the file format explicitly" -r
-
-
 
 complete -c pdm -n "__fish_seen_subcommand_from info" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from info" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
@@ -140,8 +120,6 @@ complete -c pdm -n "__fish_seen_subcommand_from info" -l "packages" -d "Show the
 complete -c pdm -n "__fish_seen_subcommand_from info" -l "env" -d "Show PEP 508 environment markers"
 complete -c pdm -n "__fish_seen_subcommand_from info" -l "json" -d "Dump the information in JSON"
 
-
-
 complete -c pdm -n "__fish_seen_subcommand_from init" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from init" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
 complete -c pdm -n "__fish_seen_subcommand_from init" -s "g" -l "global" -d "Use the global project, supply the project root with `-p` option"
@@ -153,8 +131,6 @@ complete -c pdm -n "__fish_seen_subcommand_from init" -s "n" -l "non-interactive
 complete -c pdm -n "__fish_seen_subcommand_from init" -l "python" -d "Specify the Python version/path to use" -r
 complete -c pdm -n "__fish_seen_subcommand_from init" -l "backend" -d "Specify the build backend" -x
 complete -c pdm -n "__fish_seen_subcommand_from init" -l "lib" -d "Create a library project"
-
-
 
 complete -c pdm -n "__fish_seen_subcommand_from install" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from install" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
@@ -176,8 +152,6 @@ complete -c pdm -n "__fish_seen_subcommand_from install" -l "no-self" -d "Don't 
 complete -c pdm -n "__fish_seen_subcommand_from install" -l "fail-fast" -s "x" -d "Abort on first installation error"
 complete -c pdm -n "__fish_seen_subcommand_from install" -l "no-isolation" -d "Do not isolate the build in a clean environment"
 
-
-
 complete -c pdm -n "__fish_seen_subcommand_from list" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from list" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
 complete -c pdm -n "__fish_seen_subcommand_from list" -s "g" -l "global" -d "Use the global project, supply the project root with `-p` option"
@@ -194,8 +168,6 @@ complete -c pdm -n "__fish_seen_subcommand_from list" -l "json" -d "Output depen
 complete -c pdm -n "__fish_seen_subcommand_from list" -l "markdown" -d "Output dependencies and legal notices in markdown document format - best effort basis"
 complete -c pdm -n "__fish_seen_subcommand_from list" -l "include" -d "Dependency groups to include in the output." -x
 complete -c pdm -n "__fish_seen_subcommand_from list" -l "exclude" -d "Exclude dependency groups from the output" -x
-
-
 
 complete -c pdm -n "__fish_seen_subcommand_from lock" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from lock" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
@@ -214,8 +186,6 @@ complete -c pdm -n "__fish_seen_subcommand_from lock" -l "no-default" -d "Don't 
 complete -c pdm -n "__fish_seen_subcommand_from lock" -s "d" -l "dev" -d "Select dev dependencies"
 complete -c pdm -n "__fish_seen_subcommand_from lock" -l "prod" -l "production" -d "Unselect dev dependencies"
 
-
-
 complete -c pdm -n "__fish_seen_subcommand_from publish" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from publish" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
 complete -c pdm -n "__fish_seen_subcommand_from publish" -s "p" -l "project" -d "Specify another path as the project root, which changes the base of pyproject.toml and __pypackages__" -r
@@ -229,8 +199,6 @@ complete -c pdm -n "__fish_seen_subcommand_from publish" -s "c" -l "comment" -d 
 complete -c pdm -n "__fish_seen_subcommand_from publish" -l "no-build" -d "Don't build the package before publishing"
 complete -c pdm -n "__fish_seen_subcommand_from publish" -l "no-very-ssl" -d "Disable SSL verification"
 complete -c pdm -n "__fish_seen_subcommand_from publish" -l "ca-certs" -d "The path to a PEM-encoded Certificate Authority bundle to use for publish server validation [env var: PDM_PUBLISH_CA_CERTS]" -r
-
-
 
 complete -c pdm -n "__fish_seen_subcommand_from remove" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from remove" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
@@ -248,8 +216,6 @@ complete -c pdm -n "__fish_seen_subcommand_from remove" -l "no-self" -d "Don't i
 complete -c pdm -n "__fish_seen_subcommand_from remove" -l "fail-fast" -s "x" -d "Abort on first installation error"
 complete -c pdm -n "__fish_seen_subcommand_from remove" -l "no-isolation" -d "Do not isolate the build in a clean environment"
 
-
-
 complete -c pdm -n "__fish_seen_subcommand_from run" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from run" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
 complete -c pdm -n "__fish_seen_subcommand_from run" -s "g" -l "global" -d "Use the global project, supply the project root with `-p` option"
@@ -260,12 +226,8 @@ complete -c pdm -n "__fish_seen_subcommand_from run" -s "l" -l "list" -d "Show a
 complete -c pdm -n "__fish_seen_subcommand_from run" -s "j" -l "json" -d "Output all scripts infos in JSON"
 complete -c pdm -n "__fish_seen_subcommand_from run" -s "s" -l "site-packages" -d "Load site-packages from the selected interpreter"
 
-
-
 complete -c pdm -n "__fish_seen_subcommand_from search" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from search" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
-
-
 
 complete -c pdm -n "__fish_seen_subcommand_from show" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from show" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
@@ -278,8 +240,6 @@ complete -c pdm -n "__fish_seen_subcommand_from show" -l "summary" -d "Show summ
 complete -c pdm -n "__fish_seen_subcommand_from show" -l "license" -d "Show license"
 complete -c pdm -n "__fish_seen_subcommand_from show" -l "platform" -d "Show platform"
 complete -c pdm -n "__fish_seen_subcommand_from show" -l "keywords" -d "Show keywords"
-
-
 
 complete -c pdm -n "__fish_seen_subcommand_from sync" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from sync" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
@@ -300,8 +260,6 @@ complete -c pdm -n "__fish_seen_subcommand_from sync" -l "no-editable" -d "Insta
 complete -c pdm -n "__fish_seen_subcommand_from sync" -l "no-self" -d "Don't install the project itself."
 complete -c pdm -n "__fish_seen_subcommand_from sync" -l "fail-fast" -s "x" -d "Abort on first installation error"
 complete -c pdm -n "__fish_seen_subcommand_from sync" -l "no-isolation" -d "Do not isolate the build in a clean environment"
-
-
 
 complete -c pdm -n "__fish_seen_subcommand_from update" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from update" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
@@ -331,8 +289,6 @@ complete -c pdm -n "__fish_seen_subcommand_from update" -l "no-self" -d "Don't i
 complete -c pdm -n "__fish_seen_subcommand_from update" -l "fail-fast" -s "x" -d "Abort on first installation error"
 complete -c pdm -n "__fish_seen_subcommand_from update" -l "no-isolation" -d "Do not isolate the build in a clean environment"
 
-
-
 complete -c pdm -n "__fish_seen_subcommand_from use" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from use" -s "v" -l "verbose" -d "Use `-v` for detailed output and `-vv` for more detailed"
 complete -c pdm -n "__fish_seen_subcommand_from use" -s "g" -l "global" -d "Use the global project, supply the project root with `-p` option"
@@ -341,8 +297,6 @@ complete -c pdm -n "__fish_seen_subcommand_from use" -s "k" -l "skip" -d "Skip s
 complete -c pdm -n "__fish_seen_subcommand_from use" -s "f" -l "first" -d "Select the first matched interpreter"
 complete -c pdm -n "__fish_seen_subcommand_from use" -s "i" -l "ignore-remembered" -d "Ignore the remembered selection"
 complete -c pdm -n "__fish_seen_subcommand_from use" -l "venv" -d "Use the interpreter in the virtual environment with the given name" -x
-
-
 
 complete -c pdm -n "__fish_seen_subcommand_from venv" -s "h" -l "help" -d "Show this help message and exit."
 complete -c pdm -n "__fish_seen_subcommand_from venv" -s "p" -l "project" -d "Specify another path as the project root, which changes the base of pyproject.toml and __pypackages__" -r

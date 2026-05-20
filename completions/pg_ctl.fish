@@ -9,3 +9,12 @@ complete -k -c pg_ctl -n __fish_use_subcommand -x -a restart -d "effectively exe
 complete -k -c pg_ctl -n __fish_use_subcommand -x -a stop -d "shuts down the server that is running in the specified data directory"
 complete -k -c pg_ctl -n __fish_use_subcommand -x -a start -d "launches a new server"
 complete -k -c pg_ctl -n __fish_use_subcommand -x -a init -d "creates a new PostgreSQL database cluster"
+
+
+
+
+
+
+
+
+

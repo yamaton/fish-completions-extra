@@ -3,8 +3,6 @@
 complete -c streamlit -n "not __fish_seen_subcommand_from activate cache config docs hello help run version" -l "log_level" -d "--version Show the version and exit." -x
 complete -c streamlit -n "not __fish_seen_subcommand_from activate cache config docs hello help run version" -l "help" -d "Show this message and exit."
 
-
-
 complete -k -c streamlit -n __fish_use_subcommand -x -a version -d "Print Streamlit's version number."
 complete -k -c streamlit -n __fish_use_subcommand -x -a run -d "Run a Python script, piping stderr to Streamlit."
 complete -k -c streamlit -n __fish_use_subcommand -x -a help -d "Print this help message."
@@ -14,23 +12,17 @@ complete -k -c streamlit -n __fish_use_subcommand -x -a config -d "Manage Stream
 complete -k -c streamlit -n __fish_use_subcommand -x -a cache -d "Manage the Streamlit cache."
 complete -k -c streamlit -n __fish_use_subcommand -x -a activate -d "Activate Streamlit by entering your email."
 
-
-
 complete -c streamlit -n "__fish_seen_subcommand_from activate" -l "help" -d "Show this message and exit."
 
+complete -c streamlit -n "__fish_seen_subcommand_from cache; and not __fish_seen_subcommand_from clear" -l "help" -d "Show this message and exit."
 
+complete -k -c streamlit -n "__fish_seen_subcommand_from cache; and not __fish_seen_subcommand_from clear" -x -a clear -d "Clear st.cache, st.cache_data, and st.cache_resource caches."
 
-complete -c streamlit -n "__fish_seen_subcommand_from cache" -l "help" -d "Show this message and exit."
-
-
+complete -c streamlit -n "__fish_seen_subcommand_from cache; and __fish_seen_subcommand_from clear" -l "help" -d "Show this message and exit."
 
 complete -c streamlit -n "__fish_seen_subcommand_from config" -l "help" -d "Show this message and exit."
 
-
-
 complete -c streamlit -n "__fish_seen_subcommand_from docs" -l "help" -d "Show this message and exit."
-
-
 
 complete -c streamlit -n "__fish_seen_subcommand_from hello" -l "global.disableWatchdogWarning" -d "By default, Streamlit checks if the" -x
 complete -c streamlit -n "__fish_seen_subcommand_from hello" -l "global.disableWidgetStateDuplicationWarning" -d "By default, Streamlit displays a warning" -x
@@ -91,11 +83,7 @@ complete -c streamlit -n "__fish_seen_subcommand_from hello" -l "theme.textColor
 complete -c streamlit -n "__fish_seen_subcommand_from hello" -l "theme.font" -d "Font family for all text in the app, except" -x
 complete -c streamlit -n "__fish_seen_subcommand_from hello" -l "help" -d "Show this message and exit."
 
-
-
 complete -c streamlit -n "__fish_seen_subcommand_from help" -l "help" -d "Show this message and exit."
-
-
 
 complete -c streamlit -n "__fish_seen_subcommand_from run" -l "global.disableWatchdogWarning" -d "By default, Streamlit checks if the" -x
 complete -c streamlit -n "__fish_seen_subcommand_from run" -l "global.disableWidgetStateDuplicationWarning" -d "By default, Streamlit displays a warning" -x
@@ -155,7 +143,5 @@ complete -c streamlit -n "__fish_seen_subcommand_from run" -l "theme.secondaryBa
 complete -c streamlit -n "__fish_seen_subcommand_from run" -l "theme.textColor" -d "Color used for almost all text." -x
 complete -c streamlit -n "__fish_seen_subcommand_from run" -l "theme.font" -d "Font family for all text in the app, except" -x
 complete -c streamlit -n "__fish_seen_subcommand_from run" -l "help" -d "Show this message and exit."
-
-
 
 complete -c streamlit -n "__fish_seen_subcommand_from version" -l "help" -d "Show this message and exit."
