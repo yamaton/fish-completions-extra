@@ -2,6 +2,8 @@
 
 complete -c pixi -n "not __fish_seen_subcommand_from add auth build clean completion config exec global info init import install list lock reinstall publish remove run search self-update shell shell-hook task tree update upgrade upload workspace help" -s "V" -l "version" -d "Print version"
 complete -c pixi -n "not __fish_seen_subcommand_from add auth build clean completion config exec global info init import install list lock reinstall publish remove run search self-update shell shell-hook task tree update upgrade upload workspace help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "not __fish_seen_subcommand_from add auth build clean completion config exec global info init import install list lock reinstall publish remove run search self-update shell shell-hook task tree update upgrade upload workspace help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "not __fish_seen_subcommand_from add auth build clean completion config exec global info init import install list lock reinstall publish remove run search self-update shell shell-hook task tree update upgrade upload workspace help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "not __fish_seen_subcommand_from add auth build clean completion config exec global info init import install list lock reinstall publish remove run search self-update shell shell-hook task tree update upgrade upload workspace help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "not __fish_seen_subcommand_from add auth build clean completion config exec global info init import install list lock reinstall publish remove run search self-update shell shell-hook task tree update upgrade upload workspace help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 complete -c pixi -n "not __fish_seen_subcommand_from add auth build clean completion config exec global info init import install list lock reinstall publish remove run search self-update shell shell-hook task tree update upgrade upload workspace help" -l "list" -d "List all installed commands (built-in and extensions)"
@@ -43,6 +45,8 @@ complete -c pixi -n "__fish_seen_subcommand_from add" -l "editable" -d "Whether 
 complete -c pixi -n "__fish_seen_subcommand_from add" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from add" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from add" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from add" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from add" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from add" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from add" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 complete -c pixi -n "__fish_seen_subcommand_from add" -s "g" -l "git" -d "The git url to use when adding a git dependency" -x
@@ -67,6 +71,8 @@ complete -c pixi -n "__fish_seen_subcommand_from add" -l "tls-root-certs" -d "Wh
 complete -c pixi -n "__fish_seen_subcommand_from add" -l "use-environment-activation-cache" -d "Use environment activation cache (experimental)"
 
 complete -c pixi -n "__fish_seen_subcommand_from auth; and not __fish_seen_subcommand_from login logout help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from auth; and not __fish_seen_subcommand_from login logout help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from auth; and not __fish_seen_subcommand_from login logout help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from auth; and not __fish_seen_subcommand_from login logout help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from auth; and not __fish_seen_subcommand_from login logout help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -88,10 +94,14 @@ complete -c pixi -n "__fish_seen_subcommand_from auth; and __fish_seen_subcomman
 complete -c pixi -n "__fish_seen_subcommand_from auth; and __fish_seen_subcommand_from login" -l "oauth-flow" -d "OAuth flow: auto (default), auth-code, device-code [possible values: auto, auth-code, device-code]" -x
 complete -c pixi -n "__fish_seen_subcommand_from auth; and __fish_seen_subcommand_from login" -l "oauth-scope" -d "Additional OAuth scopes to request (repeatable)" -x
 complete -c pixi -n "__fish_seen_subcommand_from auth; and __fish_seen_subcommand_from login" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from auth; and __fish_seen_subcommand_from login" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from auth; and __fish_seen_subcommand_from login" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from auth; and __fish_seen_subcommand_from login" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from auth; and __fish_seen_subcommand_from login" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
 complete -c pixi -n "__fish_seen_subcommand_from auth; and __fish_seen_subcommand_from logout" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from auth; and __fish_seen_subcommand_from logout" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from auth; and __fish_seen_subcommand_from logout" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from auth; and __fish_seen_subcommand_from logout" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from auth; and __fish_seen_subcommand_from logout" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -119,6 +129,8 @@ complete -c pixi -n "__fish_seen_subcommand_from build" -l "frozen" -d "Install 
 complete -c pixi -n "__fish_seen_subcommand_from build" -l "locked" -d "Check if lockfile is up-to-date before installing the environment, aborts when lockfile isn't up-to-date with the manifest file"
 complete -c pixi -n "__fish_seen_subcommand_from build" -l "as-is" -d "Shorthand for the combination of --no-install and --frozen"
 complete -c pixi -n "__fish_seen_subcommand_from build" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from build" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from build" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from build" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from build" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -129,6 +141,8 @@ complete -c pixi -n "__fish_seen_subcommand_from clean; and not __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from clean; and not __fish_seen_subcommand_from cache help" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from clean; and not __fish_seen_subcommand_from cache help" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from clean; and not __fish_seen_subcommand_from cache help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from clean; and not __fish_seen_subcommand_from cache help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from clean; and not __fish_seen_subcommand_from cache help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from clean; and not __fish_seen_subcommand_from cache help" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from clean; and not __fish_seen_subcommand_from cache help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -146,6 +160,8 @@ complete -c pixi -n "__fish_seen_subcommand_from clean; and __fish_seen_subcomma
 complete -c pixi -n "__fish_seen_subcommand_from clean; and __fish_seen_subcommand_from cache" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from clean; and __fish_seen_subcommand_from cache" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from clean; and __fish_seen_subcommand_from cache" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from clean; and __fish_seen_subcommand_from cache" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from clean; and __fish_seen_subcommand_from cache" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from clean; and __fish_seen_subcommand_from cache" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from clean; and __fish_seen_subcommand_from cache" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -154,10 +170,14 @@ complete -c pixi -n "__fish_seen_subcommand_from completion"  -d "Bourne Again S
 complete -c pixi -n "__fish_seen_subcommand_from completion"  -d "Elvish shell" -x
 complete -c pixi -n "__fish_seen_subcommand_from completion"  -d "Friendly Interactive SHell (fish)" -x
 complete -c pixi -n "__fish_seen_subcommand_from completion" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from completion" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from completion" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from completion" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from completion" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
 complete -c pixi -n "__fish_seen_subcommand_from config; and not __fish_seen_subcommand_from edit list prepend append set unset help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from config; and not __fish_seen_subcommand_from edit list prepend append set unset help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from config; and not __fish_seen_subcommand_from edit list prepend append set unset help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from config; and not __fish_seen_subcommand_from edit list prepend append set unset help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from config; and not __fish_seen_subcommand_from edit list prepend append set unset help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -175,6 +195,8 @@ complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from edit" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from edit" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from edit" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from edit" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from edit" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from edit" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from edit" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -185,6 +207,8 @@ complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from list" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from list" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from list" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from list" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from list" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from list" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from list" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -194,6 +218,8 @@ complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from prepend" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from prepend" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from prepend" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from prepend" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from prepend" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from prepend" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from prepend" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -203,6 +229,8 @@ complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from append" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from append" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from append" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from append" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from append" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from append" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from append" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -212,6 +240,8 @@ complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from set" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from set" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from set" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from set" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from set" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from set" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from set" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -221,6 +251,8 @@ complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from unset" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from unset" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from unset" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from unset" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from unset" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from unset" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from config; and __fish_seen_subcommand_from unset" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -245,10 +277,14 @@ complete -c pixi -n "__fish_seen_subcommand_from exec" -l "tls-no-verify" -d "Do
 complete -c pixi -n "__fish_seen_subcommand_from exec" -l "tls-root-certs" -d "Which TLS root certificates to use: 'webpki' (bundled Mozilla roots), 'native' (system store), or 'all' (both)" -x
 complete -c pixi -n "__fish_seen_subcommand_from exec" -l "use-environment-activation-cache" -d "Use environment activation cache (experimental)"
 complete -c pixi -n "__fish_seen_subcommand_from exec" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from exec" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from exec" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from exec" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from exec" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
 complete -c pixi -n "__fish_seen_subcommand_from global; and not __fish_seen_subcommand_from add edit install uninstall remove list sync expose shortcut update tree help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and not __fish_seen_subcommand_from add edit install uninstall remove list sync expose shortcut update tree help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and not __fish_seen_subcommand_from add edit install uninstall remove list sync expose shortcut update tree help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and not __fish_seen_subcommand_from add edit install uninstall remove list sync expose shortcut update tree help" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and not __fish_seen_subcommand_from add edit install uninstall remove list sync expose shortcut update tree help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -286,10 +322,14 @@ complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from add" -l "tls-root-certs" -d "Which TLS root certificates to use: 'webpki' (bundled Mozilla roots), 'native' (system store), or 'all' (both)" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from add" -l "use-environment-activation-cache" -d "Use environment activation cache (experimental)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from add" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from add" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from add" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from add" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from add" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from edit" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from edit" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from edit" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from edit" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from edit" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -319,6 +359,8 @@ complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from install" -l "tls-root-certs" -d "Which TLS root certificates to use: 'webpki' (bundled Mozilla roots), 'native' (system store), or 'all' (both)" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from install" -l "use-environment-activation-cache" -d "Use environment activation cache (experimental)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from install" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from install" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from install" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from install" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from install" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -335,6 +377,8 @@ complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from uninstall" -l "tls-root-certs" -d "Which TLS root certificates to use: 'webpki' (bundled Mozilla roots), 'native' (system store), or 'all' (both)" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from uninstall" -l "use-environment-activation-cache" -d "Use environment activation cache (experimental)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from uninstall" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from uninstall" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from uninstall" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from uninstall" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from uninstall" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -352,6 +396,8 @@ complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from remove" -l "tls-root-certs" -d "Which TLS root certificates to use: 'webpki' (bundled Mozilla roots), 'native' (system store), or 'all' (both)" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from remove" -l "use-environment-activation-cache" -d "Use environment activation cache (experimental)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from remove" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from remove" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from remove" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from remove" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from remove" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -371,6 +417,8 @@ complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from list" -l "tls-root-certs" -d "Which TLS root certificates to use: 'webpki' (bundled Mozilla roots), 'native' (system store), or 'all' (both)" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from list" -l "use-environment-activation-cache" -d "Use environment activation cache (experimental)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from list" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from list" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from list" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from list" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from list" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -387,10 +435,14 @@ complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from sync" -l "tls-root-certs" -d "Which TLS root certificates to use: 'webpki' (bundled Mozilla roots), 'native' (system store), or 'all' (both)" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from sync" -l "use-environment-activation-cache" -d "Use environment activation cache (experimental)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from sync" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from sync" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from sync" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from sync" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from sync" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and not __fish_seen_subcommand_from add remove help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and not __fish_seen_subcommand_from add remove help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and not __fish_seen_subcommand_from add remove help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and not __fish_seen_subcommand_from add remove help" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and not __fish_seen_subcommand_from add remove help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -412,6 +464,8 @@ complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and __fish_seen_subcommand_from add" -l "tls-root-certs" -d "Which TLS root certificates to use: 'webpki' (bundled Mozilla roots), 'native' (system store), or 'all' (both)" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and __fish_seen_subcommand_from add" -l "use-environment-activation-cache" -d "Use environment activation cache (experimental)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and __fish_seen_subcommand_from add" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and __fish_seen_subcommand_from add" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and __fish_seen_subcommand_from add" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and __fish_seen_subcommand_from add" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and __fish_seen_subcommand_from add" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -428,11 +482,15 @@ complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and __fish_seen_subcommand_from remove" -l "tls-root-certs" -d "Which TLS root certificates to use: 'webpki' (bundled Mozilla roots), 'native' (system store), or 'all' (both)" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and __fish_seen_subcommand_from remove" -l "use-environment-activation-cache" -d "Use environment activation cache (experimental)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and __fish_seen_subcommand_from remove" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and __fish_seen_subcommand_from remove" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and __fish_seen_subcommand_from remove" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and __fish_seen_subcommand_from remove" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from expose; and __fish_seen_subcommand_from remove" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
 
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and not __fish_seen_subcommand_from add remove help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and not __fish_seen_subcommand_from add remove help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and not __fish_seen_subcommand_from add remove help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and not __fish_seen_subcommand_from add remove help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and not __fish_seen_subcommand_from add remove help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -454,6 +512,8 @@ complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and __fish_seen_subcommand_from add" -l "tls-root-certs" -d "Which TLS root certificates to use: 'webpki' (bundled Mozilla roots), 'native' (system store), or 'all' (both)" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and __fish_seen_subcommand_from add" -l "use-environment-activation-cache" -d "Use environment activation cache (experimental)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and __fish_seen_subcommand_from add" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and __fish_seen_subcommand_from add" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and __fish_seen_subcommand_from add" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and __fish_seen_subcommand_from add" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and __fish_seen_subcommand_from add" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -470,6 +530,8 @@ complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and __fish_seen_subcommand_from remove" -l "tls-root-certs" -d "Which TLS root certificates to use: 'webpki' (bundled Mozilla roots), 'native' (system store), or 'all' (both)" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and __fish_seen_subcommand_from remove" -l "use-environment-activation-cache" -d "Use environment activation cache (experimental)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and __fish_seen_subcommand_from remove" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and __fish_seen_subcommand_from remove" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and __fish_seen_subcommand_from remove" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and __fish_seen_subcommand_from remove" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from shortcut; and __fish_seen_subcommand_from remove" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -487,12 +549,16 @@ complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from update" -l "tls-root-certs" -d "Which TLS root certificates to use: 'webpki' (bundled Mozilla roots), 'native' (system store), or 'all' (both)" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from update" -l "use-environment-activation-cache" -d "Use environment activation cache (experimental)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from update" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from update" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from update" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from update" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from update" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from tree" -s "e" -l "environment" -d "The environment to list packages for" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from tree" -s "i" -l "invert" -d "Invert tree and show what depends on a given package in the regex argument"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from tree" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from tree" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from tree" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from tree" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from global; and __fish_seen_subcommand_from tree" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -502,6 +568,8 @@ complete -c pixi -n "__fish_seen_subcommand_from info" -l "json" -d "Whether to 
 complete -c pixi -n "__fish_seen_subcommand_from info" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from info" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from info" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from info" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from info" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from info" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from info" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -512,6 +580,8 @@ complete -c pixi -n "__fish_seen_subcommand_from init" -l "format" -d "The manif
 complete -c pixi -n "__fish_seen_subcommand_from init" -s "s" -l "scm" -d "Source Control Management used for this workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from init" -l "conda-pypi-map" -d "Set a mapping between conda channels and pypi channels" -x
 complete -c pixi -n "__fish_seen_subcommand_from init" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from init" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from init" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from init" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from init" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -522,6 +592,8 @@ complete -c pixi -n "__fish_seen_subcommand_from import" -s "f" -l "feature" -d 
 complete -c pixi -n "__fish_seen_subcommand_from import" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from import" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from import" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from import" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from import" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from import" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from import" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 complete -c pixi -n "__fish_seen_subcommand_from import" -l "auth-file" -d "Path to the file containing the authentication token" -r
@@ -545,6 +617,8 @@ complete -c pixi -n "__fish_seen_subcommand_from install" -l "only" -d "Install 
 complete -c pixi -n "__fish_seen_subcommand_from install" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from install" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from install" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from install" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from install" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from install" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from install" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 complete -c pixi -n "__fish_seen_subcommand_from install" -l "frozen" -d "Install the environment as defined in the lockfile, doesn't update lockfile if it isn't up-to-date with the manifest file"
@@ -571,6 +645,8 @@ complete -c pixi -n "__fish_seen_subcommand_from list" -s "x" -l "explicit" -d "
 complete -c pixi -n "__fish_seen_subcommand_from list" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from list" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from list" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from list" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from list" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from list" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from list" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 complete -c pixi -n "__fish_seen_subcommand_from list" -l "frozen" -d "Install the environment as defined in the lockfile, doesn't update lockfile if it isn't up-to-date with the manifest file"
@@ -583,6 +659,8 @@ complete -c pixi -n "__fish_seen_subcommand_from lock" -l "dry-run" -d "Compute 
 complete -c pixi -n "__fish_seen_subcommand_from lock" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from lock" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from lock" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from lock" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from lock" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from lock" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from lock" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 complete -c pixi -n "__fish_seen_subcommand_from lock" -l "no-install" -d "Don't modify the environment, only modify the lock-file [env: PIXI_NO_INSTALL=]"
@@ -592,6 +670,8 @@ complete -c pixi -n "__fish_seen_subcommand_from reinstall" -s "a" -l "all" -d "
 complete -c pixi -n "__fish_seen_subcommand_from reinstall" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from reinstall" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from reinstall" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from reinstall" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from reinstall" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from reinstall" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from reinstall" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 complete -c pixi -n "__fish_seen_subcommand_from reinstall" -l "frozen" -d "Install the environment as defined in the lockfile, doesn't update lockfile if it isn't up-to-date with the manifest file"
@@ -634,6 +714,8 @@ complete -c pixi -n "__fish_seen_subcommand_from publish" -l "tls-no-verify" -d 
 complete -c pixi -n "__fish_seen_subcommand_from publish" -l "tls-root-certs" -d "Which TLS root certificates to use: 'webpki' (bundled Mozilla roots), 'native' (system store), or 'all' (both)" -x
 complete -c pixi -n "__fish_seen_subcommand_from publish" -l "use-environment-activation-cache" -d "Use environment activation cache (experimental)"
 complete -c pixi -n "__fish_seen_subcommand_from publish" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from publish" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from publish" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from publish" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from publish" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -643,6 +725,8 @@ complete -c pixi -n "__fish_seen_subcommand_from remove" -s "f" -l "feature" -d 
 complete -c pixi -n "__fish_seen_subcommand_from remove" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from remove" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from remove" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from remove" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from remove" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from remove" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from remove" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 complete -c pixi -n "__fish_seen_subcommand_from remove" -s "g" -l "git" -d "The git url to use when adding a git dependency" -x
@@ -674,6 +758,8 @@ complete -c pixi -n "__fish_seen_subcommand_from run" -l "templated" -d "Enable 
 complete -c pixi -n "__fish_seen_subcommand_from run" -s "n" -l "dry-run" -d "Run the task in dry-run mode (only print the command that would run)"
 complete -c pixi -n "__fish_seen_subcommand_from run" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from run" -s "w" -l "workspace" -d "Name of the workspace" -x
+complete -c pixi -n "__fish_seen_subcommand_from run" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from run" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from run" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from run" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 complete -c pixi -n "__fish_seen_subcommand_from run" -l "no-install" -d "Don't modify the environment, only modify the lock-file"
@@ -703,6 +789,8 @@ complete -c pixi -n "__fish_seen_subcommand_from search" -l "json" -d "Output in
 complete -c pixi -n "__fish_seen_subcommand_from search" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from search" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from search" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from search" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from search" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from search" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from search" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -711,6 +799,8 @@ complete -c pixi -n "__fish_seen_subcommand_from self-update" -l "dry-run" -d "O
 complete -c pixi -n "__fish_seen_subcommand_from self-update" -l "force" -d "Force download the desired version when not exactly same with the current."
 complete -c pixi -n "__fish_seen_subcommand_from self-update" -l "no-release-note" -d "Skip printing the release notes"
 complete -c pixi -n "__fish_seen_subcommand_from self-update" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from self-update" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from self-update" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from self-update" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from self-update" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -718,6 +808,8 @@ complete -c pixi -n "__fish_seen_subcommand_from shell" -s "e" -l "environment" 
 complete -c pixi -n "__fish_seen_subcommand_from shell" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from shell" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from shell" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from shell" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from shell" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from shell" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from shell" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 complete -c pixi -n "__fish_seen_subcommand_from shell" -l "no-install" -d "Don't modify the environment, only modify the lock-file"
@@ -746,6 +838,8 @@ complete -c pixi -n "__fish_seen_subcommand_from shell-hook" -l "json" -d "Emit 
 complete -c pixi -n "__fish_seen_subcommand_from shell-hook" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from shell-hook" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from shell-hook" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from shell-hook" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from shell-hook" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from shell-hook" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from shell-hook" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 complete -c pixi -n "__fish_seen_subcommand_from shell-hook" -l "no-install" -d "Don't modify the environment, only modify the lock-file"
@@ -771,6 +865,8 @@ complete -c pixi -n "__fish_seen_subcommand_from shell-hook" -l "change-ps1" -d 
 complete -c pixi -n "__fish_seen_subcommand_from task; and not __fish_seen_subcommand_from add remove alias list help" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from task; and not __fish_seen_subcommand_from add remove alias list help" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from task; and not __fish_seen_subcommand_from add remove alias list help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from task; and not __fish_seen_subcommand_from add remove alias list help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from task; and not __fish_seen_subcommand_from add remove alias list help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from task; and not __fish_seen_subcommand_from add remove alias list help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from task; and not __fish_seen_subcommand_from add remove alias list help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -792,6 +888,8 @@ complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcomman
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from add" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from add" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from add" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from add" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from add" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from add" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from add" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -800,6 +898,8 @@ complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcomman
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from remove" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from remove" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from remove" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from remove" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from remove" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from remove" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from remove" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -808,6 +908,8 @@ complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcomman
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from alias" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from alias" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from alias" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from alias" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from alias" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from alias" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from alias" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -817,6 +919,8 @@ complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcomman
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from list" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from list" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from list" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from list" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from list" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from list" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from task; and __fish_seen_subcommand_from list" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -827,6 +931,8 @@ complete -c pixi -n "__fish_seen_subcommand_from tree" -s "i" -l "invert" -d "In
 complete -c pixi -n "__fish_seen_subcommand_from tree" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from tree" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from tree" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from tree" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from tree" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from tree" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from tree" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 complete -c pixi -n "__fish_seen_subcommand_from tree" -l "frozen" -d "Install the environment as defined in the lockfile, doesn't update lockfile if it isn't up-to-date with the manifest file"
@@ -853,6 +959,8 @@ complete -c pixi -n "__fish_seen_subcommand_from update" -l "use-environment-act
 complete -c pixi -n "__fish_seen_subcommand_from update" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from update" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from update" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from update" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from update" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from update" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from update" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -863,6 +971,8 @@ complete -c pixi -n "__fish_seen_subcommand_from upgrade" -s "n" -l "dry-run" -d
 complete -c pixi -n "__fish_seen_subcommand_from upgrade" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from upgrade" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from upgrade" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from upgrade" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from upgrade" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from upgrade" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from upgrade" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 complete -c pixi -n "__fish_seen_subcommand_from upgrade" -l "no-install" -d "Don't modify the environment, only modify the lock-file"
@@ -883,6 +993,8 @@ complete -c pixi -n "__fish_seen_subcommand_from upgrade" -l "use-environment-ac
 
 complete -c pixi -n "__fish_seen_subcommand_from upload; and not __fish_seen_subcommand_from quetz artifactory prefix anaconda cloudsmith s3 help" -l "allow-insecure-host" -d "List of hosts for which SSL certificate verification should be skipped" -x
 complete -c pixi -n "__fish_seen_subcommand_from upload; and not __fish_seen_subcommand_from quetz artifactory prefix anaconda cloudsmith s3 help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from upload; and not __fish_seen_subcommand_from quetz artifactory prefix anaconda cloudsmith s3 help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from upload; and not __fish_seen_subcommand_from quetz artifactory prefix anaconda cloudsmith s3 help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from upload; and not __fish_seen_subcommand_from quetz artifactory prefix anaconda cloudsmith s3 help" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from upload; and not __fish_seen_subcommand_from quetz artifactory prefix anaconda cloudsmith s3 help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -898,6 +1010,8 @@ complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from quetz" -s "c" -l "channel" -d "The URL to your channel [env: QUETZ_CHANNEL=]" -x
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from quetz" -s "a" -l "api-key" -d "The Quetz API key, if none is provided, the token is read from the keychain / auth-file [env: QUETZ_API_KEY=]" -r
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from quetz" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from quetz" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from quetz" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from quetz" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from quetz" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -905,6 +1019,8 @@ complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from artifactory" -s "c" -l "channel" -d "The URL to your channel [env: ARTIFACTORY_CHANNEL=]" -x
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from artifactory" -s "t" -l "token" -d "Your Artifactory token [env: ARTIFACTORY_TOKEN=]" -x
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from artifactory" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from artifactory" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from artifactory" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from artifactory" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from artifactory" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -917,6 +1033,8 @@ complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from prefix" -s "s" -l "skip-existing" -d "Skip upload if package already exists"
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from prefix" -l "force" -d "Force overwrite existing packages"
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from prefix" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from prefix" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from prefix" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from prefix" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from prefix" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -926,6 +1044,8 @@ complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from anaconda" -s "u" -l "url" -d "The URL to the Anaconda server [env: ANACONDA_SERVER_URL=]" -x
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from anaconda" -s "f" -l "force" -d "Replace files on conflict [env: ANACONDA_FORCE=]"
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from anaconda" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from anaconda" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from anaconda" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from anaconda" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from anaconda" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -934,6 +1054,8 @@ complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from cloudsmith" -s "a" -l "api-key" -d "The Cloudsmith API key, if none is provided, the token is read from the keychain / auth-file [env: CLOUDSMITH_API_KEY=]" -r
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from cloudsmith" -s "u" -l "url" -d "The URL to the Cloudsmith API server [env: CLOUDSMITH_API_URL=]" -x
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from cloudsmith" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from cloudsmith" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from cloudsmith" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from cloudsmith" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from cloudsmith" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -946,6 +1068,8 @@ complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from s3" -l "session-token" -d "The session token for the S3 bucket [env: S3_SESSION_TOKEN=]" -x
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from s3" -l "addressing-style" -d "How to address the bucket [env: S3_ADDRESSING_STYLE=] [default: virtual-host] [possible values: virtual-host, path]" -r
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from s3" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from s3" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from s3" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from s3" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcommand_from s3" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -953,6 +1077,8 @@ complete -c pixi -n "__fish_seen_subcommand_from upload; and __fish_seen_subcomm
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and not __fish_seen_subcommand_from channel description platform version environment feature export name system-requirements register requires-pixi help" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and not __fish_seen_subcommand_from channel description platform version environment feature export name system-requirements register requires-pixi help" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and not __fish_seen_subcommand_from channel description platform version environment feature export name system-requirements register requires-pixi help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and not __fish_seen_subcommand_from channel description platform version environment feature export name system-requirements register requires-pixi help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and not __fish_seen_subcommand_from channel description platform version environment feature export name system-requirements register requires-pixi help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and not __fish_seen_subcommand_from channel description platform version environment feature export name system-requirements register requires-pixi help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and not __fish_seen_subcommand_from channel description platform version environment feature export name system-requirements register requires-pixi help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -972,6 +1098,8 @@ complete -k -c pixi -n "__fish_seen_subcommand_from workspace; and not __fish_se
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and not __fish_seen_subcommand_from add list remove help" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and not __fish_seen_subcommand_from add list remove help" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and not __fish_seen_subcommand_from add list remove help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and not __fish_seen_subcommand_from add list remove help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and not __fish_seen_subcommand_from add list remove help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and not __fish_seen_subcommand_from add list remove help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and not __fish_seen_subcommand_from add list remove help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1001,6 +1129,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from add" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from add" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from add" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from add" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from add" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from add" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from add" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -1008,6 +1138,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from list" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from list" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from list" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from list" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from list" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from list" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from list" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1032,6 +1164,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from remove" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from remove" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from remove" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from remove" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from remove" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from remove" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from channel; and __fish_seen_subcommand_from remove" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -1039,6 +1173,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and not __fish_seen_subcommand_from get set help" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and not __fish_seen_subcommand_from get set help" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and not __fish_seen_subcommand_from get set help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and not __fish_seen_subcommand_from get set help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and not __fish_seen_subcommand_from get set help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and not __fish_seen_subcommand_from get set help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and not __fish_seen_subcommand_from get set help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1049,12 +1185,16 @@ complete -k -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_s
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and __fish_seen_subcommand_from get" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and __fish_seen_subcommand_from get" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and __fish_seen_subcommand_from get" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and __fish_seen_subcommand_from get" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and __fish_seen_subcommand_from get" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and __fish_seen_subcommand_from get" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and __fish_seen_subcommand_from get" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and __fish_seen_subcommand_from set" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and __fish_seen_subcommand_from set" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and __fish_seen_subcommand_from set" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and __fish_seen_subcommand_from set" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and __fish_seen_subcommand_from set" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and __fish_seen_subcommand_from set" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from description; and __fish_seen_subcommand_from set" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -1062,6 +1202,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and not __fish_seen_subcommand_from add list remove help" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and not __fish_seen_subcommand_from add list remove help" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and not __fish_seen_subcommand_from add list remove help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and not __fish_seen_subcommand_from add list remove help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and not __fish_seen_subcommand_from add list remove help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and not __fish_seen_subcommand_from add list remove help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and not __fish_seen_subcommand_from add list remove help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1075,12 +1217,16 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from add" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from add" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from add" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from add" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from add" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from add" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from add" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from list" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from list" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from list" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from list" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from list" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from list" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from list" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1089,6 +1235,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from remove" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from remove" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from remove" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from remove" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from remove" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from remove" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from platform; and __fish_seen_subcommand_from remove" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1096,6 +1244,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and not __fish_seen_subcommand_from get set major minor patch help" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and not __fish_seen_subcommand_from get set major minor patch help" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and not __fish_seen_subcommand_from get set major minor patch help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and not __fish_seen_subcommand_from get set major minor patch help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and not __fish_seen_subcommand_from get set major minor patch help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and not __fish_seen_subcommand_from get set major minor patch help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and not __fish_seen_subcommand_from get set major minor patch help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1109,30 +1259,40 @@ complete -k -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_s
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from get" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from get" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from get" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from get" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from get" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from get" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from get" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from set" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from set" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from set" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from set" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from set" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from set" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from set" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from major" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from major" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from major" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from major" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from major" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from major" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from major" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from minor" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from minor" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from minor" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from minor" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from minor" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from minor" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from minor" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from patch" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from patch" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from patch" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from patch" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from patch" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from patch" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from version; and __fish_seen_subcommand_from patch" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1140,6 +1300,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and not __fish_seen_subcommand_from add list remove help" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and not __fish_seen_subcommand_from add list remove help" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and not __fish_seen_subcommand_from add list remove help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and not __fish_seen_subcommand_from add list remove help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and not __fish_seen_subcommand_from add list remove help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and not __fish_seen_subcommand_from add list remove help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and not __fish_seen_subcommand_from add list remove help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1155,18 +1317,24 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from add" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from add" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from add" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from add" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from add" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from add" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from add" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from list" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from list" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from list" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from list" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from list" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from list" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from list" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from remove" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from remove" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from remove" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from remove" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from remove" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from remove" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from environment; and __fish_seen_subcommand_from remove" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1174,6 +1342,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and not __fish_seen_subcommand_from list remove help" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and not __fish_seen_subcommand_from list remove help" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and not __fish_seen_subcommand_from list remove help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and not __fish_seen_subcommand_from list remove help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and not __fish_seen_subcommand_from list remove help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and not __fish_seen_subcommand_from list remove help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and not __fish_seen_subcommand_from list remove help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1184,12 +1354,16 @@ complete -k -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_s
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and __fish_seen_subcommand_from list" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and __fish_seen_subcommand_from list" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and __fish_seen_subcommand_from list" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and __fish_seen_subcommand_from list" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and __fish_seen_subcommand_from list" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and __fish_seen_subcommand_from list" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and __fish_seen_subcommand_from list" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and __fish_seen_subcommand_from remove" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and __fish_seen_subcommand_from remove" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and __fish_seen_subcommand_from remove" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and __fish_seen_subcommand_from remove" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and __fish_seen_subcommand_from remove" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and __fish_seen_subcommand_from remove" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from feature; and __fish_seen_subcommand_from remove" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1197,6 +1371,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and not __fish_seen_subcommand_from conda-explicit-spec conda-environment help" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and not __fish_seen_subcommand_from conda-explicit-spec conda-environment help" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and not __fish_seen_subcommand_from conda-explicit-spec conda-environment help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and not __fish_seen_subcommand_from conda-explicit-spec conda-environment help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and not __fish_seen_subcommand_from conda-explicit-spec conda-environment help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and not __fish_seen_subcommand_from conda-explicit-spec conda-environment help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and not __fish_seen_subcommand_from conda-explicit-spec conda-environment help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1211,6 +1387,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and __fish_seen_subcommand_from conda-explicit-spec" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and __fish_seen_subcommand_from conda-explicit-spec" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and __fish_seen_subcommand_from conda-explicit-spec" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and __fish_seen_subcommand_from conda-explicit-spec" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and __fish_seen_subcommand_from conda-explicit-spec" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and __fish_seen_subcommand_from conda-explicit-spec" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and __fish_seen_subcommand_from conda-explicit-spec" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and __fish_seen_subcommand_from conda-explicit-spec" -l "frozen" -d "Install the environment as defined in the lockfile, doesn't update lockfile if it isn't up-to-date with the manifest file"
@@ -1236,6 +1414,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and __fish_seen_subcommand_from conda-environment" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and __fish_seen_subcommand_from conda-environment" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and __fish_seen_subcommand_from conda-environment" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and __fish_seen_subcommand_from conda-environment" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and __fish_seen_subcommand_from conda-environment" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and __fish_seen_subcommand_from conda-environment" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from export; and __fish_seen_subcommand_from conda-environment" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -1243,6 +1423,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and not __fish_seen_subcommand_from get set help" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and not __fish_seen_subcommand_from get set help" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and not __fish_seen_subcommand_from get set help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and not __fish_seen_subcommand_from get set help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and not __fish_seen_subcommand_from get set help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and not __fish_seen_subcommand_from get set help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and not __fish_seen_subcommand_from get set help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1253,12 +1435,16 @@ complete -k -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_s
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and __fish_seen_subcommand_from get" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and __fish_seen_subcommand_from get" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and __fish_seen_subcommand_from get" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and __fish_seen_subcommand_from get" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and __fish_seen_subcommand_from get" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and __fish_seen_subcommand_from get" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and __fish_seen_subcommand_from get" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and __fish_seen_subcommand_from set" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and __fish_seen_subcommand_from set" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and __fish_seen_subcommand_from set" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and __fish_seen_subcommand_from set" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and __fish_seen_subcommand_from set" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and __fish_seen_subcommand_from set" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from name; and __fish_seen_subcommand_from set" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -1266,6 +1452,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and not __fish_seen_subcommand_from add list help" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and not __fish_seen_subcommand_from add list help" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and not __fish_seen_subcommand_from add list help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and not __fish_seen_subcommand_from add list help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and not __fish_seen_subcommand_from add list help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and not __fish_seen_subcommand_from add list help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and not __fish_seen_subcommand_from add list help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1283,6 +1471,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and __fish_seen_subcommand_from add" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and __fish_seen_subcommand_from add" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and __fish_seen_subcommand_from add" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and __fish_seen_subcommand_from add" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and __fish_seen_subcommand_from add" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and __fish_seen_subcommand_from add" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and __fish_seen_subcommand_from add" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
@@ -1291,6 +1481,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and __fish_seen_subcommand_from list" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and __fish_seen_subcommand_from list" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and __fish_seen_subcommand_from list" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and __fish_seen_subcommand_from list" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and __fish_seen_subcommand_from list" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and __fish_seen_subcommand_from list" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from system-requirements; and __fish_seen_subcommand_from list" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1301,6 +1493,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and not __fish_seen_subcommand_from list remove prune help" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and not __fish_seen_subcommand_from list remove prune help" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and not __fish_seen_subcommand_from list remove prune help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and not __fish_seen_subcommand_from list remove prune help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and not __fish_seen_subcommand_from list remove prune help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and not __fish_seen_subcommand_from list remove prune help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and not __fish_seen_subcommand_from list remove prune help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1313,18 +1507,24 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from list" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from list" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from list" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from list" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from list" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from list" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from list" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from remove" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from remove" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from remove" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from remove" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from remove" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from remove" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from remove" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from prune" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from prune" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from prune" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from prune" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from prune" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from prune" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from register; and __fish_seen_subcommand_from prune" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1332,6 +1532,8 @@ complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subc
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and not __fish_seen_subcommand_from get set unset verify help" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and not __fish_seen_subcommand_from get set unset verify help" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and not __fish_seen_subcommand_from get set unset verify help" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and not __fish_seen_subcommand_from get set unset verify help" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and not __fish_seen_subcommand_from get set unset verify help" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and not __fish_seen_subcommand_from get set unset verify help" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and not __fish_seen_subcommand_from get set unset verify help" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
@@ -1344,24 +1546,32 @@ complete -k -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_s
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from get" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from get" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from get" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from get" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from get" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from get" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from get" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from set" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from set" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from set" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from set" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from set" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from set" -l "color" -d "Whether the log needs to be colored" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from set" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal"
 
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from unset" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from unset" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from unset" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from unset" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from unset" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from unset" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from unset" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from verify" -s "m" -l "manifest-path" -d "The path to `pixi.toml`, `pyproject.toml`, or the workspace directory" -r
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from verify" -s "w" -l "workspace" -d "Name of the workspace" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from verify" -s "h" -l "help" -d "Display help information"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from verify" -s "v" -l "verbose" -d "Increase logging verbosity (-v for warnings, -vv for info, -vvv for debug, -vvvv for trace)"
+complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from verify" -s "q" -l "quiet" -d "Decrease logging verbosity (quiet mode)"
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from verify" -l "color" -d "Whether the log needs to be colored [env: PIXI_COLOR=] [default: auto] [possible values: always, never, auto]" -x
 complete -c pixi -n "__fish_seen_subcommand_from workspace; and __fish_seen_subcommand_from requires-pixi; and __fish_seen_subcommand_from verify" -l "no-progress" -d "Hide all progress bars, always turned on if stderr is not a terminal [env: PIXI_NO_PROGRESS=]"
 
